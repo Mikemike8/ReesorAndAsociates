@@ -74,12 +74,12 @@ export const Home = () => {
       <div className="max-w-4xl">
         {/* Text Section */}
         <p className="text-sm tracking-[0.3em] mb-8 fade-in" style={{ animationDelay: '0.5s' }}>
-          WELCOME TO RESSOR
+          WELCOME TO REESOR
         </p>
 
         {/* Main Heading */}
         <h1 className="text-[12vw] md:text-[7vw] font-light leading-[0.9] mb-8 fade-in" style={{ animationDelay: '0.8s' }}>
-          RESSOR & <br /> ASSOCIATES
+          REESOR & <br /> ASSOCIATES
         </h1>
 
         {/* Divider Line */}

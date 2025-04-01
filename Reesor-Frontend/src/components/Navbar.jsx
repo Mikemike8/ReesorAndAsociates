@@ -24,7 +24,7 @@ export const Navbar = () => {
     <nav className="fixed w-full z-50 nav-blur text-white border-b border-white/10">
         <div className="max-w-[2000px] mx-auto px-4 sm:px-8">
             <div className="flex justify-between h-24 items-center">
-                <div className="text-2xl sm:text-3xl font-light tracking-[0.3em] logo">Ressor & Associates | Transportation</div>
+                <div className="text-2xl sm:text-3xl font-light tracking-[0.3em] logo">Reesor & Associates | Transportation</div>
                 <div className="hidden md:flex space-x-16 text-xs tracking-[0.2em]">
                     <Link to="/" className="hover-line" >Home</Link>
                     <Link to="/about" className="hover-line" >About</Link>
