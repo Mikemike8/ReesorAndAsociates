@@ -2,9 +2,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-import { Home } from './components/Home';  // Named import for Home
-import { About } from './components/About';  // Named import for About
+import { Home } from './components/Home'; 
+import { About } from './components/About';  
 import { Navbar } from './components/Navbar';
+import { Contact } from './components/Contact';
 function App() {
   return (
     <Router>
@@ -17,6 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          
         </Routes>
       </div>
     </Router>
