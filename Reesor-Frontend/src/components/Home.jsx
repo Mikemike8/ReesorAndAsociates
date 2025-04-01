@@ -52,38 +52,54 @@ export const Home = () => {
     ))}
   </div>
 </section>
+<div className="bg-black text-white selection:bg-white selection:text-black">
+  <section className="min-h-screen relative flex items-center">
+    <div className="absolute inset-0">
+      {/* Video Background */}
+      <video 
+        src={Morgan}  // Replace with your actual video source
+        alt="Luxury Suit"
+        className="w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      {/* Overlay Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+    </div>
 
-      <div className="bg-black text-white selection:bg-white selection:text-black">
-        <section className=" sectiot min-h-screen relative flex items-center">
-          <div className="absolute inset-0">
-            <video 
-              src={Morgan}
-              alt="Luxury Suit" 
-              className="w-full h-full object-cover" 
-              autoPlay 
-              loop 
-              muted
-            />
-            <div className="absolute inset-0 image-gradient"></div>
-          </div>
-          <div className="relative z-10 max-w-[2000px] mx-auto px-4 sm:px-8 pt-32">
-            <div className="max-w-4xl">
-              <p className="text-sm tracking-[0.3em] mb-8 fade-in" style={{ animationDelay: '0.5s' }}>WELCOME TO RESSOR</p>
-              <h1 className="text-[12vw] md:text-[7vw] font-light leading-[0.9] mb-8 fade-in" style={{ animationDelay: '0.8s' }}>
-                RESSOR  & <br />  ASSOCIATES
-              </h1>
-              <div className="h-[1px] w-32 bg-white reveal-line mb-12" style={{ animationDelay: '1.2s' }}></div>
-              <p className="text-lg sm:text-xl font-light tracking-wide text-white/80 max-w-xl mb-16 fade-in leading-relaxed" style={{ animationDelay: '1.5s' }}>
-                Industry Expertise That Works for You
-              </p>
-              <button className="group w-full sm:w-auto px-8 sm:px-12 py-4 border border-white hover:bg-yellow-100 hover:text-black transition-all duration-500 text-xs tracking-[0.2em] fade-in flex items-center justify-center sm:justify-start gap-4" style={{ animationDelay: '1.8s' }}>
-                Safeguarding Your Business Against Fraud and Payment Issues in Transportation
-                <span className="h-[1px] w-8 bg-current transform transition-transform group-hover:translate-x-2"></span>
-              </button>
-            </div>
-          </div>
-        </section>
+    {/* Content Overlay */}
+    <div className="relative z-10 max-w-[2000px] mx-auto px-4 sm:px-8 pt-32">
+      <div className="max-w-4xl">
+        {/* Text Section */}
+        <p className="text-sm tracking-[0.3em] mb-8 fade-in" style={{ animationDelay: '0.5s' }}>
+          WELCOME TO RESSOR
+        </p>
+
+        {/* Main Heading */}
+        <h1 className="text-[12vw] md:text-[7vw] font-light leading-[0.9] mb-8 fade-in" style={{ animationDelay: '0.8s' }}>
+          RESSOR & <br /> ASSOCIATES
+        </h1>
+
+        {/* Divider Line */}
+        <div className="h-[1px] w-32 bg-white reveal-line mb-12" style={{ animationDelay: '1.2s' }}></div>
+
+        {/* Subtitle Text */}
+        <p className="text-lg sm:text-xl font-light tracking-wide text-white/80 max-w-xl mb-16 fade-in leading-relaxed" style={{ animationDelay: '1.5s' }}>
+          Industry Expertise That Works for You
+        </p>
+
+        {/* Call to Action Button */}
+        <button className="group w-full sm:w-auto px-8 sm:px-12 py-4 border border-white hover:bg-yellow-100 hover:text-black transition-all duration-500 text-xs tracking-[0.2em] fade-in flex items-center justify-center sm:justify-start gap-4" style={{ animationDelay: '1.8s' }}>
+          Safeguarding Your Business Against Fraud and Payment Issues in Transportation
+          <span className="h-[1px] w-8 bg-current transform transition-transform group-hover:translate-x-2"></span>
+        </button>
       </div>
+    </div>
+  </section>
+</div>
+
         {/* First Content  */}
 
     <div className="flex flex-row w-full py-8 pr-1.5 justify-between   items-center bg-gray-100">
