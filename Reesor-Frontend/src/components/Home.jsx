@@ -1,6 +1,6 @@
 import React from 'react';
 import Morgan from '../assets/Morgan.mp4'; 
-import Truck  from '../assets/Truck.jpg'
+import Truck2  from '../assets/Truck2.jpg'
 export const Home = () => {
   // Array of product data
   const products = [
@@ -75,7 +75,7 @@ export const Home = () => {
               <p className="text-lg sm:text-xl font-light tracking-wide text-white/80 max-w-xl mb-16 fade-in leading-relaxed" style={{ animationDelay: '1.5s' }}>
                 Industry Expertise That Works for You
               </p>
-              <button className="group w-full sm:w-auto px-8 sm:px-12 py-4 border border-white hover:bg-yellow-00 hover:text-black transition-all duration-500 text-xs tracking-[0.2em] fade-in flex items-center justify-center sm:justify-start gap-4" style={{ animationDelay: '1.8s' }}>
+              <button className="group w-full sm:w-auto px-8 sm:px-12 py-4 border border-white hover:bg-yellow-100 hover:text-black transition-all duration-500 text-xs tracking-[0.2em] fade-in flex items-center justify-center sm:justify-start gap-4" style={{ animationDelay: '1.8s' }}>
                 Safeguarding Your Business Against Fraud and Payment Issues in Transportation
                 <span className="h-[1px] w-8 bg-current transform transition-transform group-hover:translate-x-2"></span>
               </button>
@@ -85,15 +85,15 @@ export const Home = () => {
       </div>
         {/* First Content  */}
 
-        <div className="flex flex-row w-full py-8 px-6 justify-between items-center bg-gray-100">
-  <div className="font-light max-w-xl">
-    <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-      DONT LET BROKERS GET AWAY WITH IT CALL US
-    </h3>
+        <div className="flex flex-row w-full py-8 pr-1.5 justify-between   items-center bg-gray-100">
+  <div className="font-light  mb-14 max-w-xl">
+  <h3 className="text-[32px] font-semibold font-light tracking-wide text-black mb-4 p-1">
+  DONT LET BROKERS GET AWAY WITH IT CALL US
+</h3>
     <p className="text-lg text-gray-600 mb-4">Find Who is Not Paying</p>
     
-    <button className="flex items-center space-x-2 px-4 py-2 bg-black text-white rounded-lg hover:bg-blue-700 transition duration-300">
-      <img src="" alt="" className="w-5 h-5" />
+    <button className="flex items-center space-x-2 px-4 py-1 bg-black text-white rounded-lg hover:bg-gray-500 transition duration-300">
+    <i  className='fas text-white text-[32px]'>&#xf1d8;</i>
       <span>Find Out</span>
     </button>
     
@@ -105,13 +105,13 @@ export const Home = () => {
       <li>Illegal Offsets Against Freight Charges</li>
     </ul>
     
-    <button className="flex items-center space-x-2 mt-4 px-4 py-2 bg-black text-white rounded-lg hover:bg-green-700 transition duration-300">
-      <img src="" alt="" className="w-5 h-5" />
+    <button className="flex items-center space-x-2 mt-4 px-4 py-1 bg-black text-white rounded-lg hover:bg-gray-500 transition duration-300">
+    <i  className='fas text-white text-[32px]'>&#xf1d8;</i>
       <span>Learn More</span>
     </button>
   </div>
 
-  <img className="w-8/12 rounded-lg shadow-lg hidden lg:block" src={Truck} alt="Truck" />
+  <img className="w-7/12 rounded-lg shadow-lg hidden lg:block" src={Truck2} alt="Truck" />
 </div>
 
       {/* Marquee text */}
