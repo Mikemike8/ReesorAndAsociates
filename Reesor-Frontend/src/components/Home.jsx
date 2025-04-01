@@ -1,6 +1,6 @@
 import React from 'react';
 import Morgan from '../assets/Morgan.mp4'; 
-
+import Truck  from '../assets/Truck.jpg'
 export const Home = () => {
   // Array of product data
   const products = [
@@ -52,11 +52,6 @@ export const Home = () => {
   </div>
 </section>
 
-
-
-
-
-      {/* Hero Section with Video */}
       <div className="bg-black text-white selection:bg-white selection:text-black">
         <section className=" sectiot min-h-screen relative flex items-center">
           <div className="absolute inset-0">
@@ -88,6 +83,36 @@ export const Home = () => {
           </div>
         </section>
       </div>
+        {/* First Content  */}
+
+        <div className="flex flex-row w-full py-8 px-6 justify-between items-center bg-gray-100">
+  <div className="font-light max-w-xl">
+    <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+      DONT LET BROKERS GET AWAY WITH IT CALL US
+    </h3>
+    <p className="text-lg text-gray-600 mb-4">Find Who is Not Paying</p>
+    
+    <button className="flex items-center space-x-2 px-4 py-2 bg-black text-white rounded-lg hover:bg-blue-700 transition duration-300">
+      <img src="" alt="" className="w-5 h-5" />
+      <span>Find Out</span>
+    </button>
+    
+    <span className="block text-lg text-gray-800 font-medium mt-6">Challenges Facing Motor Carriers</span>
+    
+    <ul className="list-disc list-inside text-gray-700 mt-2">
+      <li>Double Brokering</li>
+      <li>Broker Closures</li>
+      <li>Illegal Offsets Against Freight Charges</li>
+    </ul>
+    
+    <button className="flex items-center space-x-2 mt-4 px-4 py-2 bg-black text-white rounded-lg hover:bg-green-700 transition duration-300">
+      <img src="" alt="" className="w-5 h-5" />
+      <span>Learn More</span>
+    </button>
+  </div>
+
+  <img className="w-8/12 rounded-lg shadow-lg hidden lg:block" src={Truck} alt="Truck" />
+</div>
 
       {/* Marquee text */}
       <div className="overflow-hidden py-4 sm:py-8 bg-white text-black border-y border-black/20">
@@ -95,6 +120,11 @@ export const Home = () => {
           Safeguarding  Businesses &nbsp;&nbsp;&nbsp;  Against Fraud &nbsp;&nbsp;&nbsp;
         </div>
       </div>
+    <div>
+
+
+        
+    </div>
     </div>
   );
 };
