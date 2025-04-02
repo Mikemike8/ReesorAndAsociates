@@ -28,7 +28,7 @@ export const Navbar = () => {
                 <div className="hidden md:flex space-x-16 text-xs tracking-[0.2em]">
                     <Link to="/" className="hover-line" >Home</Link>
                     <Link to="/about" className="hover-line" >About</Link>
-                    <Link to="/about"className="hover-line" >Contact</Link>
+                    <Link to="/contact"className="hover-line" >Contact</Link>
     
                 </div>
                 <button className="md:hidden w-8 h-8 flex flex-col justify-center space-y-2" onClick={toggleMenu} aria-label="Toggle menu">
