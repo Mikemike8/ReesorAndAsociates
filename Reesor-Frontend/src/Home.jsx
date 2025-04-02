@@ -72,7 +72,7 @@ export const Home = () => {
           <div className="relative z-10 max-w-[2000px] mx-auto px-4 sm:px-8 pt-32">
             <div className="max-w-4xl">
               <p className="text-sm tracking-[0.3em] mb-8 fade-in" style={{ animationDelay: '0.5s' }}>WELCOME TO RESSOR</p>
-              <h1 className="text-[12vw] md:text-[7vw] font-light leading-[0.9] mb-8 fade-in" style={{ animationDelay: '0.8s' }}>
+              <h1 className="text-[12vw] md:text-[7vw] font-light leading-[0.9]  mb-8 fade-in" style={{ animationDelay: '0.8s' }}>
                 RESSOR  & <br />  ASSOCIATES
               </h1>
               <div className="h-[1px] w-32 bg-white reveal-line mb-12" style={{ animationDelay: '1.2s' }}></div>
