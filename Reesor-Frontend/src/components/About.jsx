@@ -33,6 +33,34 @@ const teamMembers = [
 
 const About = () => {
   return (
+      <>
+   <section className="mx-auto sm:py-10 bg-gray-50">
+  <div className="mx-auto flex justify-center object-center px-4 py-6 sm:py-16 lg:max-w-7xl">
+  <div className="flex justify-center object-center flex-col gap-8 sm:gap-12">
+  {/* About Us Title */}
+  <h2 className="text-3xl py-3 sm:text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl text-center">
+    About Us
+  </h2>
+  
+  {/* About Us Paragraph */}
+  <p className="text-lg sm:text-xl font-light text-gray-700 text-center max-w-3xl mx-auto leading-relaxed sm:leading-relaxed">
+    We are a dedicated team of professionals committed to delivering exceptional services and products that meet the highest standards of quality. Our mission is to provide innovative solutions to our clients, focusing on reliability, efficiency, and excellence. From the moment you engage with us, we prioritize your needs and work closely with you to ensure your satisfaction. We believe in building long-term relationships based on trust, integrity, and shared success. Whether you are an individual, a small business, or a large enterprise, we have the experience and expertise to help you achieve your goals.
+  </p>
+  
+  {/* Optional CTA Button */}
+  <div className="text-center -mt-6">
+  <a href="#contact">
+    <button className="bg-yellow-800 text-white font-semibold py-3 px-8 rounded-lg hover:bg-yellow-700 transition-colors">
+      Get in Touch
+    </button>
+  </a>
+</div>
+</div>
+  </div>
+</section>
+
+
+    
     <section className="py-16 mx-auto sm:py-20">
       <div className="mx-auto flex justify-center object-center px-4 py-16 sm:py-24 lg:max-w-7xl">
         <div className="flex justify-center object-center flex-col gap-12 sm:gap-16">
@@ -91,6 +119,7 @@ const About = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
