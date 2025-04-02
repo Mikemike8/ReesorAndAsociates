@@ -50,7 +50,7 @@ const About = () => {
   {/* Optional CTA Button */}
   <div className="text-center -mt-6">
   <a href="#contact">
-    <button className="bg-yellow-800 text-white font-semibold py-3 px-8 rounded-lg hover:bg-yellow-700 transition-colors">
+    <button className="bg-black text-white font-semibold py-3 px-8 rounded-lg hover:bg-yellow-700 transition-colors">
       Get in Touch
     </button>
   </a>
@@ -104,6 +104,7 @@ const About = () => {
                       <p className="text-lg text-pretty text-center mb-4">
                         {member.description}
                       </p>
+                      <br />
                       <a href="tel:555-555-5555" className="inline-flex">
                         <button className="my-2 bg-black hover:bg-yellow-700 text-white font-light py-2 px-4 w-auto rounded-full inline-flex items-center">
                           <span>Call</span>
