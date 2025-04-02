@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
- 
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,13 +11,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.0.17",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^6.30.0"
   },
   "homepage": "https://Mikemike8.github.io/Reesor-Frontend",
-
   "devDependencies": {
     "@eslint/js": "^9.21.0",
     "@types/react": "^19.0.10",
