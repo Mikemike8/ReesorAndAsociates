@@ -144,7 +144,7 @@ export const Home = () => {
   </div>
 
   {/* Vertical Line Divider */}
-  <div className="lg:block absolute w-[1px] bg-black h-full top-0 left-[calc(40%+10px)]"></div>
+  <div className="hidden lg:block absolute w-[1px] bg-black h-full top-0 left-[calc(40%+10px)]"></div>
 
   {/* Right Column - Content */}
   <div className="w-full lg:w-7/12 px-4 text-black flex flex-col justify-start">
