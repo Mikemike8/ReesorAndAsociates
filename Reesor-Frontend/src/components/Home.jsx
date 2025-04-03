@@ -118,6 +118,14 @@ export const Home = () => {
 
 </div>
 
+
+<div className="w-full border-2 border-black bg-gray-200 text-center h-16 flex items-center justify-center">
+  <h2 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">THE NUMBERS DON'T LIE</h2>
+</div>
+
+
+
+
 {/* Chart Section - First Section */}
 <div className="flex flex-col lg:flex-row w-full bg-white py-8 space-y-8 lg:space-y-0 lg:space-x-8">
 
