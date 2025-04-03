@@ -125,6 +125,54 @@ export const Home = () => {
 
 
 
+<div className="relative flex w-full space-x-4">
+  {/* Left Column - Content */}
+  <div className="w-full lg:w-5/12 px-4 text-black">
+    <p className="text-2xl lg:text-3xl font-semibold mb-4">COLLECTING FREIGHT CHARGES</p>
+    <p className="text-lg mb-4">
+      One of the biggest challenges carriers face today is getting paid for the work they’ve already done.
+    </p>
+    <p className="text-lg mb-4">
+      Double brokering has surged, making it harder to track who actually owes the money.
+    </p>
+    <p className="text-lg mb-4">
+      Brokers are illegally deducting claims and disputes from freight payments, often without proper justification or due process.
+    </p>
+    <p className="text-lg mb-4">
+      At Reesor & Associates, we focus on one thing: getting carriers paid—fully and fairly. If you're dealing with nonpayment, illegal offsets, or a broker that's gone silent, we know exactly how to step in and recover what you’re owed.
+    </p>
+  </div>
+
+  {/* Vertical Line Divider */}
+  <div className="lg:block absolute w-[1px] bg-black h-full top-0 left-[calc(40%+10px)]"></div>
+
+  {/* Right Column - Content */}
+  <div className="w-full lg:w-7/12 px-4 text-black flex flex-col justify-start">
+    {/* Title */}
+    <p className="text-2xl lg:text-3xl font-semibold mb-2">Transportation Broker Alert</p>
+
+    {/* Subtitle */}
+    <p className="text-lg mt-10">
+      <strong>Find Out Who's Not Paying</strong>
+    </p>
+
+    {/* Description */}
+    <p className="text-lg mt-12 mb-2">
+      Our Broker Alert is a weekly report identifying brokers who have failed to pay carriers, have shown a pattern of nonpayment, or are involved in questionable practices such as double brokering or illegal offsets.
+    </p>
+    
+    {/* Button */}
+    <button className="w-full mt-8 sm:w-auto px-8 sm:px-12 py-4 border border-black text-black hover:bg-yellow-100 hover:text-black transition-all duration-500 text-xs tracking-[0.2em] flex items-center justify-center sm:justify-start gap-4 mt-2">
+      View More
+    </button>
+  </div>
+</div>
+
+
+
+
+
+
 
 {/* Chart Section - First Section */}
 <div className="flex flex-col lg:flex-row w-full bg-white py-8 space-y-8 lg:space-y-0 lg:space-x-8">
