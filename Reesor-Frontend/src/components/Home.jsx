@@ -133,14 +133,11 @@ export const Home = () => {
 
 
 
+{/* Chart Section - First Section */}
+<div className="flex flex-col lg:flex-row w-full bg-white py-8 px-4">
 
-
-
-{/* Chart  */}
-
-<div className="flex flex-col lg:flex-row w-full bg-black">
   {/* Left Column - Text Content */}
-  <div className="flex flex-col w-full lg:w-6/12 py-8 px-4 text-white">
+  <div className="flex flex-col w-full lg:w-6/12 py-8 px-4 text-black">
     <p className="text-2xl lg:text-3xl font-semibold mb-6">
       The financial impact of double brokering in the transportation industry has been escalating rapidly:
     </p>
@@ -161,23 +158,68 @@ export const Home = () => {
     </div>
 
     <div>
-      <p className="text-lg">
+      <p className="text-lg mb-4">
         Widespread Impact: In <strong>Q2 2023</strong>, <strong>85%</strong> of freight brokers and carriers reported being affected by double brokering.
       </p>
     </div>
-    <button className="group mt-6   w-full sm:w-auto text-sm tracking-[0.2em] hover:text-black transition-colors flex items-center justify-start gap-6">
-          <a href="" className="text-white text-lg hover:text-yellow-100"> View Charts</a>
-          <span className="h-[1px] w-12 bg-current transform  transition-transform group-hover:translate-x-4"></span>
-        </button>
+
+    <button className="group mt-6 w-full sm:w-auto text-sm tracking-[0.2em] hover:text-black transition-colors flex items-center justify-start gap-6">
+      <a href="" className="text-white text-lg hover:text-yellow-100">View Charts</a>
+      <span className="h-[1px] w-12 bg-current transform transition-transform group-hover:translate-x-4"></span>
+    </button>
   </div>
 
   {/* Right Column - Image */}
   <div className="w-full lg:w-6/12 flex justify-center lg:justify-end py-8">
-    <img className="w-full lg:w-11/12 rounded-lg shadow-lg" src={Chart} alt="Chart" />
-    
+    <img className="w-full lg:w-11/12 rounded-lg shadow-[0px_5px_15px_rgba(0,0,0,0.8)]" src={Chart} alt="Chart" />
   </div>
 
 </div>
+
+{/* Chart Section - Second Section (Reversed layout) */}
+<div className="flex flex-col lg:flex-row-reverse w-full bg-white py-8 px-4">
+
+  {/* Right Column - Text Content */}
+  <div className="flex flex-col w-full lg:w-6/12 py-8 px-4 text-black">
+    <p className="text-2xl lg:text-3xl font-semibold mb-6">
+      The financial impact of double brokering in the transportation industry has been escalating rapidly:
+    </p>
+
+    <div className="mb-6">
+      <p className="text-lg mb-2">
+        2021: It cost the industry over <strong>$100 million</strong> annually.
+      </p>
+      <p className="text-lg mb-2">
+        2023: This number surged to between <strong>$500 million and $700 million</strong>.
+      </p>
+      <p className="text-lg mb-2">
+        2024: Losses remained within the range of <strong>$500 million to $700 million</strong>.
+      </p>
+      <p className="text-lg mb-4">
+        For 2025: Given the ongoing rise in fraudulent activities, it is plausible that the financial impact will continue to increase.
+      </p>
+    </div>
+
+    <div>
+      <p className="text-lg mb-4">
+        Widespread Impact: In <strong>Q2 2023</strong>, <strong>85%</strong> of freight brokers and carriers reported being affected by double brokering.
+      </p>
+    </div>
+
+    <button className="group mt-6 w-full sm:w-auto text-sm tracking-[0.2em] hover:text-black transition-colors flex items-center justify-start gap-6">
+      <a href="" className="text-white text-lg hover:text-yellow-100">View Charts</a>
+      <span className="h-[1px] w-12 bg-current transform transition-transform group-hover:translate-x-4"></span>
+    </button>
+  </div>
+
+  {/* Left Column - Image */}
+  <div className="w-full lg:w-6/12 flex justify-center lg:justify-start py-8">
+    <img className="w-full lg:w-11/12 rounded-lg shadow-[0px_5px_15px_rgba(0,0,0,0.8)]" src={Chart} alt="Chart" />
+  </div>
+
+</div>
+
+
 
 
 

@@ -1,6 +1,6 @@
-
 import { Link } from 'react-router-dom';
 import React from 'react';
+import RessorLogo from '../assets/Reesorrr.png'; // Ensure your image path is correct
 
 export const Navbar = () => {
     function toggleMenu() {
@@ -19,34 +19,41 @@ export const Navbar = () => {
         });
     }
 
-    return (<>
-    
-    <nav className="fixed w-full z-50 nav-blur text-white border-b border-white/10">
-        <div className="max-w-[2000px] mx-auto px-4 sm:px-8">
-            <div className="flex justify-between h-24 items-center">
-                <div className="text-2xl sm:text-3xl font-light tracking-[0.3em] logo">Reesor & Associates | Transportation</div>
-                <div className="hidden md:flex space-x-16 text-xs tracking-[0.2em]">
-                    <Link to="/" className="hover-line" >Home</Link>
-                    <Link to="/about" className="hover-line" >About</Link>
-                    <Link to="/contact"className="hover-line" >Contact</Link>
-    
-                </div>
-                <button className="md:hidden w-8 h-8 flex flex-col justify-center space-y-2" onClick={toggleMenu} aria-label="Toggle menu">
-                    <span className="w-full h-[1px] bg-white transform transition-transform origin-right"></span>
-                    <span className="w-full h-[1px] bg-white transform transition-transform origin-right"></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+    return (
+        <>
+            <nav className="fixed w-full z-50 bg-black text-white border-b border-white/10">
+                <div className="max-w-[2000px] mx-auto px-4 sm:px-8">
+                    <div className="flex justify-between h-28 items-center"> {/* Increased height from h-24 to h-32 */}
+                        {/* Left side: Logo */}
+                        <img className="h-24 w-24 sm:h-16" src={RessorLogo} alt="Reesor & Associates Logo" />
+                        
+                        {/* Centered text in the middle */}
+                        <div className="flex justify-center items-center absolute left-1/2 transform -translate-x-1/2 text-sm sm:text-lg font-light tracking-[0.2em]">
+                            Transportatbar on Recovery Agency
+                        </div>
 
-    <div className="mobile-menu fixed inset-0 bg-black z-40 flex flex-col justify-center items-center space-y-12 nav-blur md:hidden pt-24">
-       
-        <Link to="/" className="text-2xl text-white tracking-[0.2em] hover:text-white/50 transition-colors">Home</Link>
-        <Link to="/about"className="text-2xl text-white tracking-[0.2em] hover:text-white/50 transition-colors" >About</Link>
-        <Link to="/about"className="text-2xl text-white tracking-[0.2em] hover:text-white/50 transition-colors" >Contact</Link>
-    </div>
-    
-    </>
-    
+                        {/* Desktop Menu */}
+                        <div className="hidden md:flex space-x-16 text-xs tracking-[0.2em]">
+                            <Link to="/" className="hover-line">Home</Link>
+                            <Link to="/about" className="hover-line">About</Link>
+                            <Link to="/contact" className="hover-line">Contact</Link>
+                        </div>
+                        
+                        {/* Hamburger Menu Button for Mobile */}
+                        <button className="md:hidden w-8 h-8 flex flex-col justify-center space-y-2" onClick={toggleMenu} aria-label="Toggle menu">
+                            <span className="w-full h-[1px] bg-white transform transition-transform origin-right"></span>
+                            <span className="w-full h-[1px] bg-white transform transition-transform origin-right"></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+
+            {/* Mobile Menu */}
+            <div className="mobile-menu fixed inset-0 bg-black bg-opacity-70 z-40 flex flex-col justify-center items-center space-y-12 nav-blur md:hidden pt-24">
+                <Link to="/" className="text-2xl text-white tracking-[0.2em] hover:text-white/50 transition-colors" onClick={toggleMenu}>Home</Link>
+                <Link to="/about" className="text-2xl text-white tracking-[0.2em] hover:text-white/50 transition-colors" onClick={toggleMenu}>About</Link>
+                <Link to="/contact" className="text-2xl text-white tracking-[0.2em] hover:text-white/50 transition-colors" onClick={toggleMenu}>Contact</Link>
+            </div>
+        </>
     );
 };
