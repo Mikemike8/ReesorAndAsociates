@@ -248,7 +248,7 @@ export const Home = () => {
     </div>
 
     <button className="group mt-6 w-full sm:w-auto text-sm tracking-[0.2em] hover:text-black transition-colors flex items-center justify-start gap-6">
-      <a href="" className="text-black text-lg hover:text-yellow-100">Top Debtors </a>
+      <a href="" className="text-black text-lg hover:text-gray-600">Top Debtors </a>
       <span className="h-[1px] w-12 bg-current transform transition-transform group-hover:translate-x-4"></span>
     </button>
   </div>
