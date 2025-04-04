@@ -79,14 +79,21 @@ h1, h2, .logo {
   width: 100%;
 }
 
+/* Mobile menu style */
 .mobile-menu {
-  transform: translateY(-100%);
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .mobile-menu.active {
-  transform: translateY(0);
+  display: flex;
+  opacity: 1;
+  /* Additional styling */
+  background: rgba(0, 0, 0, 0.7);
 }
+
+
 
 /* Flex container for the grid layout */
 .flex-container {
