@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
-import RessorLogo from '../assets/Reesorrr.png'; // Ensure your image path is correct
+import RessorLogo from '../assets/ReesorT.png'; // Ensure your image path is correct
 
 export const Navbar = () => {
     function toggleMenu() {
@@ -21,16 +21,13 @@ export const Navbar = () => {
 
     return (
         <>
-            <nav className="fixed w-full z-50 bg-black text-white border-b border-white/10">
+            <nav className="fixed w-full z-50 bg-[#111111] text-white border-b border-white/10">
                 <div className="max-w-[2000px] mx-auto px-4 sm:px-8">
                     <div className="flex justify-between h-28 items-center"> {/* Increased height from h-24 to h-32 */}
                         {/* Left side: Logo */}
-                        <img className="h-24 w-24 sm:h-16" src={RessorLogo} alt="Reesor & Associates Logo" />
+                        <img className="h-10 w-15 sm:h-16" src={RessorLogo} alt="Reesor & Associates Logo" />
                         
-                        {/* Centered text in the middle */}
-                        <div className="flex justify-center items-center absolute left-1/2 transform -translate-x-1/2 text-sm sm:text-lg font-light tracking-[0.2em]">
-                            Transportatbar on Recovery Agency
-                        </div>
+                        
 
                         {/* Desktop Menu */}
                         <div className="hidden md:flex space-x-16 text-xs tracking-[0.2em]">
