@@ -33,32 +33,221 @@ const teamMembers = [
 
 const About = () => {
   return (
-      <>
-   <section className="mx-auto sm:py-10 bg-gray-50">
-  <div className="mx-auto flex justify-center object-center px-4 py-6 sm:py-16 lg:max-w-7xl">
-  <div className="flex justify-center object-center flex-col gap-8 sm:gap-12">
-  {/* About Us Title */}
-  <h2 className="text-3xl py-3 sm:text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl text-center">
-    About Us
-  </h2>
+      <>{/* About Page Section */}
+      <div className="bg-gray-50  shadow-lg py-24">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col lg:flex-row gap-12">
+      
+      {/* Left Column - Contact Info & Form */}
+      <div className="w-full lg:w-1/2 space-y-10">
+        {/* Contact Information Card */}
+        <div className="bg-gray-50 p-8 rounded-lg  border border-gray-50">
+          <h3 className="text-2xl font-bold text-gray-800 mb-6">Reesor & Associates</h3>
+          
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-medium text-gray-700 mb-2">Opening Hours</h4>
+              <ul className="text-gray-600 space-y-1">
+                <li className="flex items-center">
+                  <span className="inline-block w-24">Mon-Thu:</span> 9:00AM - 5:00PM
+                </li>
+                <li className="flex items-center">
+                  <span className="inline-block w-24">Fri:</span> 9:00AM - 4:00PM
+                </li>
+                <li className="flex items-center">
+                  <span className="inline-block w-24">Sat-Sun:</span> Closed
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-medium text-gray-700 mb-2">Location</h4>
+              <p className="text-gray-600">5689 Goodman RD, Olive Branch, MS 38654</p>
+            </div>
+            
+            <div>
+              <h4 className="font-medium text-gray-700 mb-2">Contact</h4>
+              <ul className="text-gray-600 space-y-1">
+                <li>
+                  Email: <a href="mailto:info@mysite.com" className="text-blue-600 hover:text-blue-800">info@mysite.com</a>
+                </li>
+                <li>
+                  Phone: <a href="tel:555-555-1212" className="text-blue-600 hover:text-blue-800">555-555-1212</a>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-medium text-gray-700 mb-3">Follow Us</h4>
+              <div className="flex space-x-4 text-gray-500">
+                <a href="#" className="hover:text-blue-700 transition-colors">
+                  <span className="sr-only">Facebook</span>
+                  <i className="fab fa-facebook text-xl"></i>
+                </a>
+                <a href="#" className="hover:text-blue-400 transition-colors">
+                  <span className="sr-only">Twitter</span>
+                  <i className="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" className="hover:text-blue-600 transition-colors">
+                  <span className="sr-only">LinkedIn</span>
+                  <i className="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" className="hover:text-red-600 transition-colors">
+                  <span className="sr-only">YouTube</span>
+                  <i className="fab fa-youtube text-xl"></i>
+                </a>
+                <a href="#" className="hover:text-gray-800 transition-colors">
+                  <span className="sr-only">TikTok</span>
+                  <i className="fab fa-tiktok text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    {/* Contact Form Card - Red Version */}
+<div className="bg-red-50  p-8 rounded-lg shadow-sm border border-gray-100">
+  <h3 className="text-2xl  text-red-800 font-bold text-gray-800 mb-6">Contact Us</h3>
   
-  {/* About Us Paragraph */}
-  <p className="text-lg sm:text-xl font-light text-gray-700 text-center max-w-3xl mx-auto leading-relaxed sm:leading-relaxed">
-    We are a dedicated team of professionals committed to delivering exceptional services and products that meet the highest standards of quality. Our mission is to provide innovative solutions to our clients, focusing on reliability, efficiency, and excellence. From the moment you engage with us, we prioritize your needs and work closely with you to ensure your satisfaction. We believe in building long-term relationships based on trust, integrity, and shared success. Whether you are an individual, a small business, or a large enterprise, we have the experience and expertise to help you achieve your goals.
-  </p>
-  
-  {/* Optional CTA Button */}
-  <div className="text-center -mt-6">
-  <a href="#contact">
-    <button className="bg-black text-white font-semibold py-3 px-8 rounded-lg hover:bg-yellow-700 transition-colors">
-      Get in Touch
-    </button>
-  </a>
+  <form className="space-y-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div>
+        <label htmlFor="first-name" className="block text-sm font-medium text-red-800 mb-1">First Name</label>
+        <input 
+          type="text" 
+          id="first-name" 
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" 
+          placeholder="First name"
+          required
+        />
+      </div>
+      
+      <div>
+        <label htmlFor="last-name" className="block text-sm font-medium text-red-800 mb-1">Last Name</label>
+        <input 
+          type="text" 
+          id="last-name" 
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" 
+          placeholder="Last name"
+          required
+        />
+      </div>
+    </div>
+    
+    <div>
+      <label htmlFor="email" className="block text-sm font-medium text-red-800 mb-1">Email</label>
+      <input 
+        type="email" 
+        id="email" 
+        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" 
+        placeholder="your.email@example.com"
+        required
+      />
+    </div>
+    
+    <div>
+      <label htmlFor="phone" className="block text-sm font-medium text-red-800 mb-1">Phone</label>
+      <input 
+        type="tel" 
+        id="phone" 
+        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" 
+        placeholder="(123) 456-7890"
+        required
+      />
+    </div>
+    
+    <div>
+      <label htmlFor="message" className="block text-sm font-medium text-red-800  mb-1">Message</label>
+      <textarea 
+        id="message" 
+        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" 
+        placeholder="Your message"
+        rows="4"
+        required
+      ></textarea>
+    </div>
+    
+    <div>
+      <button 
+        type="submit" 
+        className="w-full bg-red-700 text-white py-3 px-6 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 transition-colors"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
 </div>
-</div>
-  </div>
-</section>
 
+      </div>
+      
+      {/* Right Column - About Us Content */}
+      <div className="w-full lg:w-1/2 space-y-8">
+    {/* Email Subscription Card - Red Version */}
+<div className="bg-red-50 p-6 rounded-lg border border-red-100">
+  <h4 className="font-semibold text-red-800 mb-2 text-sm">RECEIVE WEEKLY BROKER ALERTS VIA EMAIL</h4>
+  <p className="text-red-700 mb-4 text-sm">Stay updated on nonpaying brokers, double brokering activity, and high-risk companies—delivered straight to your inbox. Sign up now to protect your business.</p>
+  
+  <form className="space-y-3">
+    <div>
+      <label className="block text-xs font-medium text-red-800 mb-1">Company Name</label>
+      <input 
+        type="text" 
+        className="w-full px-3 py-2 border border-red-200 rounded text-sm focus:ring-red-500 focus:border-red-500" 
+        placeholder="Your company name"
+      />
+    </div>
+    <div>
+      <label className="block text-xs font-medium text-red-800 mb-1">Email</label>
+      <input 
+        type="email" 
+        className="w-full px-3 py-2 border border-red-200 rounded text-sm focus:ring-red-500 focus:border-red-500" 
+        placeholder="your.email@example.com"
+      />
+    </div>
+    <button 
+      type="submit" 
+      className="w-full bg-red-700 text-white py-2 px-4 rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 text-sm transition-colors"
+    >
+      Subscribe
+    </button>
+  </form>
+</div>
+        
+        {/* About Us Content */}
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-gray-800">About Us</h2>
+          
+          <div className="prose prose-sm text-gray-600 space-y-4">
+            <p>At Reesor & Associates, we don't just collect freight charges—we protect the people who keep America moving.</p>
+            
+            <p>Founded by J. Reesor, the pioneer behind the first transportation collection agency (Baxter Bailey), our company was built on decades of real-world experience in the freight and logistics industry. We saw the growing problems carriers faced—unpaid freight charges, fraudulent brokers, and disappearing payments—and we stepped in with a solution the industry had never seen before.</p>
+            
+            <h3 className="text-xl font-semibold text-gray-800 mt-6">Our History</h3>
+            <p>After launching Baxter Bailey and watching it grow into an industry leader, we recognized a crucial problem: massive growth came at the cost of personal service and high recovery rates. Too many clients, too fast. That's why Reesor & Associates takes a different approach. We focus on quality over volume—ensuring that every case gets the attention it deserves.</p>
+            
+            <h3 className="text-xl font-semibold text-gray-800 mt-6">Our Mission</h3>
+            <p>To recover every dollar you're owed—and to hold brokers accountable, even if they've gone out of business, illegally offset charges, or vanished behind a new name.</p>
+            
+            <h3 className="text-xl font-semibold text-gray-800 mt-6">What Makes Us Different</h3>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>We go beyond the broker—pursuing shippers, consignees, and third parties when appropriate.</li>
+              <li>We understand federal transportation law and use it to your advantage.</li>
+              <li>We act quickly, professionally, and persistently to get results.</li>
+              <li>We only get paid if you do. No recovery, no fee.</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold text-gray-800 mt-6">Our Promise</h3>
+            <p>You did the work. You delivered the freight. We make sure you get paid.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+
+
+  
 
     
     <section className="py-16 mx-auto sm:py-20">
