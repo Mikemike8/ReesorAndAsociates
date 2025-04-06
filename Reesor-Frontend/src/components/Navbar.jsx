@@ -89,7 +89,7 @@ export const Navbar = () => {
             className="text-2xl text-white tracking-[0.2em] hover:text-white/50 transition-colors transform hover:scale-105" 
             onClick={toggleMenu}
           >
-            Debtor
+           Place Debtor
           </Link>
    
 </div>
