@@ -147,7 +147,7 @@ export const Home = () => {
 <div className="hidden lg:block absolute w-[2px] bg-black h-full top-0 right-[calc(50%+10px)]"></div>
 
 {/* Right Column - Content */}
-<div className="w-full lg:w-6/12 px-4 text-black flex flex-col justify-end  absolute right-2 "> {/* Adjust width here */}
+<div className="w-full lg:w-6/12 px-4 text-black flex flex-col justify-end sm:relative lg:absolute right-2 "> {/* Adjust width here */}
   {/* Title */}
   <p className="text-2xl lg:text-3xl font-semibold mb-2">Transportation Broker Alert</p>
 
