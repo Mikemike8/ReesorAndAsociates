@@ -84,11 +84,11 @@ export const Navbar = () => {
         About
     </Link>
     <Link 
-        to="/contact" 
+        to="/debtor" 
         className="text-2xl text-white tracking-[0.2em] hover:text-white/50 transition-colors transform hover:scale-105" 
         onClick={toggleMenu}
     >
-        Contact
+      Place Debtor 
     </Link>
 </div>
 
