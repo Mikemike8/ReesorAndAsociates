@@ -331,7 +331,7 @@ export const Home = () => {
 
     {/* Footer Section */}
 <footer className="bg-[#111111] text-white py-8">
-  <div className="container mx-auto px-4 flex flex-col lg:flex-row justify-between items-center space-y-8 lg:space-y-0">
+  <div className="container mx-auto px-4 text-white flex flex-col lg:flex-row justify-between items-center space-y-8 lg:space-y-0">
 
     {/* Left Section - Company Info */}
     <div className="w-full lg:w-4/12 text-center lg:text-left">
