@@ -334,7 +334,7 @@ export const Home = () => {
   <div className="container mx-auto px-4 text-white flex flex-col lg:flex-row justify-between items-center space-y-8 lg:space-y-0">
 
     {/* Left Section - Company Info */}
-    <div className="w-full lg:w-4/12 text-center lg:text-left">
+    <div className="w-full lg:w-4/12 text-center text-white lg:text-left">
       <p className="text-3xl font-semibold mb-4">Reesor & Associates</p>
       <p className="text-lg mb-4">
         Your trusted partner in protecting your freight and ensuring payment.

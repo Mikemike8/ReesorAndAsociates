@@ -151,6 +151,10 @@ h1, h2, .logo {
     color: black;
     margin-bottom: 16px;
   }
+  footer p{
+    color: white;
+
+  }
 
   .seccc  button {
     padding: 10px 20px;
