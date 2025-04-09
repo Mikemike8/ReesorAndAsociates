@@ -1,5 +1,7 @@
 import React from 'react';
 import { PhoneIcon } from '@heroicons/react/20/solid';
+import { Link } from 'react-router-dom'; // Import the Link component
+
 
 
 const About = () => {
@@ -182,7 +184,21 @@ const About = () => {
     </button>
   </form>
 </div>
+
+ <div className="bg-red-700 text-white p-6 rounded-xl shadow-lg text-center">
+          <h3 className="text-xl font-bold mb-2">TRANSPORTATION ALERT</h3>
+          <p className="text-lg  text-white  mb-4">Find Out Who's Not Paying</p>
+          {/* Wrap the button with Link for navigation */}
+<Link to="/topdebtor">
+  <button className="bg-white text-red-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+    View Top Debtors →
+  </button>
+</Link>
+        </div>
+
+
       </div>
+      
     </div>
   </div>
 </div>
