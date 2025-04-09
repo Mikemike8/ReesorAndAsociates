@@ -5,6 +5,7 @@ import { Home } from './components/Home';
 import { About } from './components/About';  
 import Debtor from './components/Debtor';  // import the new Debtor component
 import { Navbar } from './components/Navbar';
+import  {TopDebtor} from './components/TopDebtor';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/debtor" element={<Debtor />} /> 
+          <Route path="/topdebtor" element={<TopDebtor />} /> 
+        
         
         </Routes>
       </div>

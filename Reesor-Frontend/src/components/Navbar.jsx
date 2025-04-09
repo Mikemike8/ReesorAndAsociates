@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import RessorLogo from '../assets/ReesorT.png'; // Ensure your image path is correct
+import RessorLogo from '../assets/Reesorlog.png'; // Ensure your image path is correct
 
 export const Navbar = () => {
     const [isMobile, setIsMobile] = useState(false);  // State to check screen size
@@ -40,11 +40,12 @@ export const Navbar = () => {
                 <div className="max-w-[2000px] mx-auto px-4 sm:px-8">
                     <div className="flex justify-between items-center h-28">
                         {/* Left side: Logo with responsive sizes */}
-                        <img 
-                            className="h-10 w-auto sm:h-12 md:h-16 lg:h-20 xl:h-24" 
-                            src={RessorLogo} 
-                            alt="Reesor & Associates Logo" 
-                        />
+                        <img
+  className="w-[120px] h-[120px] sm:w-[130px] sm:h-[130px] md:w-[130px] md:h-[130px] lg:w-[150px] lg:h-[150px] xl:w-[150px] xl:h-[150px]"
+  src={RessorLogo}
+  alt="Reesor & Associates Logo"
+/>
+
 
                         {/* Hamburger Menu Button for Mobile (this will only appear on smaller screens) */}
                         {isMobile && (
@@ -91,9 +92,17 @@ export const Navbar = () => {
           >
            Place Debtor
           </Link>
+          <Link 
+            to="/topdebtor" 
+            className="text-2xl text-white tracking-[0.2em] hover:text-white/50 transition-colors transform hover:scale-105" 
+            onClick={toggleMenu}
+          >
+           Top Debtor
+          </Link>
    
 </div>
 
         </>
     );
 };
+

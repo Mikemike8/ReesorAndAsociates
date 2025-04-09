@@ -1,40 +1,10 @@
 import React from 'react';
 import { PhoneIcon } from '@heroicons/react/20/solid';
 
-const teamMembers = [
-  {
-    name: "John Doe",
-    title: "CEO",
-    skills: "Leadership, Business Strategy, Team Management",
-    imageUrl:
-      "https://plus.unsplash.com/premium_photo-1678197937465-bdbc4ed95815?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D", // Replace with real people images
-    description:
-      "John is the visionary leader driving our company towards innovation and success.",
-  },
-  {
-    name: "Jane Smith",
-    title: "Creative Director",
-    skills: "Design, UX/UI, Creative Direction",
-    imageUrl:
-      "https://media.istockphoto.com/id/2099403180/photo/laughing-yougn-businesswoman-standing-with-her-arms-crossed-against-an-office-wall.webp?a=1&b=1&s=612x612&w=0&k=20&c=fd9yaVrgWeZIHTfllbUmxTjPRVD2b79Yzt4HQlQfNSA=", // Replace with real people images
-    description:
-      "Jane is responsible for transforming ideas into beautiful designs and seamless user experiences.",
-  },
-  {
-    name: "Robert Brown",
-    title: "Operations Manager",
-    skills: "Project Management, Operations, Process Optimization",
-    imageUrl:
-      "https://images.unsplash.com/photo-1504593811423-6dd665756598?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D", // Replace with real people images
-    description:
-      "Robert ensures that our projects run smoothly, managing resources and optimizing processes.",
-  },
-];
 
 const About = () => {
   return (
-      <>{/* About Page Section */}
-      <div className="bg-gray-50  shadow-lg py-24">
+      <> <div className="bg-gray-50  shadow-lg py-24">
   <div className="container mx-auto px-4">
     <div className="flex flex-col lg:flex-row gap-12">
       
@@ -212,53 +182,63 @@ const About = () => {
     </button>
   </form>
 </div>
-        
-        {/* About Us Content */}
-        <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-gray-800">About Us</h2>
-          
-          <div className="prose prose-sm text-gray-600 space-y-4">
-            <p>At Reesor & Associates, we don't just collect freight charges—we protect the people who keep America moving.</p>
-            
-            <p>Founded by J. Reesor, the pioneer behind the first transportation collection agency (Baxter Bailey), our company was built on decades of real-world experience in the freight and logistics industry. We saw the growing problems carriers faced—unpaid freight charges, fraudulent brokers, and disappearing payments—and we stepped in with a solution the industry had never seen before.</p>
-            
-            <h3 className="text-xl font-semibold text-gray-800 mt-6">Our History</h3>
-            <p>After launching Baxter Bailey and watching it grow into an industry leader, we recognized a crucial problem: massive growth came at the cost of personal service and high recovery rates. Too many clients, too fast. That's why Reesor & Associates takes a different approach. We focus on quality over volume—ensuring that every case gets the attention it deserves.</p>
-            
-            <h3 className="text-xl font-semibold text-gray-800 mt-6">Our Mission</h3>
-            <p>To recover every dollar you're owed—and to hold brokers accountable, even if they've gone out of business, illegally offset charges, or vanished behind a new name.</p>
-            
-            <h3 className="text-xl font-semibold text-gray-800 mt-6">What Makes Us Different</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>We go beyond the broker—pursuing shippers, consignees, and third parties when appropriate.</li>
-              <li>We understand federal transportation law and use it to your advantage.</li>
-              <li>We act quickly, professionally, and persistently to get results.</li>
-              <li>We only get paid if you do. No recovery, no fee.</li>
-            </ul>
-            
-            <h3 className="text-xl font-semibold text-gray-800 mt-6">Our Promise</h3>
-            <p>You did the work. You delivered the freight. We make sure you get paid.</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </div>
-      
+    
+    </>
+  );
+};
+
+export { About }; // Named export
 
 
-  
 
+
+
+
+
+    
+    {/*
+    //   {
+//     name: "John Doe",
+//     title: "CEO",
+//     skills: "Leadership, Business Strategy, Team Management",
+//     imageUrl:
+//       "https://plus.unsplash.com/premium_photo-1678197937465-bdbc4ed95815?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D", // Replace with real people images
+//     description:
+//       "John is the visionary leader driving our company towards innovation and success.",
+//   },
+//   {
+//     name: "Jane Smith",
+//     title: "Creative Director",
+//     skills: "Design, UX/UI, Creative Direction",
+//     imageUrl:
+//       "https://media.istockphoto.com/id/2099403180/photo/laughing-yougn-businesswoman-standing-with-her-arms-crossed-against-an-office-wall.webp?a=1&b=1&s=612x612&w=0&k=20&c=fd9yaVrgWeZIHTfllbUmxTjPRVD2b79Yzt4HQlQfNSA=", // Replace with real people images
+//     description:
+//       "Jane is responsible for transforming ideas into beautiful designs and seamless user experiences.",
+//   },
+//   {
+//     name: "Robert Brown",
+//     title: "Operations Manager",
+//     skills: "Project Management, Operations, Process Optimization",
+//     imageUrl:
+//       "https://images.unsplash.com/photo-1504593811423-6dd665756598?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D", // Replace with real people images
+//     description:
+//       "Robert ensures that our projects run smoothly, managing resources and optimizing processes.",
+//   },
+// ];
     
     <section className="py-16 mx-auto sm:py-20">
       <div className="mx-auto flex justify-center object-center px-4 py-16 sm:py-24 lg:max-w-7xl">
         <div className="flex justify-center object-center flex-col gap-12 sm:gap-16">
-          {/* Company Heading */}
+          
           <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl text-center">
             Meet Our Team
           </h2>
 
-          {/* Team Members Grid */}
+         
           <div className="mx-auto grid gap-12 space-y-10 md:space-y-0 sm:gap-16 lg:grid-cols-3">
             {teamMembers.map((member) => (
               <div
@@ -266,7 +246,7 @@ const About = () => {
                 className="group h-80 w-80 [perspective:1000px]"
               >
                 <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  {/* Front face with image */}
+                  
                   <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
                     <img
                       className="object-cover cursor-pointer object-center h-full w-full rounded-xl"
@@ -278,7 +258,6 @@ const About = () => {
                     </p>
                   </div>
 
-                  {/* Back face with professional details */}
                   <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-8 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
                     <div className="flex min-h-full flex-col items-center justify-center space-y-6">
                       <h3 className="text-xl font-semibold mb-2 text-white">
@@ -308,9 +287,4 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-    </>
-  );
-};
-
-export { About }; // Named export
+    </section> */}

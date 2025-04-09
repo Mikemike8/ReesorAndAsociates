@@ -1,29 +1,7 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import the Link component
+
 
 const Debtor = () => {
   return (
@@ -168,42 +146,6 @@ const Debtor = () => {
             </button>
           </form>
         </div>
-
-        {/* Broker Alerts Subscription */}
-        <div className="bg-red-100 p-8 rounded-xl shadow-lg">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold text-red-900 mb-2">
-              Transportation Security Alert Service
-            </h2>
-            <p className="text-red-800">
-              Protect your business with real-time freight industry intelligence
-            </p>
-          </div>
-          
-          <form className="space-y-4">
-            <div>
-              <input
-                type="text"
-                placeholder="Enter company name"
-                className="w-full px-4 py-3 border border-red-300 rounded-lg focus:ring-2 focus:ring-red-500"
-              />
-            </div>
-            <div>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full px-4 py-3 border border-red-300 rounded-lg focus:ring-2 focus:ring-red-500"
-                required
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-white text-red-700 py-3 px-6 rounded-lg border-2 border-red-700 hover:bg-red-50 transition-colors font-medium"
-            >
-              Subscribe to Broker Alerts
-            </button>
-          </form>
-        </div>
       </div>
     </div>
 
@@ -267,10 +209,13 @@ const Debtor = () => {
         {/* Transportation Alert Banner */}
         <div className="bg-red-700 text-white p-6 rounded-xl shadow-lg text-center">
           <h3 className="text-xl font-bold mb-2">TRANSPORTATION ALERT</h3>
-          <p className="text-lg mb-4">Find Out Who's Not Paying</p>
-          <button className="bg-white text-red-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors font-medium">
-            View More →
-          </button>
+          <p className="text-lg  text-white  mb-4">Find Out Who's Not Paying</p>
+          {/* Wrap the button with Link for navigation */}
+<Link to="/topdebtor">
+  <button className="bg-white text-red-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+    View Top Debtors →
+  </button>
+</Link>
         </div>
       </div>
     </div>
