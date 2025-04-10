@@ -83,10 +83,10 @@ export const Home = () => {
 </div>
 
 <div className="overflow-hidden flex flex-row h-8 bg-white text-black border-y border-black/20">
-  <div className="whitespace-nowrap inline-block animate-marquee text-lg sm:text-2xl md:text-xl font-bold leading-tight tracking-tight">
+  <div className="whitespace-nowrap font-sans inline-block animate-marquee text-lg sm:text-2xl md:text-xl font-bold leading-tight tracking-tight">
     Find out who owes you money &nbsp;&nbsp;&nbsp; Sign up for broker alerts &nbsp;&nbsp;&nbsp; Place debtors now &nbsp;&nbsp;&nbsp;
   </div>
-  <div className="whitespace-nowrap inline-block animate-marquee text-lg sm:text-2xl md:text-xl font-bold leading-tight tracking-tight">
+  <div className="whitespace-nowrap font-sans inline-block animate-marquee text-lg sm:text-2xl md:text-xl font-bold leading-tight tracking-tight">
     Find out who owes you money &nbsp;&nbsp;&nbsp; Sign up for broker alerts &nbsp;&nbsp;&nbsp; Place debtors now &nbsp;&nbsp;&nbsp;
   </div>
 </div>
