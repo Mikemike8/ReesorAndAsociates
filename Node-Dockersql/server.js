@@ -6,6 +6,7 @@ const sql = require('mssql');
 
 const app = express();
 const port = 3000; // Choose the port where your server will run
+app.use(express.json());
 
 // Enable CORS
 app.use(cors());
@@ -54,10 +55,59 @@ app.get('/data', async (req, res) => {
   }
 });
 
-// Serve the index.html file directly from the root of the project
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html')); // Serve index.html from the project root
+
+
+
+
+
+app.post('/datatwo', async (req, res) => {
+  const { FirstName, LastName, AmountOwed, Rank } = req.body;
+
+  console.log('Incoming POST /datatwo request:', req.body); // 👈 add this
+
+  try {
+    await sql.connect(config);
+    await sql.query`
+      INSERT INTO Debtors (FirstName, LastName, AmountOwed, Rank)
+      VALUES (${FirstName}, ${LastName}, ${AmountOwed}, ${Rank})
+    `;
+    res.status(201).send('Debtor created');
+  } catch (err) {
+    console.error('Error inserting debtor:', err);
+    res.status(500).send('Error inserting debtor');
+  } finally {
+    await sql.close();
+  }
 });
+
+
+
+// Update a debtor
+app.put('/data/:id', async (req, res) => {
+  const { id } = req.params;
+  const { FirstName, LastName, AmountOwed, Rank } = req.body;
+  try {
+    await sql.connect(config);
+    await sql.query`
+      UPDATE Debtors
+      SET FirstName = ${FirstName}, LastName = ${LastName}, AmountOwed = ${AmountOwed}, Rank = ${Rank}
+      WHERE DebtorID = ${id}
+    `;
+    res.send('Debtor updated');
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Error updating debtor');
+  } finally {
+    await sql.close();
+  }
+});
+
+
+
+// // Serve the index.html file directly from the root of the project
+// app.get('/', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'index.html')); // Serve index.html from the project root
+// });
 
 // Start the Express server
 app.listen(port, () => {

@@ -1,4 +1,9 @@
 import React from 'react';
+import { 
+  ClockIcon,
+  MapPinIcon,
+  EnvelopeIcon 
+} from '@heroicons/react/24/outline'; // Heroicons v2
 import { PhoneIcon } from '@heroicons/react/20/solid';
 import { Link } from 'react-router-dom'; // Import the Link component
 
@@ -6,202 +11,218 @@ import { Link } from 'react-router-dom'; // Import the Link component
 
 const About = () => {
   return (
-      <> <div className="bg-gray-50  shadow-lg py-24">
-  <div className="container mx-auto px-4">
-    <div className="flex flex-col lg:flex-row gap-12">
-      
-      {/* Left Column - Contact Info & Form */}
-      <div className="w-full lg:w-1/2 space-y-10">
-        {/* Contact Information Card */}
-        <div className="bg-gray-50 p-8 rounded-lg  border border-gray-50">
-          <h3 className="text-2xl font-bold text-gray-800 mb-6">Reesor & Associates</h3>
+      <> <div className="bg-gray-50 py-16 md:py-24">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           
-          <div className="space-y-6">
-            <div>
-              <h4 className="font-medium text-gray-700 mb-2">Opening Hours</h4>
-              <ul className="text-gray-600 space-y-1">
-                <li className="flex items-center">
-                  <span className="inline-block w-24">Mon-Thu:</span> 9:00AM - 5:00PM
-                </li>
-                <li className="flex items-center">
-                  <span className="inline-block w-24">Fri:</span> 9:00AM - 4:00PM
-                </li>
-                <li className="flex items-center">
-                  <span className="inline-block w-24">Sat-Sun:</span> Closed
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-medium text-gray-700 mb-2">Location</h4>
-              <p className="text-gray-600">5689 Goodman RD, Olive Branch, MS 38654</p>
-            </div>
-            
-            <div>
-              <h4 className="font-medium text-gray-700 mb-2">Contact</h4>
-              <ul className="text-gray-600 space-y-1">
-                <li>
-                  Email: <a href="mailto:info@mysite.com" className="text-blue-600 hover:text-blue-800">info@mysite.com</a>
-                </li>
-                <li>
-                  Phone: <a href="tel:555-555-1212" className="text-blue-600 hover:text-blue-800">555-555-1212</a>
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-medium text-gray-700 mb-3">Follow Us</h4>
-              <div className="flex space-x-4 text-gray-500">
-                <a href="#" className="hover:text-blue-700 transition-colors">
-                  <span className="sr-only">Facebook</span>
-                  <i className="fab fa-facebook text-xl"></i>
-                </a>
-                <a href="#" className="hover:text-blue-400 transition-colors">
-                  <span className="sr-only">Twitter</span>
-                  <i className="fab fa-twitter text-xl"></i>
-                </a>
-                <a href="#" className="hover:text-blue-600 transition-colors">
-                  <span className="sr-only">LinkedIn</span>
-                  <i className="fab fa-linkedin text-xl"></i>
-                </a>
-                <a href="#" className="hover:text-red-600 transition-colors">
-                  <span className="sr-only">YouTube</span>
-                  <i className="fab fa-youtube text-xl"></i>
-                </a>
-                <a href="#" className="hover:text-gray-800 transition-colors">
-                  <span className="sr-only">TikTok</span>
-                  <i className="fab fa-tiktok text-xl"></i>
-                </a>
+          {/* Left Column */}
+          <div className="space-y-8">
+            {/* Contact Information */}
+            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Reesor & Associates</h3>
+              
+              <div className="space-y-6">
+                <div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <ClockIcon className="h-5 w-5 text-red-600" />
+                    <h4 className="font-semibold text-gray-800">Opening Hours</h4>
+                  </div>
+                  <dl className="grid grid-cols-3 gap-2 text-gray-600">
+                    <dt className="font-medium">Mon-Thu</dt>
+                    <dd className="col-span-2">9:00AM - 5:00PM</dd>
+                    <dt className="font-medium">Friday</dt>
+                    <dd className="col-span-2">9:00AM - 4:00PM</dd>
+                    <dt className="font-medium">Weekend</dt>
+                    <dd className="col-span-2 text-red-600">Closed</dd>
+                  </dl>
+                </div>
+    
+                <div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <MapPinIcon className="h-5 w-5 text-red-600" />
+                    <h4 className="font-semibold text-gray-800">Location</h4>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    <span className="block">5689 Goodman Road</span>
+                    <span className="block">Olive Branch, MS 38654</span>
+                  </p>
+                </div>
+    
+                <div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <EnvelopeIcon className="h-5 w-5 text-red-600" />
+                    <h4 className="font-semibold text-gray-800">Contact</h4>
+                  </div>
+                  <ul className="text-gray-600 space-y-2">
+                    <li>
+                      <a href="mailto:info@mysite.com" className="hover:text-red-700 transition-colors">
+                        info@mysite.com
+                      </a>
+                    </li>
+                    <li>
+                      <a href="tel:555-555-1212" className="hover:text-red-700 transition-colors">
+                        555-555-1212
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+    
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-3">Follow Us</h4>
+                  <div className="flex space-x-4">
+                    {['facebook', 'twitter', 'linkedin', 'youtube', 'tiktok'].map((platform) => (
+                      <a key={platform} href="#" className="text-gray-500 hover:text-red-600 transition-colors">
+                        <span className="sr-only">{platform}</span>
+                        <i className={`fab fa-${platform} text-xl`}></i>
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </div>
+            </div>
+    
+            {/* Contact Form */}
+            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                <span className="text-red-600">//</span> Contact Us
+              </h3>
+              
+              <form className="space-y-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                    <input 
+                      type="text"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      placeholder="John"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                    <input 
+                      type="text" 
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent" 
+                      placeholder="Doe"
+                      required
+                    />
+                  </div>
+                </div>
+    
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                  <input 
+                    type="email"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    placeholder="john.doe@example.com"
+                    required
+                  />
+                </div>
+    
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                  <input 
+                    type="tel"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    placeholder="(123) 456-7890"
+                    required
+                  />
+                </div>
+    
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                  <textarea
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    rows="4"
+                    placeholder="How can we help you?"
+                    required
+                  ></textarea>
+                </div>
+    
+                <button
+                  type="submit"
+                  className="w-full bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+    
+          {/* Right Column */}
+          <div className="space-y-8">
+            {/* Subscription Card */}
+            <div className="bg-red-50 p-8 rounded-xl border border-red-100">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-red-100 p-3 rounded-lg">
+                  <EnvelopeIcon className="h-6 w-6 text-red-600" />
+                </div>
+                <h4 className="font-semibold text-red-700 text-lg">
+                  Weekly Broker Alerts
+                  <span className="block text-sm font-normal text-red-600 mt-1">
+                    Non-paying brokers & high-risk companies
+                  </span>
+                </h4>
+              </div>
+              
+              <form className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-red-700 mb-2">Company Name</label>
+                  <input 
+                    type="text"
+                    className="w-full px-4 py-2.5 border border-red-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    placeholder="Your company name"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-red-700 mb-2">Work Email</label>
+                  <input 
+                    type="email"
+                    className="w-full px-4 py-2.5 border border-red-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    placeholder="contact@company.com"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                >
+                  Subscribe Now
+                </button>
+              </form>
+            </div>
+    
+            {/* Transportation Alert */}
+            <div className="bg-red-600 h-100 text-white p-8 rounded-xl text-center">
+              <h3 className="text-xl font-bold mb-3">
+                Transportation Alert
+                <span className="block text-sm font-normal mt-2 opacity-90">
+                  Find Out Who's Not Paying
+                </span>
+              </h3>
+              <Link 
+                to="/topdebtor"
+                className="inline-block bg-white text-red-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium mt-4 focus:outline-none focus:ring-2 focus:ring-white"
+              >
+                View Top Debtors →
+              </Link>
             </div>
           </div>
         </div>
-        
-    {/* Contact Form Card - Red Version */}
-<div className="bg-red-50  p-8 rounded-lg shadow-sm border border-gray-100">
-  <h3 className="text-2xl  text-red-800 font-bold text-gray-800 mb-6">Contact Us</h3>
-  
-  <form className="space-y-5">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-      <div>
-        <label htmlFor="first-name" className="block text-sm font-medium text-red-800 mb-1">First Name</label>
-        <input 
-          type="text" 
-          id="first-name" 
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" 
-          placeholder="First name"
-          required
-        />
-      </div>
-      
-      <div>
-        <label htmlFor="last-name" className="block text-sm font-medium text-red-800 mb-1">Last Name</label>
-        <input 
-          type="text" 
-          id="last-name" 
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" 
-          placeholder="Last name"
-          required
-        />
       </div>
     </div>
     
-    <div>
-      <label htmlFor="email" className="block text-sm font-medium text-red-800 mb-1">Email</label>
-      <input 
-        type="email" 
-        id="email" 
-        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" 
-        placeholder="your.email@example.com"
-        required
-      />
-    </div>
-    
-    <div>
-      <label htmlFor="phone" className="block text-sm font-medium text-red-800 mb-1">Phone</label>
-      <input 
-        type="tel" 
-        id="phone" 
-        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" 
-        placeholder="(123) 456-7890"
-        required
-      />
-    </div>
-    
-    <div>
-      <label htmlFor="message" className="block text-sm font-medium text-red-800  mb-1">Message</label>
-      <textarea 
-        id="message" 
-        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500" 
-        placeholder="Your message"
-        rows="4"
-        required
-      ></textarea>
-    </div>
-    
-    <div>
-      <button 
-        type="submit" 
-        className="w-full bg-red-700 text-white py-3 px-6 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 transition-colors"
-      >
-        Submit
-      </button>
-    </div>
-  </form>
-</div>
-
-      </div>
-      
-      {/* Right Column - About Us Content */}
-      <div className="w-full lg:w-1/2 space-y-8">
-    {/* Email Subscription Card - Red Version */}
-<div className="bg-red-50 p-6 rounded-lg border border-red-100">
-  <h4 className="font-semibold text-red-800 mb-2 text-sm">RECEIVE WEEKLY BROKER ALERTS VIA EMAIL</h4>
-  <p className="text-red-700 mb-4 text-sm">Stay updated on nonpaying brokers, double brokering activity, and high-risk companies—delivered straight to your inbox. Sign up now to protect your business.</p>
-  
-  <form className="space-y-3">
-    <div>
-      <label className="block text-xs font-medium text-red-800 mb-1">Company Name</label>
-      <input 
-        type="text" 
-        className="w-full px-3 py-2 border border-red-200 rounded text-sm focus:ring-red-500 focus:border-red-500" 
-        placeholder="Your company name"
-      />
-    </div>
-    <div>
-      <label className="block text-xs font-medium text-red-800 mb-1">Email</label>
-      <input 
-        type="email" 
-        className="w-full px-3 py-2 border border-red-200 rounded text-sm focus:ring-red-500 focus:border-red-500" 
-        placeholder="your.email@example.com"
-      />
-    </div>
-    <button 
-      type="submit" 
-      className="w-full bg-red-700 text-white py-2 px-4 rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 text-sm transition-colors"
-    >
-      Subscribe
-    </button>
-  </form>
-</div>
-
- <div className="bg-red-700 text-white p-6 rounded-xl shadow-lg text-center">
-          <h3 className="text-xl font-bold mb-2">TRANSPORTATION ALERT</h3>
-          <p className="text-lg  text-white  mb-4">Find Out Who's Not Paying</p>
-          {/* Wrap the button with Link for navigation */}
-<Link to="/topdebtor">
-  <button className="bg-white text-red-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors font-medium">
-    View Top Debtors →
-  </button>
-</Link>
-        </div>
-
-
-      </div>
-      
-    </div>
-  </div>
-</div>
+    {/* SVG Icons */}
+    <svg className="hidden">
+      <symbol id="clock-icon" viewBox="0 0 24 24">
+        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </symbol>
+      <symbol id="map-pin-icon" viewBox="0 0 24 24">
+        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+      </symbol>
+      <symbol id="envelope-icon" viewBox="0 0 24 24">
+        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+      </symbol>
+    </svg>
     
     </>
   );
