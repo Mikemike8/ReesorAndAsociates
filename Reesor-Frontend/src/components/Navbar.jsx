@@ -40,11 +40,20 @@ export const Navbar = () => {
                 <div className="max-w-[2000px] mx-auto px-4 sm:px-8">
                     <div className="flex justify-between items-center h-28">
                         {/* Left side: Logo with responsive sizes */}
-                        <img
-  className="w-[120px] h-[120px] sm:w-[130px] sm:h-[130px] md:w-[130px] md:h-[130px] lg:w-[150px] lg:h-[150px] xl:w-[150px] xl:h-[150px]"
-  src={RessorLogo}
-  alt="Reesor & Associates Logo"
-/>
+                        
+                        <div className="flex flex-row items-center text-center">
+  <img
+    className="w-[120px] h-[120px] sm:w-[130px] sm:h-[130px] md:w-[130px] md:h-[130px] lg:w-[150px] lg:h-[150px] xl:w-[150px] xl:h-[150px]"
+    src={RessorLogo}
+    alt="Reesor & Associates Logo"
+  />
+  <p className="mt-4 max-w-[295px] text-white text-lg font-bold font-display">
+      Reesor & Associates
+    </p>
+</div>
+
+
+
 
 
                         {/* Hamburger Menu Button for Mobile (this will only appear on smaller screens) */}
