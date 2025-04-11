@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'custom-blue': '#003366',
+      },
       animation: {
         marquee: 'marquee 60s linear infinite', // Adjust the duration for slower speed
       },
