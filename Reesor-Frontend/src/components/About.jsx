@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { 
   ClockIcon,
   MapPinIcon,
@@ -7,9 +8,38 @@ import {
 import { PhoneIcon } from '@heroicons/react/20/solid';
 import { Link } from 'react-router-dom'; // Import the Link component
 
-
-
 const About = () => {
+  
+
+  // Form submission handler for company and email data
+  const [email, setEmail] = useState('');
+  const [company, setCompany] = useState('');
+  const [status, setStatus] = useState('');
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault(); // stop page reload
+    setStatus('Submitting...');
+  
+    try {
+      const response = await fetch('http://localhost:5000/api/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ Email: email, Company: company })
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        setStatus(data.message);
+        setEmail('');
+        setCompany('');
+      } else {
+        setStatus(`❌ Error: ${data.error}`);
+      }
+    } catch (err) {
+      setStatus('❌ Failed to connect to server');
+    }
+  };
   return (
       <> <div className="bg-gray-50 py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
@@ -164,32 +194,40 @@ const About = () => {
                   </span>
                 </h4>
               </div>
-              
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-red-700 mb-2">Company Name</label>
-                  <input 
-                    type="text"
-                    className="w-full px-4 py-2.5 border border-red-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                    placeholder="Your company name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-red-700 mb-2">Work Email</label>
-                  <input 
-                    type="email"
-                    className="w-full px-4 py-2.5 border border-red-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                    placeholder="contact@company.com"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-                >
-                  Subscribe Now
-                </button>
-              </form>
-            </div>
+              {/* Company/Email Form */}
+      <form onSubmit={handleFormSubmit} className="space-y-4">
+        <div>
+          <label className="block text-sm font-medium text-red-700 mb-2">Company Name</label>
+          <input
+            type="text"
+            className="w-full px-4 py-2.5 border border-red-200 rounded-lg"
+            placeholder="Your company name"
+            value={company}
+            onChange={(e) => setCompany(e.target.value)}
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-red-700 mb-2">Work Email</label>
+          <input
+            type="email"
+            className="w-full px-4 py-2.5 border border-red-200 rounded-lg"
+            placeholder="contact@company.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <button type="submit" className="w-full bg-red-600 text-white py-3 px-6 rounded-lg">
+          Subscribe Now
+        </button>
+        {status && <p>{status}</p>}
+      </form>
+    </div>
+
+
+
+
+
+
     
             {/* Transportation Alert */}
             <div className="bg-red-600 h-100 text-white p-8 rounded-xl text-center">

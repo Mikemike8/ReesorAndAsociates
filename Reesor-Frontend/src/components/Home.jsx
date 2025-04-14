@@ -3,6 +3,8 @@ import Morgan from '../assets/Morgan.mp4';
 import Truck2  from '../assets/Truck2.jpg';
 import Doubles from '../assets/Doubles.png';
 import Freight from '../assets/Freight.png';
+import RessorLogo from '../assets/Reesorlog.png'; // Ensure your image path is correct
+
 import Chart from '../assets/Chart.png';
 export const Home = () => {
 
@@ -232,23 +234,24 @@ export const Home = () => {
     <div>
     </div>
 
-    {/* Footer Section */}
+  {/* Footer Section */}
 <footer className="bg-custom-blue text-white py-8">
-  <div className="container mx-auto px-4 text-white flex flex-col lg:flex-row justify-between items-center space-y-8 lg:space-y-0">
+  <div className="container mx-auto px-4 text-white flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-8 lg:space-y-0">
 
-    {/* Left Section - Company Info */}
-    <div className="w-full lg:w-4/12 text-center text-white lg:text-left">
-      <p className="text-3xl font-semibold mb-4">Reesor & Associates</p>
-      <p className="text-lg mb-4">
-        Your trusted partner in protecting your freight and ensuring payment.
-      </p>
-      <p className="text-sm">&copy; 2025 Reesor & Associates. All Rights Reserved.</p>
+    {/* Left Section - Logo + Company Info */}
+    <div className="w-full lg:w-4/12 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4">
+      <img
+        className="w-[200px] h-[200px] sm:w-[220px] sm:h-[220px] md:w-[240px] md:h-[240px] lg:w-[260px] lg:h-[260px]"
+        src={RessorLogo}
+        alt="Reesor & Associates Logo"
+      />
+      
     </div>
 
     {/* Middle Section - Quick Links */}
     <div className="w-full lg:w-4/12 text-center">
-      <p className="text-xl font-semibold mb-4">Quick Links</p>
-      <ul className="space-y-2">
+      <p className="text-4xl font-semibold mb-4">Quick Links</p>
+      <ul className="text-xl space-y-2">
         <li><a href="#" className="hover:text-yellow-400">Home</a></li>
         <li><a href="#" className="hover:text-yellow-400">About Us</a></li>
         <li><a href="#" className="hover:text-yellow-400">Services</a></li>
@@ -258,25 +261,32 @@ export const Home = () => {
 
     {/* Right Section - Social Media */}
     <div className="w-full lg:w-4/12 text-center lg:text-right">
-      <p className="text-xl font-semibold mb-4">Follow Us</p>
+      <p className="text-4xl font-semibold mb-4">Follow Us</p>
       <div className="flex justify-center lg:justify-end space-x-6">
-        <a href="#" className="text-2xl hover:text-yellow-400">
+        <a href="#" className="text-3xl hover:text-yellow-400">
           <i className="fab fa-facebook"></i>
         </a>
-        <a href="#" className="text-2xl hover:text-yellow-400">
+        <a href="#" className="text-3xl hover:text-yellow-400">
           <i className="fab fa-twitter"></i>
         </a>
-        <a href="#" className="text-2xl hover:text-yellow-400">
+        <a href="#" className="text-3xl hover:text-yellow-400">
           <i className="fab fa-linkedin"></i>
         </a>
-        <a href="#" className="text-2xl hover:text-yellow-400">
+        <a href="#" className="text-3xl hover:text-yellow-400">
           <i className="fab fa-instagram"></i>
         </a>
       </div>
     </div>
+   
 
   </div>
+  <div className="mt-12 border-t border-white/20 pt-6 text-center text-sm text-white/70">
+      &copy; 2025 Reesor & Associates. All rights reserved.
+    </div>
 </footer>
+
+
+
 
 
    
