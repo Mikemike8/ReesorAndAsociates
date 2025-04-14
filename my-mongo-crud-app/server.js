@@ -45,6 +45,105 @@ app.post('/api/save', async (req, res) => {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Define the debtor schema
+const debtorSchema = new mongoose.Schema({
+  FirstName: { type: String, required: true },
+  LastName: { type: String, required: true },
+  AmountOwed: { type: Number, required: true },
+  Rank: { type: Number, default: 0 },  // Rank based on AmountOwed
+  lastUpdated: { type: Date, default: Date.now }
+});
+
+// Create a model for Debtors
+const Debtor = mongoose.model('Debtor', debtorSchema);
+
+module.exports = Debtor;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// POST endpoint to save a new debtor and rank them
+app.post('/api/debtor', async (req, res) => {
+  const { FirstName, LastName, AmountOwed } = req.body;
+
+  if (!FirstName || !LastName || !AmountOwed) {
+    return res.status(400).json({ error: 'All fields (FirstName, LastName, AmountOwed) are required.' });
+  }
+
+  try {
+    // Step 1: Create a new debtor entry
+    const newDebtor = new Debtor({ FirstName, LastName, AmountOwed });
+
+    // Step 2: Save the new debtor
+    await newDebtor.save();
+
+    // Step 3: Rank all debtors by AmountOwed in descending order
+    const allDebtors = await Debtor.find().sort({ AmountOwed: -1 });
+
+    // Step 4: Update the rank field for each debtor
+    for (let i = 0; i < allDebtors.length; i++) {
+      allDebtors[i].Rank = i + 1;  // Assign rank starting from 1
+      await allDebtors[i].save();  // Save the updated debtor record
+    }
+
+    // Return success message
+    res.status(201).json({ message: 'Debtor added and ranked successfully!' });
+  } catch (error) {
+    console.error('Error:', error.message);
+    res.status(500).json({ error: 'Failed to save debtor and rank.' });
+  }
+});
+
+
+
+
+
+
+
+
+// GET endpoint to fetch all debtors and their rank
+app.get('/api/debtors', async (req, res) => {
+  try {
+    const debtors = await Debtor.find().sort({ Rank: 1 });  // Sorted by Rank, lowest to highest
+    res.status(200).json(debtors);
+  } catch (error) {
+    console.error('Error:', error.message);
+    res.status(500).json({ error: 'Failed to fetch debtors.' });
+  }
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
