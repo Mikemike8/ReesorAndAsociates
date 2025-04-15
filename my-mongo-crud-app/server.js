@@ -5,10 +5,12 @@ const cors = require('cors'); // <-- NEW LINE
 require('dotenv').config();
 
 const app = express();
-const PORT = 5000;
-
-// Middleware
-app.use(cors()); // <-- ENABLE CORS
+const PORT = 5010;
+app.use(cors({
+  origin: 'http://localhost:5173', // or your React frontend port
+  credentials: true,
+}));
+// <-- ENABLE CORS
 app.use(bodyParser.json());
 
 // MongoDB Connection

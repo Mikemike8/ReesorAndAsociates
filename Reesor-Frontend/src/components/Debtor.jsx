@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'; // Import the Link component
 
 
 const Debtor = () => {
-
   const [formData, setFormData] = useState({
     fullName: "",
     companyName: "",
@@ -45,16 +44,20 @@ const Debtor = () => {
       formPayload.append("documentFile", formData.documentFile);
     }
 
-    // POST request to submit the form data
     fetch("http://localhost:5000/submit-form", {
       method: "POST",
       body: formPayload,
     })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Form submitted:", data);
-      })
+      .then((response) => response.json().then(data => {
+        if (response.ok) {
+          alert("Upload Successful ✅");
+          window.location.reload(); // Refresh the page
+        } else {
+          alert("Failed to upload: " + data.message);
+        }
+      }))
       .catch((error) => {
+        alert("Error submitting form: " + error.message);
         console.error("Error submitting form:", error);
       });
   };
@@ -69,7 +72,11 @@ const Debtor = () => {
         
         {/* Debt Recovery Form Section */}
         <div className="bg-white rounded-xl shadow-lg p-8">
+        
 
+        <h1 className="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-red-600 pb-4">
+            Freight Claim Recovery Submission
+          </h1>
 
         <form onSubmit={handleSubmit} className="space-y-6">
       {/* Contact Information */}
@@ -233,139 +240,8 @@ const Debtor = () => {
 
 
 
-          <h1 className="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-red-600 pb-4">
-            Freight Claim Recovery Submission
-          </h1>
-
-          <form className="space-y-6">
-            {/* Contact Information */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Your Full Name*
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter Your Name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500"
-                  required
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Company Name*
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter company name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500"
-                  required
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Phone Number*
-                </label>
-                <input
-                  type="tel"
-                  placeholder="Enter your phone number"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500"
-                  required
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address*
-                </label>
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500"
-                  required
-                />
-              </div>
-            </div>
-
-            {/* Debtor Information */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Debtor Information*
-              </label>
-              <input
-                type="text"
-                placeholder="Who owes you money? (Company/Legal Name)"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500"
-                required
-              />
-            </div>
-
-            {/* Document Upload */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Upload Documentation*
-              </label>
-              <div className="mt-1 flex justify-center px-6 pt-8 pb-6 border-2 border-dashed border-gray-300 rounded-lg">
-                <div className="space-y-2 text-center">
-                  <svg className="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
-                    <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  <div className="text-sm text-gray-600">
-                    <p className="font-medium">Drag files here or click to upload</p>
-                    <p className="text-xs mt-1">Required: Bill of Lading, Rate Confirmation, Invoice (PDF/JPEG/PNG)</p>
-                  </div>
-                  <input
-                    type="file"
-                    className="hidden"
-                    multiple
-                    accept=".pdf,.jpg,.jpeg,.png"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Additional Information */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Additional Details
-              </label>
-              <textarea
-                rows="4"
-                placeholder="Include any special instructions or relevant information"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500"
-              ></textarea>
-            </div>
-
-            {/* Process Timeline */}
-            <div className="bg-red-50 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold text-red-800 mb-4">What Happens Next:</h3>
-              <ol className="space-y-4 text-sm text-red-700">
-                <li className="flex items-start">
-                  <span className="flex-shrink-0 w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center mr-3">1</span>
-                  Submission review within 24 business hours
-                </li>
-                <li className="flex items-start">
-                  <span className="flex-shrink-0 w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center mr-3">2</span>
-                  Case evaluation by our legal team
-                </li>
-                <li className="flex items-start">
-                  <span className="flex-shrink-0 w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center mr-3">3</span>
-                  Recovery process initiation with your approval
-                </li>
-              </ol>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-red-700 text-white py-4 px-6 rounded-lg hover:bg-red-800 transition-colors font-semibold text-lg"
-            >
-              Initiate Recovery Process
-            </button>
-          </form>
+          
+        
         </div>
       </div>
     </div>
