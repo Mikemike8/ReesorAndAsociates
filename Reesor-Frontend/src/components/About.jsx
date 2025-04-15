@@ -117,65 +117,83 @@ const About = () => {
                 <span className="text-red-600">//</span> Contact Us
               </h3>
               
-              <form className="space-y-5">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                    <input 
-                      type="text"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                      placeholder="John"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                    <input 
-                      type="text" 
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent" 
-                      placeholder="Doe"
-                      required
-                    />
-                  </div>
-                </div>
-    
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                  <input 
-                    type="email"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                    placeholder="john.doe@example.com"
-                    required
-                  />
-                </div>
-    
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                  <input 
-                    type="tel"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                    placeholder="(123) 456-7890"
-                    required
-                  />
-                </div>
-    
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                    rows="4"
-                    placeholder="How can we help you?"
-                    required
-                  ></textarea>
-                </div>
-    
-                <button
-                  type="submit"
-                  className="w-full bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-                >
-                  Send Message
-                </button>
-              </form>
+              <form  
+  action="https://formsubmit.co/michaeljh811@gmail.com" 
+  method="POST"
+  className="space-y-5"
+>
+  {/* Disable CAPTCHA (optional but useful) */}
+  <input type="hidden" name="_captcha" value="false" />
+
+  {/* Optional: Redirect after submit */}
+  <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+
+  {/* Your existing fields below */}
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+      <input 
+        type="text"
+        name="First Name"
+        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+        placeholder="John"
+        required
+      />
+    </div>
+    <div>
+      <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+      <input 
+        type="text"
+        name="Last Name"
+        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent" 
+        placeholder="Doe"
+        required
+      />
+    </div>
+  </div>
+
+  <div>
+    <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+    <input 
+      type="email"
+      name="Email"
+      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+      placeholder="john.doe@example.com"
+      required
+    />
+  </div>
+
+  <div>
+    <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+    <input 
+      type="tel"
+      name="Phone"
+      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+      placeholder="(123) 456-7890"
+      required
+    />
+  </div>
+
+  <div>
+    <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+    <textarea
+      name="Message"
+      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+      rows="4"
+      placeholder="How can we help you?"
+      required
+    ></textarea>
+  </div>
+  <input type="hidden" name="_next" value="http://localhost:5174/about" />
+
+  <button
+    type="submit"
+    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+  >
+    Send Message
+  </button>
+</form>
+
             </div>
           </div>
     
