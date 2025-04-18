@@ -7,6 +7,7 @@ import Debtor from './components/Debtor';  // import the new Debtor component
 import { Navbar } from './components/Navbar';
 import  {TopDebtor} from './components/TopDebtor';
 import { Footer } from './components/Footer';
+import Modal from './components/Modal';
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
 
     
 
+        
+        
+        
+        
         {/* Define Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,7 +31,7 @@ function App() {
         
         
         </Routes>
-
+            
         <Footer/>
       </div>
     </Router>

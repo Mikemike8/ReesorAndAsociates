@@ -6,7 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ['"Wix Madefor Display"', 'sans-serif'], // Added Wix Madefor Display font
+        display: ['"Wix Madefor Display"', 'sans-serif'],
+        raleway: ['Raleway', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'], // Added Wix Madefor Display font
       },
       colors: {
         'custom-blue': '#003366',

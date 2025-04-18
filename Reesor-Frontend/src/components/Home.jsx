@@ -6,6 +6,7 @@ import Freight from '../assets/Freight.png';
 import RessorLogo from '../assets/Reesorlog.png'; // Ensure your image path is correct
 
 import Chart from '../assets/Chart.png';
+import Modal from './Modal';
 export const Home = () => {
 
     const [email, setEmail] = useState('');
@@ -37,7 +38,7 @@ export const Home = () => {
 
   return (
     <div>
-
+  <Modal/>  
 <div className="bg-white h-auto">
   <section className="relative">
     {/* Image Background */}
@@ -243,16 +244,6 @@ export const Home = () => {
     </section>
 
 
-
-
-<div className="overflow-hidden flex flex-row h-8 bg-white text-black border-y border-black/20">
-  <div className="whitespace-nowrap font-sans inline-block animate-marquee text-lg sm:text-2xl md:text-xl font-bold leading-tight tracking-tight">
-    Find out who owes you money &nbsp;&nbsp;&nbsp; Sign up for broker alerts &nbsp;&nbsp;&nbsp; Place debtors now &nbsp;&nbsp;&nbsp;
-  </div>
-  <div className="whitespace-nowrap font-sans inline-block animate-marquee text-lg sm:text-2xl md:text-xl font-bold leading-tight tracking-tight">
-    Find out who owes you money &nbsp;&nbsp;&nbsp; Sign up for broker alerts &nbsp;&nbsp;&nbsp; Place debtors now &nbsp;&nbsp;&nbsp;
-  </div>
-</div>
 
 
 

@@ -38,7 +38,7 @@ export const Navbar = () => {
         <>
             <nav className="fixed w-full z-50 bg-custom-blue  text-white border-b border-white/10 overflow-hidden">
                 <div className="max-w-[2000px] mx-auto px-4 sm:px-8">
-                    <div className="flex justify-between items-center h-28">
+                    <div className="flex justify-between items-center h-20">
                         {/* Left side: Logo with responsive sizes */}
                         
                         <div className="flex flex-row items-center text-center">

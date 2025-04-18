@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import RessorLogo from '../assets/Reesorlog.png'; 
+import Modal from './Modal';
 
 
 const About = () => {
@@ -8,21 +9,21 @@ const About = () => {
 
   return (
     <>
-      <div className="bg-gray-50 py-16 md:py-24">
-      <div className="w-full px-4 md:px-10">
+      <div className=" py-16 md:py-24">
+      <div className="w-full ">
 
-          <section className="text-center py-16 px-4">
-            <h1 className="text-[70px] font-bold mb-6 text-[#003366] tracking-wide">
+          <section className="text-center py-16 ">
+            <h1 className="text-[70px] font-bold mb-6  font-normal    text-[#003366] tracking-wide">
               Get Results. Contact Us Today:
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg font-raleway text-gray-600 max-w-2xl mx-auto">
               We’d love to hear from you. Whether you’re looking to recover unpaid invoices, have questions about our collection process, or just want to discuss industry challenges—we’re here to help.
             </p>
           </section>
 
           <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10 py-16 px-6">
-            <div className="space-y-6 p-10 bg-[#003366]">
-              <h2 className="text-4xl text-white font-semibold mb-4">Contact Us</h2>
+            <div className="space-y-6  font-normal p-10 bg-[#003366]">
+              <h2 className="text-4xl text-white font-raleway mb-4">Contact Us</h2>
               <form
                 action="https://formsubmit.co/michaeljh811@gmail.com"
                 method="POST"
@@ -30,7 +31,7 @@ const About = () => {
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-white mb-2">First Name*</label>
+                    <label className="block text-sm font-medium text-white   mb-2">First Name*</label>
                     <input
                       type="text"
                       name="firstName"
@@ -87,7 +88,7 @@ const About = () => {
                 <input type="hidden" name="_next" value="http://localhost:5173/about" />
                 <button
                   type="submit"
-                  className="w-full bg-red-500 text-white py-4 px-6 rounded-lg hover:bg-red-600 transition-colors font-semibold text-lg"
+                  className="w-full bg-red-500 text-white py-4 px-6 rounded-lg hover:bg-red-600 transition-colors font-raleway text-md"
                 >
                   Send Message
                 </button>
@@ -96,32 +97,34 @@ const About = () => {
 
             <div className="space-y-6 bg-[#f8f8f8] p-10 text-gray-700 text-sm">
               <div>
-                <h3 className="text-2xl font-semibold mb-2 text-[#003366]">General Inquiries</h3>
-                <p>Have a question… or just want to say hello? Get in touch:</p>
-                <p className="font-medium hover:text-[#003366]">800.710.3975</p>
+                <h3 className="text-3xl font-raleway mb-2 text-[#003366]">General Inquiries</h3>
+                <p className='font-raleway'>Have a question… or just want to say hello? Get in touch:</p>
+                <p className="font-raleway hover:text-[#003366]">800.710.3975</p>
               </div>
               
               <div>
-                <h3 className="text-2xl font-semibold mb-2 text-[#003366]"> Transportation Alert</h3>
+                <h3 className="text-3xl font-raleway mb-2 text-[#003366]"> Transportation Alert</h3>
                 <p>Find Out Who's Not Paying</p>
                 <Link
               to="/topdebtor"
-              className="inline-block mt-2 text-[#003366] underline"
+              className="inline-block mt-2  font-raleway text-[#003366] underline"
             >
               Top Debtors →
             </Link>
               </div>
               <div>
-                <h3 className="text-2xl font-semibold mb-2 text-[#003366]"> Broker Alerts</h3>
+                <h3 className="text-3xl font-raleway  mb-2 text-[#003366]"> Broker Alerts</h3>
                 <p>Stay updated with the latest broker alerts and financial insights.</p>
                 <a href="#" className="inline-block mt-2 text-[#003366] underline">Sign Up Here →</a>
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold mb-2 text-[#003366]">Our Location</h3>
-                <p>73 Church St<br />Guilford, CT 06437</p>
+             
+            
+                <h3 className="text-3xl font-raleway mb-2 text-[#003366]">Our Location</h3>
+                <p className='font-raleway '>5689 Goodman Road<br />  Olive Branch, MS 38654</p>
                 <a
-                  href="https://www.google.com/maps"
+                  href="https://g.co/kgs/Kte1A14"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-block mt-2 text-[#003366] underline"
@@ -150,7 +153,7 @@ const About = () => {
          
 
           
-
+  <Modal/>  
         </div>
       </div>
     </>

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';  // Import useState hook
 
 import { Link } from 'react-router-dom'; // Import the Link component
+import Modal from './Modal';
 
 
 const Debtor = () => {
@@ -124,7 +125,7 @@ const Debtor = () => {
         <div className="bg-white rounded-xl shadow-lg p-8">
         
 
-        <h1 className="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-red-600 pb-4">
+        <h1 className="text-3xl font-bold text-bg-custom-blue  mb-6 border-b-2 border-custom-blue  pb-4">
             Freight Claim Recovery Submission
           </h1>
 
@@ -247,22 +248,22 @@ const Debtor = () => {
 
       {/* Process Timeline */}
       <div className="bg-red-50 p-6 rounded-lg">
-        <h3 className="text-lg font-semibold text-red-800 mb-4">What Happens Next:</h3>
-        <ol className="space-y-4 text-sm text-red-700">
+        <h3 className="text-lg font-semibold text-custom-blue  mb-4">What Happens Next:</h3>
+        <ol className="space-y-4 text-sm text-black">
           <li className="flex items-start">
-            <span className="flex-shrink-0 w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center mr-3">
+            <span className="flex-shrink-0 w-6 h-6 bg-custom-blue  text-white rounded-full flex items-center justify-center mr-3">
               1
             </span>
             Submission review within 24 business hours
           </li>
           <li className="flex items-start">
-            <span className="flex-shrink-0 w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center mr-3">
+            <span className="flex-shrink-0 w-6 h-6 bg-custom-blue  text-white rounded-full flex items-center justify-center mr-3">
               2
             </span>
             Case evaluation by our legal team
           </li>
           <li className="flex items-start">
-            <span className="flex-shrink-0 w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center mr-3">
+            <span className="flex-shrink-0 w-6 h-6 bg-custom-blue  text-white rounded-full flex items-center justify-center mr-3">
               3
             </span>
             Recovery process initiation with your approval
@@ -272,20 +273,14 @@ const Debtor = () => {
 
       <button
         type="submit"
-        className="w-full bg-red-700 text-white py-4 px-6 rounded-lg hover:bg-red-800 transition-colors font-semibold text-lg"
+        className="w-full bg-custom-blue  text-white py-4 px-6 rounded-lg hover:bg-blue-900 transition-colors font-semibold text-lg"
       >
         Initiate Recovery Process
       </button>
     </form>
 
 
-
-
-
-
-
-
-
+  <Modal/>
 
 
 
@@ -296,81 +291,13 @@ const Debtor = () => {
       </div>
     </div>
 
-        {/* Broker Alerts Subscription Card */}
-        <div className="bg-white rounded-xl shadow-lg p-8 border border-red-100">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold text-red-700 mb-2">
-              Receive Weekly Broker Alerts via Email
-            </h2>
-            <p className="text-gray-600">
-              Stay updated on nonpaying brokers and high-risk companies
-            </p>
-          </div>
-
-          
-
-          <div className="form-container">
-      <form className="space-y-4" onSubmit={handleFormSubmit}> {/* Use handleFormSubmit here */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Company name
-          </label>
-          <input
-            type="text"
-            placeholder="Enter a company name"
-            value={company}
-            onChange={handleCompanyChange} // Handle company input change
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500"
-          />
-        </div>
-        
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Email*
-          </label>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={handleEmailChange} // Handle email input change
-            required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500"
-          />
-        </div>
-
-        <div className="text-center text-sm text-gray-500 mb-4">
-          <p>Free Service • Unsubscribe anytime</p>
-        </div>
-
-        <button
-          type="submit"
-          className="w-full bg-red-700 text-white py-3 px-6 rounded-lg hover:bg-red-800 transition-colors font-medium"
-        >
-          Submit
-        </button>
-      </form>
-
-      {/* Display submission status */}
-      {status && <div className="mt-4 text-center">{status}</div>}
-    </div>
-
-          <div className="mt-6 text-center text-sm text-gray-600">
-            <p className="font-medium mb-2">What you'll receive:</p>
-            <ul className="space-y-1">
-              <li>• Weekly reports on nonpaying brokers</li>
-              <li>• Double brokering activity alerts</li>
-              <li>• High-risk company warnings</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Transportation Alert Banner */}
-        <div className="bg-red-700 text-white p-6 rounded-xl shadow-lg text-center">
+        <div className="bg-custom-blue  text-white p-6 rounded-xl shadow-lg text-center">
           <h3 className="text-xl font-bold mb-2">TRANSPORTATION ALERT</h3>
           <p className="text-lg  text-white  mb-4">Find Out Who's Not Paying</p>
           {/* Wrap the button with Link for navigation */}
 <Link to="/topdebtor">
-  <button className="bg-white text-red-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+  <button className="  bg-custom-blue   px-6 py-2 rounded-lg hover:bg-blue-900 ion-colors font-medium">
     View Top Debtors →
   </button>
 </Link>

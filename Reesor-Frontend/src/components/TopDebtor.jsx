@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Modal from './Modal';
 
 export const TopDebtor = () => {
   // State to hold debtor data and error state
@@ -30,13 +31,14 @@ export const TopDebtor = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 py-10">
+        <Modal/>  
     <div className="bg-white p-6 rounded-lg mt-20 shadow-lg w-full max-w-4xl"> {/* Changed mt-30 to mt-20 */}
       {/* Title */}
       <h1 className="text-2xl font-semibold text-center text-gray-800 mb-6">Top Debtors</h1>
   
       {/* Display Error or Data Table */}
       {error ? (
-        <p className="text-center text-red-600">{error}</p>
+        <p className="text-center bg-custom-blue ">{error}</p>
       ) : (
         <table className="w-full table-auto text-left border-collapse">
           <thead>
