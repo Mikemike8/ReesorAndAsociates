@@ -46,7 +46,7 @@ export const TopDebtor = () => {
   
       {/* Display Error or Data Table */}
       {error ? (
-        <p className="text-center bg-gray-900   text-white ">{error}</p>
+        <p className="text-center bg-blue-900   text-white ">{error}</p>
       ) : (
         <table className="w-full table-auto text-left border-collapse">
           <thead>
