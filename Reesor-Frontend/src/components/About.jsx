@@ -1,292 +1,163 @@
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import { 
-  ClockIcon,
-  MapPinIcon,
-  EnvelopeIcon 
-} from '@heroicons/react/24/outline'; // Heroicons v2
-import { PhoneIcon } from '@heroicons/react/20/solid';
-import { Link } from 'react-router-dom'; // Import the Link component
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import RessorLogo from '../assets/Reesorlog.png'; 
+
 
 const About = () => {
-  
 
-  // Form submission handler for company and email data
-  const [email, setEmail] = useState('');
-  const [company, setCompany] = useState('');
-  const [status, setStatus] = useState('');
 
-  const handleFormSubmit = async (e) => {
-    e.preventDefault(); // stop page reload
-    setStatus('Submitting...');
-  
-    try {
-      const response = await fetch('http://localhost:5010/api/save', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ Email: email, Company: company })
-      });
-  
-      const data = await response.json();
-  
-      if (response.ok) {
-        setStatus(data.message);
-        setEmail('');
-        setCompany('');
-      } else {
-        setStatus(`❌ Error: ${data.error}`);
-      }
-    } catch (err) {
-      setStatus('❌ Failed to connect to server');
-    }
-  };
   return (
-      <> <div className="bg-gray-50 py-16 md:py-24">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-          
-          {/* Left Column */}
-          <div className="space-y-8">
-            {/* Contact Information */}
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Reesor & Associates</h3>
-              
-              <div className="space-y-6">
-                <div>
-                  <div className="flex items-center gap-2 mb-4">
-                    <ClockIcon className="h-5 w-5 text-red-600" />
-                    <h4 className="font-semibold text-gray-800">Opening Hours</h4>
-                  </div>
-                  <dl className="grid grid-cols-3 gap-2 text-gray-600">
-                    <dt className="font-medium">Mon-Thu</dt>
-                    <dd className="col-span-2">9:00AM - 5:00PM</dd>
-                    <dt className="font-medium">Friday</dt>
-                    <dd className="col-span-2">9:00AM - 4:00PM</dd>
-                    <dt className="font-medium">Weekend</dt>
-                    <dd className="col-span-2 text-red-600">Closed</dd>
-                  </dl>
-                </div>
-    
-                <div>
-                  <div className="flex items-center gap-2 mb-4">
-                    <MapPinIcon className="h-5 w-5 text-red-600" />
-                    <h4 className="font-semibold text-gray-800">Location</h4>
-                  </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    <span className="block">5689 Goodman Road</span>
-                    <span className="block">Olive Branch, MS 38654</span>
-                  </p>
-                </div>
-    
-                <div>
-                  <div className="flex items-center gap-2 mb-4">
-                    <EnvelopeIcon className="h-5 w-5 text-red-600" />
-                    <h4 className="font-semibold text-gray-800">Contact</h4>
-                  </div>
-                  <ul className="text-gray-600 space-y-2">
-                    <li>
-                      <a href="mailto:info@mysite.com" className="hover:text-red-700 transition-colors">
-                        info@mysite.com
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tel:555-555-1212" className="hover:text-red-700 transition-colors">
-                        555-555-1212
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-    
-                <div>
-                  <h4 className="font-semibold text-gray-800 mb-3">Follow Us</h4>
-                  <div className="flex space-x-4">
-                    {['facebook', 'twitter', 'linkedin', 'youtube', 'tiktok'].map((platform) => (
-                      <a key={platform} href="#" className="text-gray-500 hover:text-red-600 transition-colors">
-                        <span className="sr-only">{platform}</span>
-                        <i className={`fab fa-${platform} text-xl`}></i>
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-    
-            {/* Contact Form */}
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                <span className="text-red-600">//</span> Contact Us
-              </h3>
-              
-              <form  
-  action="https://formsubmit.co/michaeljh811@gmail.com" 
-  method="POST"
-  className="space-y-5"
->
-  {/* Disable CAPTCHA (optional but useful) */}
-  <input type="hidden" name="_captcha" value="false" />
+    <>
+      <div className="bg-gray-50 py-16 md:py-24">
+      <div className="w-full px-4 md:px-10">
 
-  {/* Optional: Redirect after submit */}
-  <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+          <section className="text-center py-16 px-4">
+            <h1 className="text-[70px] font-bold mb-6 text-[#003366] tracking-wide">
+              Get Results. Contact Us Today:
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We’d love to hear from you. Whether you’re looking to recover unpaid invoices, have questions about our collection process, or just want to discuss industry challenges—we’re here to help.
+            </p>
+          </section>
 
-  {/* Your existing fields below */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div>
-      <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-      <input 
-        type="text"
-        name="First Name"
-        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-        placeholder="John"
-        required
-      />
-    </div>
-    <div>
-      <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-      <input 
-        type="text"
-        name="Last Name"
-        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent" 
-        placeholder="Doe"
-        required
-      />
-    </div>
-  </div>
-
-  <div>
-    <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-    <input 
-      type="email"
-      name="Email"
-      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-      placeholder="john.doe@example.com"
-      required
-    />
-  </div>
-
-  <div>
-    <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-    <input 
-      type="tel"
-      name="Phone"
-      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-      placeholder="(123) 456-7890"
-      required
-    />
-  </div>
-
-  <div>
-    <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-    <textarea
-      name="Message"
-      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-      rows="4"
-      placeholder="How can we help you?"
-      required
-    ></textarea>
-  </div>
-  <input type="hidden" name="_next" value="http://localhost:5174/about" />
-
-  <button
-    type="submit"
-    className="w-full bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-  >
-    Send Message
-  </button>
-</form>
-
-            </div>
-          </div>
-    
-          {/* Right Column */}
-          <div className="space-y-8">
-            {/* Subscription Card */}
-            <div className="bg-red-50 p-8 rounded-xl border border-red-100">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="bg-red-100 p-3 rounded-lg">
-                  <EnvelopeIcon className="h-6 w-6 text-red-600" />
-                </div>
-                <h4 className="font-semibold text-red-700 text-lg">
-                  Weekly Broker Alerts
-                  <span className="block text-sm font-normal text-red-600 mt-1">
-                    Non-paying brokers & high-risk companies
-                  </span>
-                </h4>
-              </div>
-              {/* Company/Email Form */}
-      <form onSubmit={handleFormSubmit} className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium text-red-700 mb-2">Company Name</label>
-          <input
-            type="text"
-            className="w-full px-4 py-2.5 border border-red-200 rounded-lg"
-            placeholder="Your company name"
-            value={company}
-            onChange={(e) => setCompany(e.target.value)}
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-red-700 mb-2">Work Email</label>
-          <input
-            type="email"
-            className="w-full px-4 py-2.5 border border-red-200 rounded-lg"
-            placeholder="contact@company.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <button type="submit" className="w-full bg-red-600 text-white py-3 px-6 rounded-lg">
-          Subscribe Now
-        </button>
-        {status && <p>{status}</p>}
-      </form>
-    </div>
-
-
-
-
-
-
-    
-            {/* Transportation Alert */}
-            <div className="bg-red-600 h-100 text-white p-8 rounded-xl text-center">
-              <h3 className="text-xl font-bold mb-3">
-                Transportation Alert
-                <span className="block text-sm font-normal mt-2 opacity-90">
-                  Find Out Who's Not Paying
-                </span>
-              </h3>
-              <Link 
-                to="/topdebtor"
-                className="inline-block bg-white text-red-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium mt-4 focus:outline-none focus:ring-2 focus:ring-white"
+          <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10 py-16 px-6">
+            <div className="space-y-6 p-10 bg-[#003366]">
+              <h2 className="text-4xl text-white font-semibold mb-4">Contact Us</h2>
+              <form
+                action="https://formsubmit.co/michaeljh811@gmail.com"
+                method="POST"
+                className="space-y-6"
               >
-                View Top Debtors →
-              </Link>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-white mb-2">First Name*</label>
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="John"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-white mb-2">Last Name*</label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="Doe"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-white mb-2">Email*</label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="john.doe@example.com"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-white mb-2">Phone*</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="(123) 456-7890"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-white mb-2">Message*</label>
+                  <textarea
+                    name="message"
+                    rows="4"
+                    placeholder="How can we help you?"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500"
+                  ></textarea>
+                </div>
+
+                <input type="hidden" name="_next" value="http://localhost:5173/about" />
+                <button
+                  type="submit"
+                  className="w-full bg-red-500 text-white py-4 px-6 rounded-lg hover:bg-red-600 transition-colors font-semibold text-lg"
+                >
+                  Send Message
+                </button>
+              </form>
             </div>
-          </div>
+
+            <div className="space-y-6 bg-[#f8f8f8] p-10 text-gray-700 text-sm">
+              <div>
+                <h3 className="text-2xl font-semibold mb-2 text-[#003366]">General Inquiries</h3>
+                <p>Have a question… or just want to say hello? Get in touch:</p>
+                <p className="font-medium hover:text-[#003366]">800.710.3975</p>
+              </div>
+              
+              <div>
+                <h3 className="text-2xl font-semibold mb-2 text-[#003366]"> Transportation Alert</h3>
+                <p>Find Out Who's Not Paying</p>
+                <Link
+              to="/topdebtor"
+              className="inline-block mt-2 text-[#003366] underline"
+            >
+              Top Debtors →
+            </Link>
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold mb-2 text-[#003366]"> Broker Alerts</h3>
+                <p>Stay updated with the latest broker alerts and financial insights.</p>
+                <a href="#" className="inline-block mt-2 text-[#003366] underline">Sign Up Here →</a>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-semibold mb-2 text-[#003366]">Our Location</h3>
+                <p>73 Church St<br />Guilford, CT 06437</p>
+                <a
+                  href="https://www.google.com/maps"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-block mt-2 text-[#003366] underline"
+                >
+                  Get Directions →
+                </a>
+              </div>
+            
+
+            </div>
+            
+          </section>
+          <div className="relative w-full py-4">
+  {/* Horizontal line */}
+  <div className="absolute top-1/2 left-0 right-0 bg-gray-400 h-0.5"></div>
+
+  {/* Logo in the middle */}
+  <div className="relative flex justify-center items-center w-full">
+    <div className="absolute top-1/2 transform -translate-y-1/2 bg-custom-blue p-3 rounded-full shadow-lg">
+      <img src={RessorLogo} alt="Logo" className="w-12 h-12 object-contain"/>
+    </div>
+  </div>
+</div>
+
+
+         
+
+          
+
         </div>
       </div>
-    </div>
-    
-    {/* SVG Icons */}
-    <svg className="hidden">
-      <symbol id="clock-icon" viewBox="0 0 24 24">
-        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-      </symbol>
-      <symbol id="map-pin-icon" viewBox="0 0 24 24">
-        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-      </symbol>
-      <symbol id="envelope-icon" viewBox="0 0 24 24">
-        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-      </symbol>
-    </svg>
-    
     </>
   );
 };
 
-export { About }; // Named export
-
-
+export { About };
 
 
 

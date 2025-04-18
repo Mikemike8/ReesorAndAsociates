@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Morgan from '../assets/Morgan.mp4'; 
 import Truck2  from '../assets/Truck2.jpg';
 import Doubles from '../assets/Doubles.png';
@@ -7,6 +7,32 @@ import RessorLogo from '../assets/Reesorlog.png'; // Ensure your image path is c
 
 import Chart from '../assets/Chart.png';
 export const Home = () => {
+
+    const [email, setEmail] = useState('');
+    const [company, setCompany] = useState('');
+    const [status, setStatus] = useState('');
+  
+    const handleFormSubmit = async (e) => {
+      e.preventDefault();
+      setStatus('Submitting...');
+      try {
+        const response = await fetch('http://localhost:5010/api/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ Email: email, Company: company })
+        });
+        const data = await response.json();
+        if (response.ok) {
+          setStatus(data.message);
+          setEmail('');
+          setCompany('');
+        } else {
+          setStatus(`❌ Error: ${data.error}`);
+        }
+      } catch (err) {
+        setStatus('❌ Failed to connect to server');
+      }
+    };
 
 
   return (
@@ -233,58 +259,7 @@ export const Home = () => {
 
     <div>
     </div>
-
-  {/* Footer Section */}
-<footer className="bg-custom-blue text-white py-8">
-  <div className="container mx-auto px-4 text-white flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-8 lg:space-y-0">
-
-    {/* Left Section - Logo + Company Info */}
-    <div className="w-full lg:w-4/12 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4">
-      <img
-        className="w-[200px] h-[200px] sm:w-[220px] sm:h-[220px] md:w-[240px] md:h-[240px] lg:w-[260px] lg:h-[260px]"
-        src={RessorLogo}
-        alt="Reesor & Associates Logo"
-      />
-      
-    </div>
-
-    {/* Middle Section - Quick Links */}
-    <div className="w-full lg:w-4/12 text-center">
-      <p className="text-4xl font-semibold mb-4">Quick Links</p>
-      <ul className="text-xl space-y-2">
-        <li><a href="#" className="hover:text-yellow-400">Home</a></li>
-        <li><a href="#" className="hover:text-yellow-400">About Us</a></li>
-        <li><a href="#" className="hover:text-yellow-400">Services</a></li>
-        <li><a href="#" className="hover:text-yellow-400">Contact</a></li>
-      </ul>
-    </div>
-
-    {/* Right Section - Social Media */}
-    <div className="w-full lg:w-4/12 text-center lg:text-right">
-      <p className="text-4xl font-semibold mb-4">Follow Us</p>
-      <div className="flex justify-center lg:justify-end space-x-6">
-        <a href="#" className="text-3xl hover:text-yellow-400">
-          <i className="fab fa-facebook"></i>
-        </a>
-        <a href="#" className="text-3xl hover:text-yellow-400">
-          <i className="fab fa-twitter"></i>
-        </a>
-        <a href="#" className="text-3xl hover:text-yellow-400">
-          <i className="fab fa-linkedin"></i>
-        </a>
-        <a href="#" className="text-3xl hover:text-yellow-400">
-          <i className="fab fa-instagram"></i>
-        </a>
-      </div>
-    </div>
    
-
-  </div>
-  <div className="mt-12 border-t border-white/20 pt-6 text-center text-sm text-white/70">
-      &copy; 2025 Reesor & Associates. All rights reserved.
-    </div>
-</footer>
-
 
 
 
@@ -293,3 +268,11 @@ export const Home = () => {
     </div>
   );
 };
+{/* <div className="w-full lg:w-4/12 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4">
+<img
+  className="w-[200px] h-[200px] sm:w-[220px] sm:h-[220px] md:w-[240px] md:h-[240px] lg:w-[260px] lg:h-[260px]"
+  src={RessorLogo}
+  alt="Reesor & Associates Logo"
+/>
+
+</div> */}

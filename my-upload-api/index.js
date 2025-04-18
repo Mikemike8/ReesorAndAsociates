@@ -8,10 +8,11 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use('/files', express.static('files'));
+
 
 // MongoDB connection
-const mongoUrl =
-  "mongodb+srv://mike96:lilmike800@cluster0.ylle5px.mongodb.net/ReesorEmaildata?retryWrites=true&w=majority";
+const mongoUrl = "mongodb+srv://mike96:lilmike800@cluster0.ylle5px.mongodb.net/ReesorEmaildata?retryWrites=true&w=majority";
 
 mongoose
   .connect(mongoUrl, {

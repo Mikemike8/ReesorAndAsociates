@@ -6,6 +6,7 @@ import { About } from './components/About';
 import Debtor from './components/Debtor';  // import the new Debtor component
 import { Navbar } from './components/Navbar';
 import  {TopDebtor} from './components/TopDebtor';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div>
         {/* NavBar */}
         <Navbar/>
+
     
 
         {/* Define Routes */}
@@ -24,6 +26,8 @@ function App() {
         
         
         </Routes>
+
+        <Footer/>
       </div>
     </Router>
   );

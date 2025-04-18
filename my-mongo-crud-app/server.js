@@ -13,6 +13,8 @@ app.use(cors({
 // <-- ENABLE CORS
 app.use(bodyParser.json());
 
+
+
 // MongoDB Connection
 mongoose.connect("mongodb+srv://mike96:lilmike800@cluster0.ylle5px.mongodb.net/ReesorEmaildata?retryWrites=true&w=majority")
   .then(() => {
