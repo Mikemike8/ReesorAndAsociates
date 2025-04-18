@@ -118,8 +118,17 @@ const Debtor = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto space-y-12">
-        <div className="min-h-screen bg-gray-50 py-32 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto space-y-12">
+      <section className="text-center py-16 bg-gray-100">
+  <h1 className="text-[60px] font-bold mb-6 text-[#003366] tracking-wide">
+    Submit a Debtor
+  </h1>
+  <p className="text-lg font-raleway text-gray-600 max-w-2xl mx-auto">
+    Help us keep the industry informed. Use the form below to report companies or individuals who owe you money. 
+    Your contribution strengthens the network and promotes accountability across the board.
+  </p>
+</section>
         
         {/* Debt Recovery Form Section */}
         <div className="bg-white rounded-xl shadow-lg p-8">
