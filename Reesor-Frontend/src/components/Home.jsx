@@ -195,7 +195,7 @@ export const Home = () => {
 </div>
 
 
-<section className="flex flex-col md:flex-row items-center justify-between px-6  bg-white">
+<section className="flex  flex-col md:flex-row items-center justify-between px-6  bg-white">
       {/* Left Side - Text Info */}
       <div className="md:w-1/2 w-full mb-8 md:mb-0">
       
@@ -241,7 +241,12 @@ export const Home = () => {
           className="w-full max-w-md rounded shadow-lg"
         />
       </div>
+     
     </section>
+
+
+    
+                 
 
 
 

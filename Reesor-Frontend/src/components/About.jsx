@@ -137,6 +137,7 @@ const About = () => {
             </div>
             
           </section>
+
           <div className="relative w-full py-4">
   {/* Horizontal line */}
   <div className="absolute top-1/2 left-0 right-0 bg-gray-400 h-0.5"></div>
@@ -149,13 +150,13 @@ const About = () => {
   </div>
 </div>
 
+          <Modal/>
 
-         
-
-          
-  <Modal/>  
+  
+    
         </div>
       </div>
+
     </>
   );
 };
