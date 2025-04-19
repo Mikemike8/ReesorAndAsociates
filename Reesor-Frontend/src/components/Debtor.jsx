@@ -45,7 +45,7 @@ const Debtor = () => {
       formPayload.append("documentFile", formData.documentFile);
     }
 
-    fetch("http://localhost:5000/submit-form", {
+    fetch("https://reesorandasociatesuploadpdf.onrender.com/submit-form", {
       method: "POST",
       body: formPayload,
     })
@@ -85,7 +85,7 @@ const Debtor = () => {
     setStatus('Submitting...'); // Display submission status
   
     try {
-      const response = await fetch('http://localhost:5010/api/save', {
+      const response = await fetch('https://reesorandasociatestestserver.onrender.com/api/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ Email: email, Company: company }),
