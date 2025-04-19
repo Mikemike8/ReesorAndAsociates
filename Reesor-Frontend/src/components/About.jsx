@@ -25,10 +25,11 @@ const About = () => {
             <div className="space-y-6  font-normal p-10 bg-[#003366]">
               <h2 className="text-4xl text-white font-raleway mb-4">Contact Us</h2>
               <form
-                action="https://formsubmit.co/michaeljh811@gmail.com"
-                method="POST"
+              action="https://api.web3forms.com/submit"
+               method="POST"
                 className="space-y-6"
               >
+              <input type="hidden" name="access_key" value="12b61994-d093-414d-abec-e331862b8bec"/>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-white   mb-2">First Name*</label>
@@ -85,7 +86,7 @@ const About = () => {
                   ></textarea>
                 </div>
 
-                <input type="hidden" name="_next" value="http://localhost:5173/about" />
+                <input type="hidden" name="_next" value="https://reesorandasociates.onrender.com/about" />
                 <button
                   type="submit"
                   className="w-full bg-red-500 text-white py-4 px-6 rounded-lg hover:bg-red-600 transition-colors font-raleway text-md"
