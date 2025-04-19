@@ -109,12 +109,7 @@ app.get('/api/debtors', async (req, res) => {
 });
 
 
-app.use(express.static(path.join(__dirname, '../Reesor-Frontend/build')));
 
-// Catch-all handler for any other routes (React Router will handle this)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../Reesor-Frontend/build', 'index.html'));
-});
 
 
 
