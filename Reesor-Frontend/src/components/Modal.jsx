@@ -46,7 +46,7 @@ export default function Modal() {
         setEmail('');
         setCompany('');
         localStorage.setItem('hasSignedUp', 'true'); // Set the flag
-        setTimeout(() => closeModal(), 1500); // Optional: auto-close after a short delay
+        setTimeout(() => closeModal(), 1000); // Optional: auto-close after a short delay
       } else {
         setStatus(`❌ Error: ${data.error}`);
       }
