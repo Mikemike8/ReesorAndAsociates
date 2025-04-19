@@ -8,10 +8,22 @@ require('dotenv').config();
 
 const app = express();
 const PORT = 5010;
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://reesorandasociates.onrender.com'
+];
+
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://reesorandasociates.onrender.com'],
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('CORS not allowed'));
+    }
+  },
   credentials: true,
 }));
+
 // <-- ENABLE CORS
 app.use(bodyParser.json());
 
