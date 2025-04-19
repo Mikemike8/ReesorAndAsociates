@@ -2,9 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const multer = require('multer');
+const PORT = process.env.PORT || 5000;
+
+
 const Form = require('./models/PdfDetails');  // Import the Form model
 
 const app = express();
+
 
 app.use(express.json());
 app.use(cors({
@@ -84,6 +88,6 @@ app.get('/', (req, res) => {
 });
 
 // Start the server
-app.listen(5000, () => {
+app.listen(PORT , () => {
   console.log('Server started on port 5000');
 });
