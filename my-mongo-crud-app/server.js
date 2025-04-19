@@ -1,34 +1,23 @@
 ﻿const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const path = require('path');
-
 const cors = require('cors'); // <-- NEW LINE
 require('dotenv').config();
-const Debtor = require('./models/Debtor');
-
+const Debtor = require('./models/Debtor');  // Import the Debtor model
 const app = express();
 const PORT = 5010;
-const allowedOrigins = [
-  'http://localhost:5173',
-  'https://reesorandasociates.onrender.com'
-];
-
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('CORS not allowed'));
-    }
-  },
-  credentials: true,
+  origin: [
+    'http://localhost:5173',  // Local development
+    'https://reesorandasociates.onrender.com'  // Deployed frontend
+  ],
+  credentials: true,  // Allow cookies if necessary
 }));
+
+
 
 // <-- ENABLE CORS
 app.use(bodyParser.json());
-
-
 
 // MongoDB Connection
 mongoose.connect("mongodb+srv://mike96:lilmike800@cluster0.ylle5px.mongodb.net/ReesorEmaildata?retryWrites=true&w=majority")
@@ -67,6 +56,34 @@ app.post('/api/save', async (req, res) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // POST endpoint to save a new debtor and rank them
 app.post('/api/debtor', async (req, res) => {
   const { FirstName, LastName, AmountOwed } = req.body;
@@ -101,6 +118,11 @@ app.post('/api/debtor', async (req, res) => {
 
 
 
+
+
+
+
+
 // GET endpoint to fetch all debtors and their rank
 app.get('/api/debtors', async (req, res) => {
   try {
@@ -112,17 +134,7 @@ app.get('/api/debtors', async (req, res) => {
   }
 });
 
-
-// Serve static files from React build folder
-app.use(express.static(path.join(__dirname, 'build')));
-
-// Catch-all handler for any other routes (React Router will handle this)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running at https://reesorandasociatestestserver.onrender.com/`);
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
