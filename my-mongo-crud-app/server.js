@@ -1,6 +1,8 @@
 ﻿const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const path = require('path');
+
 const cors = require('cors'); // <-- NEW LINE
 require('dotenv').config();
 const Debtor = require('./models/Debtor');  // Import the Debtor model
