@@ -90,9 +90,15 @@ app.get('/', (req, res) => {
 });
 
 
+// Serve static files from React build folder
+const buildPath = path.join(__dirname, '../Reesor-Frontend/build');
+app.use(express.static(buildPath));
 
-
-
+// Catch-all handler for any other routes (React Router will handle this)
+// Update wildcard route to use a regular expression
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(buildPath, 'index.html'));
+});
 
 // Start the server
 app.listen(PORT , () => {
