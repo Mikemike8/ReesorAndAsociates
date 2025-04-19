@@ -119,7 +119,7 @@ export const Footer = () => {
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
-                <button type="submit" className="w-full  font-raleway  text-white py-3 px-6 rounded-lg hover:bg-red-700 transition-colors">
+                <button type="submit" className="w-full  font-raleway  text-white py-3 px-6 rounded-lg hover:text-gray-400 transition-colors">
                   Subscribe Now
                 </button>
                 {status && <p className="text-sm text-gray-200 mt-2">{status}</p>}
