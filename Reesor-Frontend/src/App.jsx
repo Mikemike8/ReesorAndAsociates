@@ -8,12 +8,14 @@ import { Navbar } from './components/Navbar';
 import  {TopDebtor} from './components/TopDebtor';
 import { Footer } from './components/Footer';
 import Modal from './components/Modal';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
       <div>
         {/* NavBar */}
+        <ScrollToTop/>
         <Navbar/>
 
     
