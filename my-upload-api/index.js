@@ -94,14 +94,14 @@ app.use((req, res, next) => {
   next();
 });
 
-// Serve static files from React build folder
-const buildPath = path.join(__dirname, '../Reesor-Frontend/build');
-app.use(express.static(buildPath));
+// // Serve static files from React build folder
+// const buildPath = path.join(__dirname, '../Reesor-Frontend/build');
+// app.use(express.static(buildPath));
 
-// Catch-all handler for any other routes (React Router will handle this)
-app.get(/^\/(?!api).*$/, (req, res) => {
-  res.sendFile(path.join(buildPath, 'index.html'));
-});
+// // Catch-all handler for any other routes (React Router will handle this)
+// app.get(/^\/(?!api).*$/, (req, res) => {
+//   res.sendFile(path.join(buildPath, 'index.html'));
+// });
 
 
 // Start the server
