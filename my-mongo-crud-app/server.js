@@ -5,6 +5,7 @@ const path = require('path');
 
 const cors = require('cors'); // <-- NEW LINE
 require('dotenv').config();
+const Debtor = require('./models/Debtor');
 
 const app = express();
 const PORT = 5010;
@@ -86,21 +87,6 @@ app.post('/api/save', async (req, res) => {
 
 
 
-// Define the debtor schema
-const debtorSchema = new mongoose.Schema({
-  FirstName: { type: String, required: true },
-  LastName: { type: String, required: true },
-  AmountOwed: { type: Number, required: true },
-  Rank: { type: Number, default: 0 },  // Rank based on AmountOwed
-  lastUpdated: { type: Date, default: Date.now }
-});
-
-// Create a model for Debtors
-const Debtor = mongoose.model('Debtor', debtorSchema);
-
-module.exports = Debtor;
-
-
 
 
 
@@ -147,13 +133,6 @@ app.post('/api/debtor', async (req, res) => {
 
 
 
-// Serve static files from React build folder
-app.use(express.static(path.join(__dirname, 'build')));
-
-// Catch-all handler for any other routes (React Router will handle this)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 
 
 
@@ -168,6 +147,16 @@ app.get('/api/debtors', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch debtors.' });
   }
 });
+
+
+// Serve static files from React build folder
+app.use(express.static(path.join(__dirname, 'build')));
+
+// Catch-all handler for any other routes (React Router will handle this)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 
 // Start server
 app.listen(PORT, () => {
