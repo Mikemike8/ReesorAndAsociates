@@ -1,6 +1,8 @@
 ﻿const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const path = require('path');
+
 const cors = require('cors'); // <-- NEW LINE
 require('dotenv').config();
 
@@ -133,6 +135,13 @@ app.post('/api/debtor', async (req, res) => {
 
 
 
+// Serve static files from React build folder
+app.use(express.static(path.join(__dirname, 'build')));
+
+// Catch-all handler for any other routes (React Router will handle this)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 
 
