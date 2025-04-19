@@ -1,4 +1,4 @@
-
+const mongoose = require('mongoose'); 
 const debtorSchema = new mongoose.Schema({
   FirstName: { type: String, required: true },
   LastName: { type: String, required: true },

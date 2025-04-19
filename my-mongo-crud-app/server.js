@@ -67,37 +67,6 @@ app.post('/api/save', async (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // POST endpoint to save a new debtor and rank them
 app.post('/api/debtor', async (req, res) => {
   const { FirstName, LastName, AmountOwed } = req.body;
@@ -129,11 +98,6 @@ app.post('/api/debtor', async (req, res) => {
     res.status(500).json({ error: 'Failed to save debtor and rank.' });
   }
 });
-
-
-
-
-
 
 
 
