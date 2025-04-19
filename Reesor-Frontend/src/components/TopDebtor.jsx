@@ -9,7 +9,7 @@ export const TopDebtor = () => {
   // Fetch debtor data when the component mounts
   useEffect(() => {
     const fetchData = () => {
-      fetch('http://localhost:5010/api/debtors')  // Your API endpoint for debtor data
+      fetch('https://reesorandasociatestestserver.onrender.com/api/debtors')  // Your API endpoint for debtor data
         .then((response) => {
           if (!response.ok) {
             throw new Error('Network response was not ok');

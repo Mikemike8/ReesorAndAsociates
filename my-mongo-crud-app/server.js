@@ -7,7 +7,7 @@ require('dotenv').config();
 const app = express();
 const PORT = 5010;
 app.use(cors({
-  origin: 'http://localhost:5173', // or your React frontend port
+  origin: ['http://localhost:5173', 'https://reesorandasociates.onrender.com'],
   credentials: true,
 }));
 // <-- ENABLE CORS
@@ -150,5 +150,5 @@ app.get('/api/debtors', async (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+  console.log(`🚀 Server running at https://reesorandasociatestestserver.onrender.com/`);
 });
