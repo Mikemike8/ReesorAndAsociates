@@ -86,6 +86,19 @@ app.get('/get-forms', async (req, res) => {
 app.get('/', (req, res) => {
   res.send('Server is running!');
 });
+'
+
+
+
+
+// Serve static files from React build folder
+app.use(express.static(path.join(__dirname, 'build')));
+
+// Catch-all handler for any other routes (React Router will handle this)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 
 // Start the server
 app.listen(PORT , () => {

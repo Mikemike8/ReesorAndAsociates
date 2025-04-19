@@ -56,34 +56,6 @@ app.post('/api/save', async (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // POST endpoint to save a new debtor and rank them
 app.post('/api/debtor', async (req, res) => {
   const { FirstName, LastName, AmountOwed } = req.body;
@@ -133,6 +105,19 @@ app.get('/api/debtors', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch debtors.' });
   }
 });
+
+
+
+
+
+// Serve static files from React build folder
+app.use(express.static(path.join(__dirname, 'build')));
+
+// Catch-all handler for any other routes (React Router will handle this)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 
 // Start server
 app.listen(PORT, () => {
