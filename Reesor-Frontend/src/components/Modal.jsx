@@ -5,12 +5,17 @@ export default function Modal() {
   const [email, setEmail] = useState('');
   const [company, setCompany] = useState('');
   const [status, setStatus] = useState('');
+  
+  
+ 
 
-  // Show modal on page load
   useEffect(() => {
-    setModalOpen(true);
-    document.body.style.overflow = "hidden";
-
+    const hasSignedUp = localStorage.getItem('hasSignedUp');
+    if (!hasSignedUp) {
+      setModalOpen(true);
+      document.body.style.overflow = "hidden";
+    }
+  
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -36,11 +41,12 @@ export default function Modal() {
       });
 
       const data = await response.json();
-
       if (response.ok) {
         setStatus(data.message);
         setEmail('');
         setCompany('');
+        localStorage.setItem('hasSignedUp', 'true'); // Set the flag
+        setTimeout(() => closeModal(), 1500); // Optional: auto-close after a short delay
       } else {
         setStatus(`❌ Error: ${data.error}`);
       }
@@ -54,8 +60,10 @@ export default function Modal() {
     document.body.style.overflow = "auto";
   };
 
+   
+  if (modalOpen === null) return null;
   if (!modalOpen) return null;
-
+ 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 px-4">
       <div className="relative bg-white rounded-xl shadow-xl p-6 md:p-8 max-w-lg w-full border border-red-100">
