@@ -109,16 +109,16 @@ app.get('/api/debtors', async (req, res) => {
 });
 
 
-
-
-
-// Serve static files from React build folder
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, '../Reesor-Frontend/build')));
 
 // Catch-all handler for any other routes (React Router will handle this)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../Reesor-Frontend/build', 'index.html'));
 });
+
+
+
+
 
 
 // Start server
