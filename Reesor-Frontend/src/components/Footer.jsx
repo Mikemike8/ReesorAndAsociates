@@ -14,7 +14,7 @@ export const Footer = () => {
       e.preventDefault();
       setStatus('Submitting...');
       try {
-        const response = await fetch('http://localhost:5010/api/save', {
+        const response = await fetch('https://reesorandasociatestestserver.onrender.com/api/save', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ Email: email, Company: company })
