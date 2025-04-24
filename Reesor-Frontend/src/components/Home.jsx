@@ -59,12 +59,10 @@ export const Home = () => {
 </div>
 
 
-
-<section className="container mx-auto flex flex-col md:flex-row items-start w-full px-4 py-12 relative">
+<section className="container mx-auto flex flex-col md:flex-row items-start w-full px-4 py-12 gap-8">
   {/* Left Column - Text */}
-  <div className="md:w-[70%] pr-0 md:pr-12 z-10">
+  <div className="md:w-1/2 w-full">
     <h2 className="text-3xl font-bold text-gray-800 mb-8">Areas of Expertise</h2>
-
     <div className="space-y-8">
       {[
         {
@@ -83,7 +81,7 @@ export const Home = () => {
         <div key={i} className="pb-8 border-b border-gray-200">
           <h3 className="text-xl font-semibold text-gray-800 mb-4">{item.title}</h3>
           <p className="text-gray-600 mb-4">{item.desc}</p>
-          <a href="#" className="text-black-600 hover:underline inline-flex items-center pl-1">
+          <a href="#" className="text-blue-600 hover:underline inline-flex items-center">
             Read More
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -93,19 +91,38 @@ export const Home = () => {
       ))}
     </div>
   </div>
-{/* Right Column - Image */}
-<div className="hidden md:block md:w-[30%] mt-12 md:mt-0">
-  <div className="w-full max-w-[380px] ml-4 md:ml-4 lg:ml-4 xl:ml-6">
-    <img
-      src={Truck2}
-      alt="Expertise Visual"
-      className="h-[623px] w-full object-cover rounded-lg"
-    />
+
+{/* Right Column - Stat Box */}
+<div className="md:w-1/2 w-full flex justify-center">
+  <div className="flex flex-col justify-between text-center bg-white px-8 py-10 h-[625px] rounded-lg shadow-xl w-full max-w-md">
+    
+    {/* Top Section */}
+    <div className="space-y-4">
+      <h1 className="text-[#616161] text-[1.5rem]">FROM 2022–2025</h1>
+      <div className="text-[#1976d2] font-bold text-[2rem] leading-snug">
+        DOUBLE BROKERING
+        <br />
+        FRAUD & BROKER CLOSURES
+      </div>
+      <div className="text-[#616161] text-[1.1rem]">RESULTED IN AN ESTIMATED</div>
+    </div>
+
+    {/* Middle Highlight */}
+    <div className="text-[#d32f2f] font-bold text-[3rem]">
+      $7.5 BILLION
+    </div>
+
+    {/* Bottom Section */}
+    <div className="text-[#616161] font-bold text-[2rem] leading-snug space-y-1">
+      <p>IN UNPAID FREIGHT</p>
+      <p>CHARGES</p>
+    </div>
   </div>
 </div>
 
 
 </section>
+
 
 
 
@@ -217,6 +234,10 @@ export const Home = () => {
           className="w-full max-w-md rounded shadow-lg"
         />
       </div>
+
+
+
+
      
     </section>
 
