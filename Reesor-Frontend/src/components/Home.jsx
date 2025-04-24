@@ -40,17 +40,17 @@ export const Home = () => {
     <div>
   <Modal/>  
   <div className="bg-white h-auto">
-  <section className="relative bg-white flex justify-center p-0 ">
-  <div className="w-full max-w-full">
-    <img
-      src={Truck2}
-      alt="Truck Background"
-      className="w-full md:h-[550px] h-auto object-cover object-center   "
-    />
-  </div>
-</section>
-
+  <section className="relative bg-white flex justify-center p-0">
+    <div className="w-full mt-[80px]">
+      <img
+        src={Truck2}
+        alt="Truck Background"
+        className="w-full h-auto md:h-[550px] object-cover object-center"
+      />
+    </div>
+  </section>
 </div>
+
 
 <div className="w-full bg-[#000000] text-center h-12 flex items-center justify-center">
   <h2 className="font-sans font-bold text-white text-[18px]">
