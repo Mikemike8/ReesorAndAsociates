@@ -53,7 +53,7 @@ export const Home = () => {
 
 
 <div className="w-full bg-[#000000] text-center h-12 flex items-center justify-center">
-  <h2 className="font-sans font-bold text-white text-[18px]">
+  <h2 className="font-sans font-bold text-white sm:text-[10px] text-[18px]">
     EXPERTS IN TRANSPORTATION DEBT RECOVERY.
   </h2>
 </div>

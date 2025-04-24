@@ -59,7 +59,7 @@ export const Navbar = () => {
                         {/* Hamburger Menu Button for Mobile (this will only appear on smaller screens) */}
                         {isMobile && (
                             <button className="md:hidden w-8 h-8 flex flex-col justify-center space-y-2" onClick={toggleMenu} aria-label="Toggle menu">
-                                <span className="w-full h-[1px] bg-white transform transition-transform origin-right"></span>
+                                <span className="w-full h-[1px] font-bold bg-white transform transition-transform origin-right"></span>
                                 <span className="w-full h-[1px] bg-white transform transition-transform origin-right"></span>
                                 <span className="w-full h-[1px] bg-white transform transition-transform origin-right"></span>
                             </button>
