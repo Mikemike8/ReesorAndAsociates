@@ -83,7 +83,7 @@ export const Home = () => {
         <div key={i} className="pb-8 border-b border-gray-200">
           <h3 className="text-xl font-semibold text-gray-800 mb-4">{item.title}</h3>
           <p className="text-gray-600 mb-4">{item.desc}</p>
-          <a href="#" className="text-blue-600 hover:underline inline-flex items-center pl-1">
+          <a href="#" className="text-black-600 hover:underline inline-flex items-center pl-1">
             Read More
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -150,10 +150,10 @@ export const Home = () => {
     <div className="pt-6 border-t border-gray-300 mt-6">
       <p className="text-xl font-semibold mb-4">Also Check Out:</p>
       <ul className="list-disc pl-6 space-y-2 text-lg">
-        <li><a href="#" className="text-blue-600 hover:underline">Top 25 Debtors</a></li>
-        <li><a href="#" className="text-blue-600 hover:underline">Weekly Debtor List</a></li>
-        <li><a href="#" className="text-blue-600 hover:underline">Place Account</a></li>
-        <li><a href="#" className="text-blue-600 hover:underline">Industry Links</a></li>
+        <li><a href="#" className="text-black-600 hover:underline">Top 25 Debtors</a></li>
+        <li><a href="#" className="text-black-600 hover:underline">Weekly Debtor List</a></li>
+        <li><a href="#" className="text-black-600 hover:underline">Place Account</a></li>
+        <li><a href="#" className="text-black-600 hover:underline">Industry Links</a></li>
       </ul>
     </div>
   </div>
