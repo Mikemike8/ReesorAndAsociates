@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      padding: {
+        'custom-top-bottom': '6.27px',
+        'custom-left-right': '12.55px',
+      },
       fontFamily: {
         display: ['"Wix Madefor Display"', 'sans-serif'],
         raleway: ['Raleway', 'sans-serif'],

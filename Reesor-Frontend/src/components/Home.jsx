@@ -39,20 +39,25 @@ export const Home = () => {
   return (
     <div>
   <Modal/>  
-<div className="bg-white h-auto">
-  <section className="relative">
-    {/* Image Background */}
+  <div className="bg-white h-auto">
+  <section className="relative bg-white flex justify-center p-0 ">
+  <div className="w-full max-w-full">
     <img
-      src={Truck2}  // Replace with your actual image source
+      src={Truck2}
       alt="Truck Background"
-      className="w-full object-cover h-[50vh] sm:h-[60vh] md:h-[100vh]" // Responsive height based on screen size
+      className="w-full md:h-[550px] h-auto object-cover object-center   "
     />
-  </section>
+  </div>
+</section>
+
 </div>
 
-<div className="w-full bg-custom-blue  text-center h-8 flex items-center justify-center">
-  <h2 className=" font-sans  text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">EXPERTS IN TRANSPORTATION DEBT RECOVERY.</h2>
+<div className="w-full bg-[#000000] text-center h-12 flex items-center justify-center">
+  <h2 className="font-sans font-bold text-white text-[18px]">
+    EXPERTS IN TRANSPORTATION DEBT RECOVERY.
+  </h2>
 </div>
+
 
 
 <section className="container mx-auto flex flex-col md:flex-row items-start w-full px-4 py-12 relative">
@@ -111,88 +116,59 @@ export const Home = () => {
 
 
 
-<div className="relative w-full text-center mb-16 pb-6"> {/* Added pb-6 for spacing inside container */}
-  <h2 className="text-3xl md:text-5xl lg:text-6xl font-normal text-gray-700 px-4 leading-snug max-w-5xl mx-auto mb-4">
-    “You shouldn't have to work twice for your money.
-    <br className="hidden md:block" />
-    You did your job — let us do ours.”
-  </h2>
-
-  {/* Fade effect at bottom */}
-  <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-b from-transparent to-white pointer-events-none"></div>
-</div>
-
-
-
 
 <div className="flex flex-col lg:flex-row w-full px-4 py-12 space-y-8 lg:space-y-0 lg:space-x-8">
 
   {/* Left Column - Image */}
   <div className="w-full lg:w-6/12 flex justify-center lg:justify-start">
     <img 
-      className="w-full lg:w-[90%] h-auto rounded-lg  object-cover" 
+      className="w-full lg:w-[90%] h-auto rounded-lg object-cover" 
       src="https://static.wixstatic.com/media/6bf8bb_d61cccea43b647bb9b2fabd59663a588~mv2.jpg/v1/fill/w_567,h_549,fp_0.50_0.50,q_80,enc_avif,quality_auto/14-Misconceptions_edited.jpg" 
       alt="Description of the image" 
     />
   </div>
-{/* Right Column - Text Content */}
-<div className="w-full lg:w-6/12 px-4 flex flex-col justify-start space-y-6 text-gray-800 font-sans">
 
-  <p className="text-xl lg:text-2xl font-medium leading-relaxed">
-    At <span className="font-semibold text-custom-blue">Reesor & Associates</span>, we understand the challenges motor carriers face every day.
-  </p>
+  {/* Right Column - Text Content */}
+  <div className="w-full lg:w-6/12 flex flex-col justify-center space-y-6 text-gray-800 font-sans">
 
-  <p className="text-lg lg:text-xl leading-relaxed">
-    We can’t raise freight rates or lower fuel costs — but we <span className="font-semibold text-gray-900">can help you recover the money you're owed</span>.
-  </p>
+    <div className="text-center">
+      <h2 className="text-[30px] font-normal text-gray-700 px-4 leading-snug max-w-5xl mx-auto">
+        “You shouldn't have to work twice for your money.
+        <br className="hidden md:block" />
+        You did your job — let us do ours.”
+      </h2>
+    </div>
 
-  <p className="text-lg lg:text-xl leading-relaxed">
-    If a broker or shipper hasn’t paid what they promised, or if you’ve been hit with unfair chargebacks or illegal offsets — <span className="text-gray-900 font-semibold">we’ll fight to get those dollars back where they belong</span> — with you.
-  </p>
+    <p className="text-[16px] font-display leading-relaxed">
+  At <span className="font-semibold text-[#000000]">Reesor & Associates</span>, we understand the challenges motor carriers face every day. We can’t raise freight rates or lower fuel costs — but we <span className="font-semibold text-gray-900">can help you recover the money you're owed</span>. If a broker or shipper hasn’t paid what they promised, or if you’ve been hit with unfair chargebacks or illegal offsets — <span className="text-gray-900 font-semibold">we’ll fight to get those dollars back where they belong</span> — with you.
+</p>
 
-  <p className="text-xl lg:text-2xl font-semibold text-gray-900 italic">
-    You did the work. You deserve to be paid.
-  </p>
+<p className="text-[16px] font-display leading-relaxed mt-6">
+  <span className="font-semibold text-gray-900 italic">You did the work. You deserve to be paid.</span> Let us help you protect your business — and your bottom line.
+</p>
 
-  <p className="text-lg lg:text-xl leading-relaxed">
-    Let us help you protect your business — and your bottom line.
-  </p>
-
-  <div className="pt-6 border-t border-gray-300 mt-6">
-    <p className="text-xl font-semibold mb-4">Also Check Out:</p>
-    <ul className="list-disc pl-6 space-y-2 text-lg">
-      <li>
-        <a href="#" className="text-blue-600 hover:underline">Top 25 Debtors</a>
-      </li>
-      <li>
-        <a href="#" className="text-blue-600 hover:underline">Weekly Debtor List</a>
-      </li>
-      <li>
-        <a href="#" className="text-blue-600 hover:underline">Place Account</a>
-      </li>
-      <li>
-        <a href="#" className="text-blue-600 hover:underline">Industry Links</a>
-      </li>
-    </ul>
+    <div className="pt-6 border-t border-gray-300 mt-6">
+      <p className="text-xl font-semibold mb-4">Also Check Out:</p>
+      <ul className="list-disc pl-6 space-y-2 text-lg">
+        <li><a href="#" className="text-blue-600 hover:underline">Top 25 Debtors</a></li>
+        <li><a href="#" className="text-blue-600 hover:underline">Weekly Debtor List</a></li>
+        <li><a href="#" className="text-blue-600 hover:underline">Place Account</a></li>
+        <li><a href="#" className="text-blue-600 hover:underline">Industry Links</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 
 
-
-
-
+<div className="relative w-full text-center mt-10 4b-6 pb-6">
   
 
-</div>
-
-<div className="relative w-full text-center mt-10 mb-12 pb-6">
-  <h2 className="text-4xl md:text-5xl lg:text-6xl text-gray-700 px-4 leading-tight font-normal">
-    Combined Losses from Broker Closures & Double Brokering (2022–2025)
+  <div className="w-full bg-[#000000]  text-center h-12 flex items-center justify-center">
+  <h2 className=" font-sans font-bold text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">  Combined Losses from Broker Closures & Double Brokering (2022–2025)
   </h2>
-
-  {/* Fade effect at bottom */}
-  <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-white pointer-events-none"></div>
 </div>
+
+ </div>
 
 
 <section className="flex  flex-col md:flex-row items-center justify-between px-6  bg-white">
