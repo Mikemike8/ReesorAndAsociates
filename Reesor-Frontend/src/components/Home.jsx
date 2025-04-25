@@ -94,7 +94,7 @@ export const Home = () => {
 
   {/* Right Column - Stat Box */}
   <div className="w-full md:w-auto md:absolute md:right-[20px] md:top-0 mt-8 md:mt-0 md:flex-shrink-0">
-    <div className="flex flex-col border-4  border-gray-400  mt-[50px] justify-between text-center bg-white px-8 py-10 h-[625px] rounded-lg w-full max-w-md mx-auto md:mx-0">
+    <div className="flex flex-col border-4  border-gray-400 bg-gray-100  mt-[50px] justify-between text-center  px-8 py-10 h-[625px] rounded-lg w-full max-w-md mx-auto md:mx-0">
       {/* Top Section */}
       <div className="space-y-4">
         <h1 className="text-[#616161] text-[1.5rem]">FROM 2022–2025</h1>
