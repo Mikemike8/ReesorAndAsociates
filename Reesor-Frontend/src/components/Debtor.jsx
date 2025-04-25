@@ -121,7 +121,7 @@ const Debtor = () => {
         <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto space-y-12">
       <section className="text-center py-16 bg-gray-100">
-  <h1 className="text-[60px] font-bold mb-6 text-[#003366] tracking-wide">
+  <h1 className="text-[60px] font-oswald mb-6 text-[#003366] tracking-wide">
     Submit a Debtor
   </h1>
   <p className="text-lg font-raleway text-gray-600 max-w-2xl mx-auto">
@@ -134,7 +134,7 @@ const Debtor = () => {
         <div className="bg-white rounded-xl shadow-lg p-8">
         
 
-        <h1 className="text-3xl font-bold text-bg-custom-blue  mb-6 border-b-2 border-custom-blue  pb-4">
+        <h1 className="text-3xl font-oswald text-bg-custom-blue  mb-6 border-b-2 border-custom-blue  pb-4">
             Freight Claim Recovery Submission
           </h1>
 
