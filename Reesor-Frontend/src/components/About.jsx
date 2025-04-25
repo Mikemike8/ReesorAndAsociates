@@ -13,7 +13,7 @@ const About = () => {
       <div className="w-full ">
 
           <section className="text-center py-16 ">
-            <h1 className="text-[70px]  mb-6  font-oswald   text-[#222222] tracking-wide">
+            <h1 className="text-[70px]  mb-6  font-oswald   text-[#000000] tracking-wide">
               Get Results. Contact Us Today:
             </h1>
             <p className="text-lg font-raleway text-gray-600 max-w-2xl mx-auto">
@@ -22,7 +22,7 @@ const About = () => {
           </section>
 
           <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10 py-16 px-6">
-            <div className="space-y-6  font-normal p-10 bg-[#222222]">
+            <div className="space-y-6  font-normal p-10 bg-[#000000] ">
               <h2 className="text-4xl text-white font-raleway mb-4">Contact Us</h2>
               <form
               action="https://api.web3forms.com/submit"
@@ -145,7 +145,7 @@ const About = () => {
 
   {/* Logo in the middle */}
   <div className="relative flex justify-center items-center w-full">
-    <div className="absolute top-1/2 transform -translate-y-1/2 bg-[#1a1a1a] p-3 rounded-full shadow-lg">
+    <div className="absolute top-1/2 transform -translate-y-1/2 bg-[#000000] p-3 rounded-full shadow-lg">
       <img src={RessorLogo} alt="Logo" className="w-12 h-12 object-contain"/>
     </div>
   </div>

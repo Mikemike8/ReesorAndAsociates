@@ -121,7 +121,7 @@ const Debtor = () => {
         <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto space-y-12">
       <section className="text-center py-16 bg-gray-200">
-  <h1 className="text-[60px] font-oswald mb-6 text-[#222222] tracking-wide">
+  <h1 className="text-[60px] font-oswald mb-6 text-[#000000] tracking-wide">
     Submit a Debtor
   </h1>
   <p className="text-lg font-raleway text-gray-600 max-w-2xl mx-auto">
