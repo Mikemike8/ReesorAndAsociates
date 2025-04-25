@@ -120,6 +120,9 @@ export const Home = () => {
   </div>
 </section>
 
+<hr class="border-t-1 border-gray-400 my-8" />
+  
+
 
 
 
