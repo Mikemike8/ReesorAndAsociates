@@ -41,7 +41,7 @@ export const Home = () => {
   <Modal/>  
   <div className="bg-white h-auto">
   <section className="relative bg-white flex justify-center p-0">
-    <div className="w-full mt-[80px]">
+    <div className="w-full mt-[5px]">
       <img
         src={Truck2}
         alt="Truck Background"
@@ -53,16 +53,16 @@ export const Home = () => {
 
 
 <div className="w-full bg-[#000000] text-center h-12 flex items-center justify-center">
-  <h2 className="font-sans font-bold text-white sm:text-[10px]   md:text-[18px]  lg:text-[18px]  text-[18px]">
+  <h2 className="font-oswald text-white sm:text-[10px]   md:text-[18px]  lg:text-[18px]  text-[18px]">
     EXPERTS IN TRANSPORTATION DEBT RECOVERY. 
   </h2>
 </div>
 
 
-<section className="relative flex flex-col md:flex-row items-start w-full px-2 py-12 gap-8">
+<section className="relative flex flex-col md:flex-row items-start  bg-gray-50 w-full px-2 py-12 gap-8">
   {/* Left Column - Text */}
   <div className="md:w-1/2 w-full">
-    <h2 className="text-3xl font-bold text-gray-800 mb-8">Areas of Expertise</h2>
+    <h2 className="text-3xl font-oswald text-gray-800 mb-8">Areas of Expertise</h2>
     <div className="space-y-8">
       {[
         {
@@ -79,7 +79,7 @@ export const Home = () => {
         },
       ].map((item, i) => (
         <div key={i} className="pb-8 border-b border-gray-200">
-          <h3 className="text-xl font-semibold text-gray-800 mb-4">{item.title}</h3>
+          <h3 className="text-xl font-oswald text-gray-800 mb-4">{item.title}</h3>
           <p className="text-gray-600 mb-4">{item.desc}</p>
           <a href="#" className="text-blue-600 hover:underline inline-flex items-center">
             Read More
@@ -98,7 +98,7 @@ export const Home = () => {
       {/* Top Section */}
       <div className="space-y-4">
         <h1 className="text-[#616161] text-[1.5rem]">FROM 2022–2025</h1>
-        <div className="text-[#1976d2] font-bold text-[2rem] leading-snug">
+        <div className="text-[#616161] font-bold text-[2rem] leading-snug">
           DOUBLE BROKERING
           <br />
           FRAUD & BROKER CLOSURES
@@ -107,7 +107,7 @@ export const Home = () => {
       </div>
 
       {/* Middle Highlight */}
-      <div className="text-[#d32f2f] font-bold text-[3rem]">
+      <div className="text-[#d32f2f]  font-bold text-[3rem]">
         $7.5 BILLION
       </div>
 
@@ -120,7 +120,7 @@ export const Home = () => {
   </div>
 </section>
 
-<hr class="border-t-1 border-gray-400 my-8" />
+<hr class="border-t-1 border-gray-200 " />
   
 
 
@@ -174,18 +174,18 @@ export const Home = () => {
 </div>
 
 
-<div className="relative w-full text-center mt-10 4b-6 pb-6">
+<div className="relative w-full text-center mt-10 b-6 ">
   
 
   <div className="w-full bg-[#000000]  text-center h-12 flex items-center justify-center">
-  <h2 className=" font-sans font-bold text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">  Combined Losses from Broker Closures & Double Brokering (2022–2025)
+  <h2 className=" font-oswald text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">  Combined Losses from Broker Closures & Double Brokering (2022–2025)
   </h2>
 </div>
 
  </div>
 
 
-<section className="flex  flex-col md:flex-row items-center justify-between px-6  bg-white">
+<section className="flex  flex-col md:flex-row items-center justify-between px-6  bg-gray-50">
       {/* Left Side - Text Info */}
       <div className="md:w-1/2 w-full mb-8 md:mb-0">
       

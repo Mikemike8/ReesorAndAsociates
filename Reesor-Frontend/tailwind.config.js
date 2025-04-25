@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         display: ['"Wix Madefor Display"', 'sans-serif'],
         raleway: ['Raleway', 'sans-serif'],
+        oswald: ['Oswald', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'], // Added Wix Madefor Display font
       },
       colors: {
