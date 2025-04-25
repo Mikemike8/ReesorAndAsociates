@@ -116,12 +116,12 @@ const Debtor = () => {
 
   
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto space-y-12">
-        <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto space-y-12">
-      <section className="text-center py-16 bg-gray-100">
-  <h1 className="text-[60px] font-oswald mb-6 text-[#003366] tracking-wide">
+      <section className="text-center py-16 bg-gray-200">
+  <h1 className="text-[60px] font-oswald mb-6 text-[#222222] tracking-wide">
     Submit a Debtor
   </h1>
   <p className="text-lg font-raleway text-gray-600 max-w-2xl mx-auto">
@@ -134,7 +134,7 @@ const Debtor = () => {
         <div className="bg-white rounded-xl shadow-lg p-8">
         
 
-        <h1 className="text-3xl font-oswald text-bg-custom-blue  mb-6 border-b-2 border-custom-blue  pb-4">
+        <h1 className="text-3xl font-oswald text-[#222222]  mb-6 border-b-2 border-[#222222]  pb-4">
             Freight Claim Recovery Submission
           </h1>
 
@@ -257,22 +257,22 @@ const Debtor = () => {
 
       {/* Process Timeline */}
       <div className="bg-red-50 p-6 rounded-lg">
-        <h3 className="text-lg font-semibold text-custom-blue  mb-4">What Happens Next:</h3>
+        <h3 className="text-lg font-semibold text-[#222222]  mb-4">What Happens Next:</h3>
         <ol className="space-y-4 text-sm text-black">
           <li className="flex items-start">
-            <span className="flex-shrink-0 w-6 h-6 bg-custom-blue  text-white rounded-full flex items-center justify-center mr-3">
+            <span className="flex-shrink-0 w-6 h-6 bg-[#222222]  text-white rounded-full flex items-center justify-center mr-3">
               1
             </span>
             Submission review within 24 business hours
           </li>
           <li className="flex items-start">
-            <span className="flex-shrink-0 w-6 h-6 bg-custom-blue  text-white rounded-full flex items-center justify-center mr-3">
+            <span className="flex-shrink-0 w-6 h-6 bg-[#222222] text-white rounded-full flex items-center justify-center mr-3">
               2
             </span>
             Case evaluation by our legal team
           </li>
           <li className="flex items-start">
-            <span className="flex-shrink-0 w-6 h-6 bg-custom-blue  text-white rounded-full flex items-center justify-center mr-3">
+            <span className="flex-shrink-0 w-6 h-6 bg-[#222222] text-white rounded-full flex items-center justify-center mr-3">
               3
             </span>
             Recovery process initiation with your approval
@@ -282,7 +282,7 @@ const Debtor = () => {
 
       <button
         type="submit"
-        className="w-full bg-custom-blue  text-white py-4 px-6 rounded-lg hover:bg-blue-900 transition-colors font-semibold text-lg"
+        className="w-full bg-[#1a1a1a]  text-white py-4 px-6 rounded-lg hover:bg-[#222222] transition-colors font-semibold text-lg"
       >
         Initiate Recovery Process
       </button>
@@ -301,12 +301,12 @@ const Debtor = () => {
     </div>
 
         {/* Transportation Alert Banner */}
-        <div className="bg-custom-blue  text-white p-6 rounded-xl shadow-lg text-center">
+        <div className="bg-[#1a1a1a]  text-white p-6 rounded-xl shadow-lg text-center">
           <h3 className="text-xl font-bold mb-2">TRANSPORTATION ALERT</h3>
           <p className="text-lg  text-white  mb-4">Find Out Who's Not Paying</p>
           {/* Wrap the button with Link for navigation */}
 <Link to="/topdebtor">
-  <button className="  bg-custom-blue   px-6 py-2 rounded-lg hover:bg-blue-900 ion-colors font-medium">
+  <button className="     px-6 py-2 rounded-lg hover:text-gray-200 ion-colors font-medium">
     View Top Debtors →
   </button>
 </Link>
