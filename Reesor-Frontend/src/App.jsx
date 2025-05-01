@@ -9,6 +9,7 @@ import  {TopDebtor} from './components/TopDebtor';
 import { Footer } from './components/Footer';
 import Modal from './components/Modal';
 import ScrollToTop from './components/ScrollToTop';
+import { Law } from './components/Law';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/debtor" element={<Debtor />} /> 
           <Route path="/topdebtor" element={<TopDebtor />} /> 
+          <Route path="/law" element={<Law/>}/>
         
         
         </Routes>

@@ -108,6 +108,15 @@ export const Navbar = () => {
           >
            Top Debtor
           </Link>
+          <Link 
+            to="/law"
+            className="text-2xl text-white tracking-[0.2em] hover:text-white/50 transition-colors transform hover:scale-105" 
+            onClick={toggleMenu}
+          >
+           About
+          </Link>
+          
+
    
 </div>
 

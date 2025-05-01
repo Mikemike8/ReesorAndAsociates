@@ -39,27 +39,32 @@ export const Home = () => {
   return (
     <div>
   <Modal/>  
-  <div className="bg-white h-auto">
-  <section className="relative bg-white flex justify-center p-0">
-    <div className="w-full mt-[5px]">
-      <img
-        src={Truck2}
-        alt="Truck Background"
-        className="w-full h-auto md:h-[550px] object-cover object-center"
-      />
-    </div>
-  </section>
+  <div className="bg-white  pt-[80px]   h-auto">
+     {/* Hero Section */}
+        <section className="relative h-[75vh] pt-[80px]  bg-cover bg-center" style={{ backgroundImage: `url(${Truck2 })` }}>
+          <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-center px-4">
+            <div>
+              <h1 className="text-white text-4xl md:text-6xl font-oswald  mb-4">
+                We Understand the Industry — and the Law
+              </h1>
+              <p className="text-white  text-lg md:text-xl max-w-3xl mx-auto">
+                Decades of real-world freight dispute experience, backed by legal expertise that gets results.
+              </p>
+            </div>
+          </div>
+        </section>
+       
 </div>
 
 
 <div className="w-full bg-[#000000] text-center h-12 flex items-center justify-center">
   <h2 className="font-oswald text-white sm:text-[18px]   md:text-[18px]  lg:text-[18px]   text-[10px]">
-    EXPERTS IN TRANSPORTATION DEBT RECOVERY. 
+  WE ARE  EXPERTS IN TRANSPORTATION DEBT RECOVERY. 
   </h2>
 </div>
 
 
-<section className="relative flex flex-col md:flex-row items-start  bg-gray-50 w-full px-2 py-12 gap-8">
+<section className="relative flex flex-col   md:flex-row items-start  bg-gray-50 w-full px-2 py-12 gap-8">
   {/* Left Column - Text */}
   <div className="md:w-1/2 w-full">
     <h2 className="text-3xl font-oswald text-gray-800 mb-8">Areas of Expertise</h2>
