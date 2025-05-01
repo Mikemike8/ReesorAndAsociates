@@ -42,16 +42,7 @@ export const Home = () => {
   <div className="bg-white  pt-[80px]   h-auto">
      {/* Hero Section */}
         <section className="relative h-[75vh] pt-[80px]  bg-cover bg-center" style={{ backgroundImage: `url(${Truck2 })` }}>
-          <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-center px-4">
-            <div>
-              <h1 className="text-white text-4xl md:text-6xl font-oswald  mb-4">
-                We Understand the Industry — and the Law
-              </h1>
-              <p className="text-white  text-lg md:text-xl max-w-3xl mx-auto">
-                Decades of real-world freight dispute experience, backed by legal expertise that gets results.
-              </p>
-            </div>
-          </div>
+          
         </section>
        
 </div>
