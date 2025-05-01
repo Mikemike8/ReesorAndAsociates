@@ -48,7 +48,9 @@ export const Home = () => {
 </div>
 
 
-<div className="w-full bg-[#000000] text-center h-12 flex items-center justify-center">
+<div className="w-full  text-center h-12 flex items-center justify-center" style={{
+  backgroundImage: 'linear-gradient(181deg, rgba(50, 50, 50, 1) -1.7%, rgba(30, 30, 30, 1) 85.6%)'
+}}>
   <h2 className="font-oswald text-white sm:text-[18px]   md:text-[18px]  lg:text-[18px]   text-[10px]">
   WE ARE  EXPERTS IN TRANSPORTATION DEBT RECOVERY. 
   </h2>
@@ -173,7 +175,9 @@ export const Home = () => {
 <div className="relative w-full text-center mt-10 b-6 ">
   
 
-  <div className="w-full bg-[#000000]  text-center h-12 flex items-center justify-center">
+  <div className="w-full   text-center h-12 flex items-center justify-center"  style={{
+  backgroundImage: 'linear-gradient(181deg, rgba(50, 50, 50, 1) -1.7%, rgba(30, 30, 30, 1) 85.6%)'
+}}>
   <h2 className=" font-oswald text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">  Combined Losses from Broker Closures & Double Brokering (2022–2025)
   </h2>
 </div>

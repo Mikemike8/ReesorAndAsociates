@@ -36,7 +36,9 @@ export const Navbar = () => {
 
     return (
         <>
-            <nav className="fixed w-full z-50 bg-[#000000]  text-white border-b border-white/10 overflow-hidden">
+            <nav className="fixed w-full z-50   text-white border-b border-white/10 overflow-hidden" style={{
+  backgroundImage: 'linear-gradient(181deg, rgba(50, 50, 50, 1) -1.7%, rgba(30, 30, 30, 1) 85.6%)'
+}}>
                 <div className="max-w-[2000px] mx-auto px-4 sm:px-8">
                     <div className="flex justify-between items-center h-20">
                         {/* Left side: Logo with responsive sizes */}

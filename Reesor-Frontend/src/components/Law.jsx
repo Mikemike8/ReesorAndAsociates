@@ -54,13 +54,25 @@ export const Law = () => {
         },
       ];
   return (
-    <div className="bg-white text-gray-900 pt-[110px]  font-sans">
+    <div className="bg-gray-50 text-gray-900 pt-[110px]  font-sans">
+
+<section className="text-center pt-24 pb-8 px-4 bg-gray-50">
+  <div className="max-w-4xl mx-auto">
+    <h1 className="text-black text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+      We Understand the Industry — and the Law
+    </h1>
+    <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
+      With decades of hands-on experience, we’ve built a practice around understanding not just the law — but how it’s applied in real-world freight disputes. Our expertise includes case law, federal transportation statutes, and how various circuit courts interpret liability between brokers, shippers, consignees, and carriers.
+    </p>
+  </div>
+</section>
+
 
 
 
       {/* Hero Section */}
       <div
-    className="relative h-[60vh] bg-cover bg-center rounded-lg overflow-hidden w-[90%] mx-auto"
+    className="relative h-[60vh] bg-cover bg-center  rounded-lg overflow-hidden w-[90%] mx-auto"
     style={{ backgroundImage: `url(${jjtrucj})` }}
   >
     <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center text-center px-4">
@@ -68,16 +80,7 @@ export const Law = () => {
     </div>
   
 </div>
-<section className="text-center pt-[10px] w-full">
-  <div className="w-[70%] mx-auto">
-    <h1 className="text-black text-3xl md:text-6xl font-bold mb-4">
-      We Understand the Industry — and the Law
-    </h1>
-  </div>
-  <p className="text-black text-lg md:text-xl pb-[5px] w-[90%] mx-auto">
-    With decades of hands-on experience, we’ve built a practice around understanding not just the law — but how it’s applied in real-world freight disputes. Our expertise includes case law, federal transportation statutes, and how various circuit courts interpret liability between brokers, shippers, consignees, and carriers.
-  </p>
-</section>
+
 
 
 
@@ -99,7 +102,7 @@ export const Law = () => {
 
 
 
-      <section className="bg-gray-100 py-16 px-6">
+      <section className="bg-gray-200 py-16 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Why Choose Us</h2>
         <div className="grid md:grid-cols-2 gap-8">
@@ -120,7 +123,7 @@ export const Law = () => {
 
 
 
-      <div className="bg-white text-gray-900 font-sans">
+      <div className="bg-gray-50 text-gray-900 font-sans">
   {/* Article Body */}
   <section className="max-w-7xl mx-auto py-12 px-4 flex flex-row items-stretch">
   {/* Left Side: Image (50%) */}
