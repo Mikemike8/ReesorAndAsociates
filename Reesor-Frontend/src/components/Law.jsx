@@ -133,7 +133,7 @@ export const Law = () => {
       <img
         src={girl}
         alt="Magazine cover image"
-        className="w-full h-full object-cover border border-yellow-300 rounded-xl"
+        className="w-full h-full object-cover border border-gray-900 rounded-xl"
       />
     </div>
 
