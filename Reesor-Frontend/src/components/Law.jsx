@@ -56,7 +56,7 @@ export const Law = () => {
   return (
     <div className="bg-gray-50 text-gray-900 pt-[110px]  font-sans">
 
-<section className="text-center pt-24 pb-8 px-4 bg-gray-50">
+<section className="text-center pt-4 pb-8 px-4 bg-gray-50">
   <div className="max-w-4xl mx-auto">
     <h1 className="text-slate-800
  text-4xl md:text-6xl font-extrabold leading-tight mb-6">
