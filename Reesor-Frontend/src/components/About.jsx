@@ -23,7 +23,8 @@ const About = () => {
           </section>
 
           <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10 py-16 px-6">
-            <div className="space-y-6  font-normal p-10 bg-[#000000] ">
+            <div className="space-y-6  font-normal p-10  "  style={{
+  backgroundImage: 'linear-gradient(181deg, rgba(50, 50, 50, 1) -1.7%, rgba(30, 30, 30, 1) 85.6%)'}}   >
               <h2 className="text-4xl text-white font-raleway mb-4">Contact Us</h2>
               <form
               action="https://api.web3forms.com/submit"
@@ -146,7 +147,8 @@ const About = () => {
 
   {/* Logo in the middle */}
   <div className="relative flex justify-center items-center w-full">
-    <div className="absolute top-1/2 transform -translate-y-1/2 bg-[#000000] p-3 rounded-full shadow-lg">
+    <div className="absolute top-1/2 transform -translate-y-1/2  p-3 rounded-full shadow-lg"   style={{
+  backgroundImage: 'linear-gradient(181deg, rgba(50, 50, 50, 1) -1.7%, rgba(30, 30, 30, 1) 85.6%)'}}  >
       <img src={RessorLogo} alt="Logo" className="w-12 h-12 object-contain"/>
     </div>
   </div>

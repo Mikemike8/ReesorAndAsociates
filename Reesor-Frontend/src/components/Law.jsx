@@ -10,6 +10,7 @@ import {
   
   
 import jjtrucj from '../assets/Truck2.jpg'; 
+import girl from '../assets/beautiful-woman-hat-retro-fashionsummer-260nw-418145404.webp'; 
 
 import React from "react";
 
@@ -130,7 +131,7 @@ export const Law = () => {
     {/* Left Side: Image (50%) */}
     <div className="w-[50%] h-full ">
       <img
-        src={jjtrucj}
+        src={girl}
         alt="Magazine cover image"
         className="w-full h-full object-cover border border-yellow-300 rounded-xl"
       />
