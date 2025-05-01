@@ -13,7 +13,8 @@ const About = () => {
       <div className="w-full ">
 
           <section className="text-center py-16 ">
-            <h1 className="text-[70px]  mb-6  font-oswald   text-[#000000] tracking-wide">
+            <h1 className="text-[70px]  mb-6  font-oswald   text-slate-800
+ tracking-wide">
               Get Results. Contact Us Today:
             </h1>
             <p className="text-lg font-raleway text-gray-600 max-w-2xl mx-auto">

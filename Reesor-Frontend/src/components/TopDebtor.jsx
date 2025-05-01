@@ -32,7 +32,8 @@ export const TopDebtor = () => {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100 py-10">
       <section className="text-center py-16">
-  <h1 className="text-[70px] font-oswald  mb-6 text-[#1a1a1a] tracking-wide">
+  <h1 className="text-[70px] font-oswald  mb-6 text-slate-800
+ tracking-wide">
     Know Who Owes You Most
   </h1>
   <p className="text-lg font-raleway text-gray-600 max-w-2xl mx-auto">
