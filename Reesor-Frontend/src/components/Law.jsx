@@ -54,7 +54,7 @@ export const Law = () => {
         },
       ];
   return (
-    <div className="bg-gray-50 text-gray-900 pt-[110px]  font-sans">
+    <div className="bg-gray-50 text-gray-900 pt-[110px]  font-sans" >
 
 <section className="text-center pt-4 pb-8 px-4 bg-gray-50">
   <div className="max-w-4xl mx-auto">
@@ -76,8 +76,17 @@ export const Law = () => {
     className="relative h-[60vh] bg-cover bg-center  rounded-lg overflow-hidden w-[90%] mx-auto"
     style={{ backgroundImage: `url(${jjtrucj})` }}
   >
-    <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center text-center px-4">
-     
+    <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-center px-4">
+      {/* CTA Footer */}
+    
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h3 className="text-5xl text-white font-bold mb-2">Need Legal Help With Freight Recovery?</h3>
+          <p className="mb-4 text-2xl text-white">We’re not just attorneys — we’re industry experts.</p>
+          <button className="bg-yellow-400 text-black px-6 py-2 rounded font-semibold hover:bg-yellow-300 transition">
+            Contact Us Now
+          </button>
+        </div>
+      
     </div>
   
 </div>
@@ -89,23 +98,14 @@ export const Law = () => {
 
 
 
-            {/* CTA Footer */}
-            <section className="bg-gray-50 text-black py-10">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h3 className="text-2xl font-bold mb-2">Need Legal Help With Freight Recovery?</h3>
-          <p className="mb-4">We’re not just attorneys — we’re industry experts.</p>
-          <button className="bg-yellow-400 text-black px-6 py-2 rounded font-semibold hover:bg-yellow-300 transition">
-            Contact Us Now
-          </button>
-        </div>
-      </section>
+            
 
 
 
 
-      <section className="bg-gray-200 py-16 px-6">
+      <section className="bg-gray-200  py-16 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Why Choose Us</h2>
+        <h2 className="text-6xl font-oswald text-center mb-12 text-gray-800">Why Choose Us</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {points.map((point, index) => (
             <div key={index} className="flex items-start space-x-4">
@@ -123,27 +123,29 @@ export const Law = () => {
     </section>
 
 
-
-      <div className="bg-gray-50 text-gray-900 font-sans">
+    <div className="bg-gray-50 pt-8 text-gray-900 font-sans">
+    <h2 className="text-6xl  mx-auto font-oswald text-center mb-12 text-gray-800">MEET THE CEO</h2>
   {/* Article Body */}
-  <section className="max-w-7xl mx-auto py-12 px-4 flex flex-row items-stretch">
-  {/* Left Side: Image (50%) */}
-  <div className="w-[30%]">
-    <img
-      src={jjtrucj}
-      alt="Magazine cover image"
-      className="w-full h-full object-cover"
-    />
-  </div>
+  <section className="max-w-7xl mx-auto py-12 px-4 flex items-stretch h-[600px]">
+    {/* Left Side: Image (50%) */}
+    <div className="w-[50%] h-full ">
+      <img
+        src={jjtrucj}
+        alt="Magazine cover image"
+        className="w-full h-full object-cover border border-yellow-300 rounded-xl"
+      />
+    </div>
 
-  {/* Right Side: Article Content (50%) */}
-  <div className="w-[70%] pl-8">
-    <p>
-    JT Reesor founded Baxter Bailey & Associates, the first and largest transportation-specific collection agency in the U.S. He revolutionized freight charge recovery, going beyond brokers to pursue shippers, consignees, and even the broker’s customers. Under his leadership, the company handled thousands of placements per year for motor carriers nationwide. However, the high client volume led to operational strain — slower responses, stagnant recovery rates, and diminished service. Learning from this, JT made a strategic shift: Fewer clients and stronger relationships. More time per case for better outcomes. A leaner, smarter, more effective model. Eventually, he sold Baxter Bailey to build a new venture focused on high-quality service and better recovery results.</p>
-  </div>
-</section>
-
+    <div className="w-[50%] text-xl pl-8 flex flex-col justify-between h-full">
+  <p className="text-xl leading-relaxed text-gray-800 font-serif tracking-wide text-justify">
+    JT Reesor founded Baxter Bailey & Associates, the first and largest transportation-specific collection agency in the U.S. He revolutionized freight charge recovery, going beyond brokers to pursue shippers, consignees, and even the broker’s customers. Under his leadership, the company handled thousands of placements per year for motor carriers nationwide. However, the high client volume led to operational strain — slower responses, stagnant recovery rates, and diminished service. Learning from this, JT made a strategic shift: Fewer clients and stronger relationships. More time per case for better outcomes. A leaner, smarter, more effective model. Eventually, he sold Baxter Bailey to build a new venture focused on high-quality service and better recovery results.
+  </p>
 </div>
+
+  </section>
+</div>
+
+
 
 
 
