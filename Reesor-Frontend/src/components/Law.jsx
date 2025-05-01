@@ -63,7 +63,7 @@ export const Law = () => {
     className="relative h-[60vh] bg-cover bg-center rounded-lg overflow-hidden w-[90%] mx-auto"
     style={{ backgroundImage: `url(${jjtrucj})` }}
   >
-    <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-center px-4">
+    <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center text-center px-4">
      
     </div>
   
