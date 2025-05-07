@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import RessorLogo from '../assets/Reesorlog.png'; 
+import TruckImage from '../assets/Legal.jpg'; // import image
+
 import Modal from './Modal';
 
 
@@ -9,18 +11,21 @@ const About = () => {
 
   return (
     <>
-      <div className=" py-16 md:py-24">
+      <div className=" py-4  md:py-20">
       <div className="w-full ">
-
-          <section className="text-center py-16 ">
-            <h1 className="text-[70px]  mb-6  font-oswald   text-slate-800
- tracking-wide">
-              Get Results. Contact Us Today:
-            </h1>
-            <p className="text-lg font-raleway text-gray-600 max-w-2xl mx-auto">
-              We’d love to hear from you. Whether you’re looking to recover unpaid invoices, have questions about our collection process, or just want to discuss industry challenges—we’re here to help.
-            </p>
-          </section>
+      <section
+  className="text-center py-24 bg-cover bg-center bg-no-repeat"
+  style={{ backgroundImage: `url(${TruckImage})` }}
+>
+<div className="pt-16"> {/* 👈 moves content down */}
+    <h1 className="text-[70px] mb-6 font-oswald text-white  tracking-wide">
+      Get Results. Contact Us Today:
+    </h1>
+    <p className="text-lg font-raleway text-white max-w-2xl mx-auto">
+      We’d love to hear from you. Whether you’re looking to recover unpaid invoices, have questions about our collection process, or just want to discuss industry challenges—we’re here to help.
+    </p>
+  </div>
+</section>
 
           <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10 py-16 px-6">
             <div className="space-y-6  font-normal p-10  "  style={{
@@ -138,10 +143,24 @@ const About = () => {
             
 
             </div>
-            
+          
           </section>
+          <div className="w-full mx-auto h-[300px]">
+  <div className="relative h-full rounded-xl shadow-md">
+    <iframe
+      className="absolute top-0 left-0 w-full h-full"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.7882753863455!2d-89.89158232537156!3d34.961914972828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x887f8f1ba6a87783%3A0xe66855f6acfc541b!2sCrossroad%20Customs!5e0!3m2!1sen!2sus!4v1746587007025!5m2!1sen!2sus"
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
 
-          <div className="relative w-full py-4">
+
+
+        
+          <div className="relative w-full py-12">
   {/* Horizontal line */}
   <div className="absolute top-1/2 left-0 right-0 bg-gray-400 h-0.5"></div>
 

@@ -74,7 +74,7 @@ export const Law = () => {
 
       {/* Hero Section */}
       <div
-    className="relative h-[60vh] bg-cover bg-center  rounded-lg overflow-hidden w-[90%] mx-auto"
+    className="relative h-[60vh] bg-cover bg-center pb-[10px] rounded-lg overflow-hidden w-[90%] mx-auto"
     style={{ backgroundImage: `url(${jjtrucj})` }}
   >
     <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-center px-4">
@@ -104,7 +104,7 @@ export const Law = () => {
 
 
 
-      <section className="bg-gray-200  py-16 px-6">
+      <section className="bg-gray-200 mt-[10px]  py-16 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-6xl font-oswald text-center mb-12 text-gray-800">Why Choose Us</h2>
         <div className="grid md:grid-cols-2 gap-8">

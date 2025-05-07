@@ -7,6 +7,28 @@ import RessorLogo from '../assets/Reesorlog.png'; // Ensure your image path is c
 
 import Chart from '../assets/Chart.png';
 import Modal from './Modal';
+
+const services = [
+  {
+    title: 'General Freight Collections',
+    desc: 'We pursue unpaid freight charges from brokers, freight forwarders, shippers, and consignees...',
+    more: 'Our collections team specializes in recovering payments swiftly while maintaining your professional reputation.'
+  },
+  {
+    title: 'Vicarious Liability',
+    desc: 'We pursue unpaid freight charges from brokers, freight forwarders, shippers, and consignees...',
+    more: 'Understanding the legal implications of carrier liability can save thousands. We’re here to help.'
+  },
+  {
+    title: 'Illegal Offset against Freight Charges',
+    desc: 'We pursue unpaid freight charges from brokers, freight forwarders, shippers, and consignees...',
+    more: 'Offsets can be challenged when unsupported. Our team provides documentation and legal backup.'
+  }
+];
+
+
+
+
 export const Home = () => {
 
     const [email, setEmail] = useState('');
@@ -36,6 +58,13 @@ export const Home = () => {
     };
 
 
+    const [openIndex, setOpenIndex] = useState(null);
+
+    const toggleReadMore = (i) => {
+      setOpenIndex(openIndex === i ? null : i);
+    };
+
+
   return (
     <div>
   <Modal/>  
@@ -57,34 +86,29 @@ export const Home = () => {
 </div>
 
 
-<section className="relative flex flex-col   md:flex-row items-start  bg-gray-50 w-full px-2 py-12 gap-8">
+<section className="relative flex flex-col md:flex-row items-start bg-gray-50 w-full px-2 py-12 gap-8">
   {/* Left Column - Text */}
-  <div className="md:w-1/2 w-full">
+  <div className="flex-1">
     <h2 className="text-3xl font-oswald text-gray-800 mb-8">Areas of Expertise</h2>
     <div className="space-y-8">
-      {[
-        {
-          title: 'General Freight Collections',
-          desc: 'We pursue unpaid freight charges from brokers, freight forwarders, shippers, and consignees...',
-        },
-        {
-          title: 'Vicarious Liability',
-          desc: 'We pursue unpaid freight charges from brokers, freight forwarders, shippers, and consignees...',
-        },
-        {
-          title: 'Illegal Offset against Freight Charges',
-          desc: 'We pursue unpaid freight charges from brokers, freight forwarders, shippers, and consignees...',
-        },
-      ].map((item, i) => (
+      {services.map((item, i) => (
         <div key={i} className="pb-8 border-b border-gray-200">
           <h3 className="text-xl font-oswald text-gray-800 mb-4">{item.title}</h3>
-          <p className="text-gray-600 mb-4">{item.desc}</p>
-          <a href="#" className="text-blue-600 hover:underline inline-flex items-center">
-            Read More
+          <p className="text-gray-600 mb-2">{item.desc}</p>
+
+          {openIndex === i && (
+            <p className="text-gray-600 mb-2">{item.more}</p>
+          )}
+
+          <button
+            onClick={() => toggleReadMore(i)}
+            className="text-blue-600 hover:underline inline-flex items-center"
+          >
+            {openIndex === i ? 'Read Less' : 'Read More'}
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
             </svg>
-          </a>
+          </button>
         </div>
       ))}
     </div>
@@ -92,7 +116,7 @@ export const Home = () => {
 
   {/* Right Column - Stat Box */}
   <div className="w-full md:w-auto md:absolute md:right-[20px] md:top-0 mt-8 md:mt-0 md:flex-shrink-0">
-    <div className="flex flex-col border-4  border-gray-400 bg-gray-100  mt-[50px] justify-between text-center  px-8 py-10 h-[625px] rounded-lg w-full max-w-md mx-auto md:mx-0">
+    <div className="flex flex-col border-4 border-gray-400 bg-gray-100 mt-[50px] justify-between text-center px-8 py-10 h-[500px] rounded-lg w-full max-w-md mx-auto md:mx-0">
       {/* Top Section */}
       <div className="space-y-4">
         <h1 className="text-[#616161] text-[1.5rem]">FROM 2022–2025</h1>
@@ -105,9 +129,7 @@ export const Home = () => {
       </div>
 
       {/* Middle Highlight */}
-      <div className="text-[#d32f2f]  font-bold text-[3rem]">
-        $7.5 BILLION
-      </div>
+      <div className="text-[#d32f2f] font-bold text-[3rem]">$7.5 BILLION</div>
 
       {/* Bottom Section */}
       <div className="text-[#616161] font-bold text-[2rem] leading-snug space-y-1">
@@ -117,6 +139,7 @@ export const Home = () => {
     </div>
   </div>
 </section>
+
 
 <hr class="border-t-1 border-gray-200 " />
   
