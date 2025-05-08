@@ -86,59 +86,62 @@ export const Home = () => {
 </div>
 
 
-<section className="relative flex flex-col md:flex-row items-start bg-gray-50 w-full px-2 py-12 gap-8">
-  {/* Left Column - Text */}
-  <div className="flex-1">
-    <h2 className="text-3xl font-oswald text-gray-800 mb-8">Areas of Expertise</h2>
-    <div className="space-y-8">
-      {services.map((item, i) => (
-        <div key={i} className="pb-8 border-b border-gray-200">
-          <h3 className="text-xl font-oswald text-gray-800 mb-4">{item.title}</h3>
-          <p className="text-gray-600 mb-2">{item.desc}</p>
+<section className="relative bg-gray-50 w-full px-4 py-12">
+  <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-12">
+    {/* Left Column - Text */}
+    <div className="flex-1">
+      <h2 className="text-3xl font-oswald text-gray-800 mb-8">Areas of Expertise</h2>
+      <div className="space-y-8">
+        {services.map((item, i) => (
+          <div key={i} className="pb-8 border-b border-gray-200">
+            <h3 className="text-xl font-oswald text-gray-800 mb-4">{item.title}</h3>
+            <p className="text-gray-600 mb-2">{item.desc}</p>
 
-          {openIndex === i && (
-            <p className="text-gray-600 mb-2">{item.more}</p>
-          )}
+            {openIndex === i && (
+              <p className="text-gray-600 mb-2">{item.more}</p>
+            )}
 
-          <button
-            onClick={() => toggleReadMore(i)}
-            className="text-blue-600 hover:underline inline-flex items-center"
-          >
-            {openIndex === i ? 'Read Less' : 'Read More'}
-            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
-      ))}
-    </div>
-  </div>
-
-  {/* Right Column - Stat Box */}
-  <div className="w-full md:w-auto md:absolute md:right-[20px] md:top-0 mt-8 md:mt-0 md:flex-shrink-0">
-    <div className="flex flex-col border-4 border-gray-400 bg-gray-100 mt-[50px] justify-between text-center px-8 py-10 h-[500px] rounded-lg w-full max-w-md mx-auto md:mx-0">
-      {/* Top Section */}
-      <div className="space-y-4">
-        <h1 className="text-[#616161] text-[1.5rem]">FROM 2022–2025</h1>
-        <div className="text-[#616161] font-bold text-[2rem] leading-snug">
-          DOUBLE BROKERING
-          <br />
-          FRAUD & BROKER CLOSURES
-        </div>
-        <div className="text-[#616161] text-[1.1rem]">RESULTED IN AN ESTIMATED</div>
+            <button
+              onClick={() => toggleReadMore(i)}
+              className="text-blue-600 hover:underline inline-flex items-center"
+            >
+              {openIndex === i ? 'Read Less' : 'Read More'}
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        ))}
       </div>
+    </div>
 
-      {/* Middle Highlight */}
-      <div className="text-[#d32f2f] font-bold text-[3rem]">$7.5 BILLION</div>
+    {/* Right Column - Stat Box */}
+    <div className="w-full lg:w-[400px] flex-shrink-0">
+      <div className="flex flex-col border-4 border-gray-400 bg-gray-100 justify-between text-center px-8 py-10 h-[500px] rounded-lg w-full">
+        {/* Top Section */}
+        <div className="space-y-4">
+          <h1 className="text-[#616161] text-[1.5rem]">FROM 2022–2025</h1>
+          <div className="text-[#616161] font-bold text-[2rem] leading-snug">
+            DOUBLE BROKERING
+            <br />
+            FRAUD & BROKER CLOSURES
+          </div>
+          <div className="text-[#616161] text-[1.1rem]">RESULTED IN AN ESTIMATED</div>
+        </div>
 
-      {/* Bottom Section */}
-      <div className="text-[#616161] font-bold text-[2rem] leading-snug space-y-1">
-        <p>IN UNPAID FREIGHT</p>
-        <p>CHARGES</p>
+        {/* Middle Highlight */}
+        <div className="text-[#d32f2f] font-bold text-[3rem]">$7.5 BILLION</div>
+
+        {/* Bottom Section */}
+        <div className="text-[#616161] font-bold text-[2rem] leading-snug space-y-1">
+          <p>IN UNPAID FREIGHT</p>
+          <p>CHARGES</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 <hr class="border-t-1 border-gray-200 " />
