@@ -127,23 +127,24 @@ export const Law = () => {
     <div className="bg-gray-50 pt-8 text-gray-900 font-sans">
     <h2 className="text-6xl  mx-auto font-oswald text-center mb-12 text-gray-800">MEET THE CEO</h2>
   {/* Article Body */}
-  <section className="max-w-7xl mx-auto py-12 px-4 flex items-stretch h-[600px]">
-    {/* Left Side: Image (50%) */}
-    <div className="w-[50%] h-full ">
-      <img
-        src={girl}
-        alt="Magazine cover image"
-        className="w-full h-full object-cover border border-gray-900 rounded-xl"
-      />
-    </div>
+  <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-stretch gap-8">
+  {/* Left Side: Image */}
+  <div className="w-full md:w-1/2">
+    <img
+      src={girl}
+      alt="Magazine cover image"
+      className="w-full h-full object-cover border border-gray-900 rounded-xl max-h-[500px] md:max-h-none"
+    />
+  </div>
 
-    <div className="w-[50%] text-xl pl-8 flex flex-col justify-between h-full">
-  <p className="text-xl leading-relaxed text-gray-800 font-serif tracking-wide text-justify">
-    JT Reesor founded Baxter Bailey & Associates, the first and largest transportation-specific collection agency in the U.S. He revolutionized freight charge recovery, going beyond brokers to pursue shippers, consignees, and even the broker’s customers. Under his leadership, the company handled thousands of placements per year for motor carriers nationwide. However, the high client volume led to operational strain — slower responses, stagnant recovery rates, and diminished service. Learning from this, JT made a strategic shift: Fewer clients and stronger relationships. More time per case for better outcomes. A leaner, smarter, more effective model. Eventually, he sold Baxter Bailey to build a new venture focused on high-quality service and better recovery results.
-  </p>
-</div>
+  {/* Right Side: Text */}
+  <div className="w-full md:w-1/2 text-xl flex flex-col justify-between">
+    <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-800 font-serif tracking-wide text-justify">
+      JT Reesor founded Baxter Bailey & Associates, the first and largest transportation-specific collection agency in the U.S. He revolutionized freight charge recovery, going beyond brokers to pursue shippers, consignees, and even the broker’s customers. Under his leadership, the company handled thousands of placements per year for motor carriers nationwide. However, the high client volume led to operational strain — slower responses, stagnant recovery rates, and diminished service. Learning from this, JT made a strategic shift: Fewer clients and stronger relationships. More time per case for better outcomes. A leaner, smarter, more effective model. Eventually, he sold Baxter Bailey to build a new venture focused on high-quality service and better recovery results.
+    </p>
+  </div>
+</section>
 
-  </section>
 </div>
 
 
