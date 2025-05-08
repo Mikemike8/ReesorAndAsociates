@@ -9,7 +9,7 @@ import {
   } from 'lucide-react';
   
   
-import jjtrucj from '../assets/Truck2.jpg'; 
+import jjtrucj from '../assets/sebastian-pichler-bAQH53VquTc-unsplash.jpg'; 
 import girl from '../assets/beautiful-woman-hat-retro-fashionsummer-260nw-418145404.webp'; 
 
 import React from "react";

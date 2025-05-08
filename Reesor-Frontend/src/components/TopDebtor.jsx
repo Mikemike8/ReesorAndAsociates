@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Modal from './Modal';
+import MoneyPile from '../assets/legalgirl.avif'
 
 export const TopDebtor = () => {
   // State to hold debtor data and error state
@@ -30,16 +31,25 @@ export const TopDebtor = () => {
   }, []);  // Empty dependency array ensures this runs once on mount
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100 py-10">
-      <section className="text-center py-16">
-  <h1 className="text-[70px] font-oswald  mb-6 text-slate-800
- tracking-wide">
-    Know Who Owes You Most
-  </h1>
-  <p className="text-lg font-raleway text-gray-600 max-w-2xl mx-auto">
-    Our Top Debtors list highlights companies with the most unpaid accounts—giving you the insights you need to protect your business. Stay ahead. Stay informed. Make smarter credit decisions.
-  </p>
+    <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100 py-20">
+<section
+  className="relative text-center py-20 w-full min-h-screen bg-cover bg-center bg-no-repeat"
+  style={{ backgroundImage: `url(${MoneyPile})` }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
+
+  {/* Content on top of overlay */}
+  <div className="relative z-10 pt-16 px-4">
+    <h1 className="text-[70px] mb-6 font-oswald text-white tracking-wide">
+      Know Who Owes You Most
+    </h1>
+    <p className="text-lg font-raleway text-white max-w-2xl mx-auto">
+      Our Top Debtors list highlights companies with the most unpaid accounts—giving you the insights you need to protect your business. Stay ahead. Stay informed. Make smarter credit decisions.
+    </p>
+  </div>
 </section>
+
         <Modal/>  
     <div className="bg-white p-6 rounded-lg mt-20 shadow-lg w-full max-w-4xl"> {/* Changed mt-30 to mt-20 */}
       {/* Title */}
