@@ -51,8 +51,7 @@ const About = () => {
       </div>
     </div>
 
-    {/* Vertical Divider */}
-    <div className="hidden md:block h-full w-[1px] bg-gray-500"></div>
+    <div className="hidden md:block w-[1px] h-48 bg-gray-500"></div>
 
     {/* Right Column */}
     <div className="flex-1">
