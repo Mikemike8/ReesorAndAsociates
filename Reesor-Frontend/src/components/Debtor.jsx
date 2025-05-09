@@ -116,7 +116,7 @@ const Debtor = () => {
 
   
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8" >
       <div className="max-w-4xl mx-auto space-y-12">
         <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto space-y-12">
@@ -301,17 +301,6 @@ const Debtor = () => {
       </div>
     </div>
 
-        {/* Transportation Alert Banner */}
-        <div className="bg-[#1a1a1a]  text-white p-6 rounded-xl shadow-lg text-center">
-          <h3 className="text-xl font-bold mb-2">TRANSPORTATION ALERT</h3>
-          <p className="text-lg  text-white  mb-4">Find Out Who's Not Paying</p>
-          {/* Wrap the button with Link for navigation */}
-<Link to="/topdebtor">
-  <button className="     px-6 py-2 rounded-lg hover:text-gray-200 ion-colors font-medium">
-    View Top Debtors →
-  </button>
-</Link>
-        </div>
       </div>
     </div>
   );

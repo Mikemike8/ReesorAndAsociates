@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa"
 import RessorLogo from '../assets/Reesorlog.png'; 
 import TruckImage from '../assets/Legal.jpg'; // import image
 
@@ -26,6 +27,47 @@ const About = () => {
     </p>
   </div>
 </section>
+
+<section className="bg-black text-white py-16 px-8">
+  <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-12 md:gap-24">
+    
+    {/* Left Column */}
+    <div className="flex-1">
+      <h1 className="text-[48px] mb-6 font-oswald tracking-wide">
+        We're Here to Help You.
+      </h1>
+
+      {/* Social Icons */}
+      <div className="flex gap-6">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-2xl">
+          <FaFacebookF />
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-2xl">
+          <FaTwitter />
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-2xl">
+          <FaLinkedinIn />
+        </a>
+      </div>
+    </div>
+
+    {/* Vertical Divider */}
+    <div className="hidden md:block h-full w-[1px] bg-gray-500"></div>
+
+    {/* Right Column */}
+    <div className="flex-1">
+      <h1 className="text-[48px] mb-6 font-oswald tracking-wide">
+        Get In Touch
+      </h1>
+      <p className="text-[20px] leading-relaxed">
+        We're here to provide the legal support you need. Reach out today to discuss your case or ask questions.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
 
           <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10 py-16 px-6">
             <div className="space-y-6  font-normal p-10  "  style={{
