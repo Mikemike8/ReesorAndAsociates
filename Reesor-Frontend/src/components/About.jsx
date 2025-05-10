@@ -4,6 +4,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa"
 import RessorLogo from '../assets/Reesorlog.png'; 
 import TruckImage from '../assets/Legal.jpg'; // import image
 
+import LegalGirl from '../assets/legalgirl.avif'
 import Modal from './Modal';
 
 
@@ -28,7 +29,8 @@ const About = () => {
   </div>
 </section>
 
-<section className="bg-black text-white py-16 px-8">
+<section className=" text-white py-16 px-8" style={{
+  backgroundImage: 'linear-gradient(181deg, rgba(50, 50, 50, 1) -1.7%, rgba(30, 30, 30, 1) 85.6%)'}}>
   <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-12 md:gap-24">
     
     {/* Left Column */}
@@ -68,7 +70,28 @@ const About = () => {
 
 
 
-          <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10 py-16 px-6">
+
+
+<section className="relative">
+  {/* Background Image Layer */}
+  <div
+    className="absolute inset-0 bg-center bg-cover"
+    style={{
+      backgroundImage: `url(${LegalGirl})`, 
+      opacity: 0.20, // Adjust opacity for subtlety
+      zIndex: -1
+    }}
+
+    
+  ></div>
+
+
+
+
+
+  
+
+<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10 py-16 px-6">
             <div className="space-y-6  font-normal p-10  "  style={{
   backgroundImage: 'linear-gradient(181deg, rgba(50, 50, 50, 1) -1.7%, rgba(30, 30, 30, 1) 85.6%)'}}   >
               <h2 className="text-4xl text-white font-raleway mb-4">Contact Us</h2>
@@ -185,7 +208,30 @@ const About = () => {
 
             </div>
           
-          </section>
+          </div>
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <div className="w-full mx-auto h-[300px]">
   <div className="relative h-full rounded-xl shadow-md">
     <iframe
