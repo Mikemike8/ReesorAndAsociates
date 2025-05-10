@@ -55,19 +55,23 @@ export const Law = () => {
         },
       ];
   return (
-    <div className="bg-gray-50 text-gray-900 pt-[110px]  font-sans" >
-
+    <div className="bg-gray-50 text-white pt-[110px]  font-sans" >
 <section className="text-center pt-4 pb-8 px-4 bg-gray-50">
-  <div className="max-w-4xl mx-auto">
-    <h1 className="text-slate-800
- text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-      We Understand the Industry — and the Law
+  <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 text-left">
+    <h1 className="text-slate-800 !text-[60px] font-oswald w-full leading-tight md:text-[48px] sm:text-[36px]">
+      We Understand the Industry <br />
+      — and the Law
     </h1>
-    <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
+
+    <p className="text-gray-700 text-lg md:text-xl leading-relaxed max-w-md sm:text-base">
       With decades of hands-on experience, we’ve built a practice around understanding not just the law — but how it’s applied in real-world freight disputes. Our expertise includes case law, federal transportation statutes, and how various circuit courts interpret liability between brokers, shippers, consignees, and carriers.
     </p>
   </div>
 </section>
+
+
+
+
 
 
 
@@ -91,6 +95,32 @@ export const Law = () => {
     </div>
   
 </div>
+
+
+
+<section className="text-center py-16 bg-gray-50">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="!text-[40px] font-oswald text-slate-800 mb-8">Our Legacy in Numbers</h2>
+    <p className="text-lg text-gray-700 mb-12">
+      We’re proud of the milestones we’ve achieved over the years,<br /> showcasing our commitment to excellence in every case we handle.
+    </p>
+    
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+      <div className="text-center">
+        <div className="text-6xl font-bold text-blue-600 mb-2">10,000+</div>
+        <div className="text-lg text-gray-600">Successful cases</div>
+      </div>
+      <div className="text-center">
+        <div className="text-6xl font-bold text-blue-600 mb-2">25+</div>
+        <div className="text-lg text-gray-600">Years of experience</div>
+      </div>
+      <div className="text-center">
+        <div className="text-6xl font-bold text-blue-600 mb-2">5,000+</div>
+        <div className="text-lg text-gray-600">Satisfied clients</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
