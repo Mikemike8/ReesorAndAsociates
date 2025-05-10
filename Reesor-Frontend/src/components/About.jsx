@@ -14,14 +14,14 @@ const About = () => {
   return (
     <>
       <div className="  ">
-      <div className="w-full ">
+      <div className="w-full  ">
       <section
-  className="text-center py-24 bg-cover bg-center bg-no-repeat"
+  className="text-center py-36 bg-cover bg-center bg-no-repeat"
   style={{ backgroundImage: `url(${TruckImage})` }}
 >
-<div className="pt-16"> {/* 👈 moves content down */}
-    <h1 className="text-[70px] mb-6 font-oswald text-white  tracking-wide">
-      Get Results. Contact Us Today:
+  <div className="pt-40"> {/* Increased padding to move content further down */}
+    <h1 className="text-[60px] mb-6 font-oswald text-white tracking-wide">
+      Empowering Companies,<br /> One Case at A Time
     </h1>
     <p className="text-lg font-raleway text-white max-w-2xl mx-auto">
       We’d love to hear from you. Whether you’re looking to recover unpaid invoices, have questions about our collection process, or just want to discuss industry challenges—we’re here to help.
@@ -29,42 +29,70 @@ const About = () => {
   </div>
 </section>
 
-<section className=" text-white py-16 px-8" style={{
-  backgroundImage: 'linear-gradient(181deg, rgba(50, 50, 50, 1) -1.7%, rgba(30, 30, 30, 1) 85.6%)'}}>
-  <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-12 md:gap-24">
-    
+
+<section
+  className="text-black py-12 px-4 bg-gray-100 sm:px-6 lg:px-8 border-t-8 border-black"
+  
+>
+  <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10 md:gap-16 lg:gap-24">
     {/* Left Column */}
     <div className="flex-1">
-      <h1 className="text-[48px] mb-6 font-oswald tracking-wide">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl mb-4 font-oswald tracking-wide"  style={{
+          backgroundImage:
+            'linear-gradient(181deg, rgba(50, 50, 50, 1) -1.7%, rgba(30, 30, 30, 1) 85.6%)',
+          WebkitBackgroundClip: 'text',
+          color: 'transparent',
+        }}>
         We're Here to Help You.
       </h1>
 
       {/* Social Icons */}
-      <div className="flex gap-6">
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-2xl">
+      <div className="flex gap-4 mt-4">
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-600 hover:text-black text-xl sm:text-2xl"
+        >
           <FaFacebookF />
         </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-2xl">
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-600 hover:text-black text-xl sm:text-2xl"
+        >
           <FaTwitter />
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-2xl">
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-600 hover:text-black text-xl sm:text-2xl"
+        >
           <FaLinkedinIn />
         </a>
       </div>
     </div>
 
-    <div className="hidden md:block w-[1px] h-48 bg-gray-500"></div>
+    {/* Divider (hidden on small screens) */}
+    <div className="hidden md:block w-[1px] h-32 md:h-48 bg-gray-400"></div>
 
     {/* Right Column */}
     <div className="flex-1">
-      <h1 className="text-[48px] mb-6 font-oswald tracking-wide">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl mb-4 font-oswald tracking-wide" style={{
+          backgroundImage:
+            'linear-gradient(181deg, rgba(50, 50, 50, 1) -1.7%, rgba(30, 30, 30, 1) 85.6%)',
+          WebkitBackgroundClip: 'text',
+          color: 'transparent',
+        }}>
         Get In Touch
       </h1>
-      <p className="text-[20px] leading-relaxed">
-        We're here to provide the legal support you need. Reach out today to discuss your case or ask questions.
+      <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-gray-800 text-gray-600 "  >
+        We're here to provide the legal support you need. Reach out today to
+        discuss your case or ask questions.
       </p>
     </div>
-
   </div>
 </section>
 
@@ -220,24 +248,42 @@ const About = () => {
 
 
 
-
-
-
-
-
-  <div className="relative w-full py-12">
-  {/* Horizontal line */}
-  <div className="absolute top-1/2 left-0 right-0  h-1"style={{
-  backgroundImage: 'linear-gradient(181deg, rgba(50, 50, 50, 1) -1.7%, rgba(30, 30, 30, 1) 85.6%)'}} ></div>
-
-  {/* Logo in the middle */}
-  <div className="relative flex justify-center items-center w-full">
-    <div className="absolute top-1/2 transform -translate-y-1/2  p-3 rounded-full shadow-lg"   style={{
-  backgroundImage: 'linear-gradient(181deg, rgba(50, 50, 50, 1) -1.7%, rgba(30, 30, 30, 1) 85.6%)'}}  >
-      <img src={RessorLogo} alt="Logo" className="w-12 h-12 object-contain"/>
+  <div
+  className="relative w-full  py-2"
+  style={{
+    background: 'linear-gradient(90deg, rgba(30, 30, 30, 1) -1.7%, rgba(50, 50, 50, 1) 85.6%)'
+  }}
+>
+  <div className="flex justify-center items-center max-w-7xl mx-auto px-4 space-x-2 sm:space-x-4">
+    
+    {/* Left - Reesor */}
+    <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-oswald text-white tracking-wide">
+      Reesor
+    </span>
+    
+    {/* Center - Logo */}
+    <div
+      className="p-1 sm:p-2 md:p-3 rounded-full shadow-lg"
+      style={{
+        backgroundImage: 'linear-gradient(181deg, rgba(70, 70, 70, 1) -1.7%, rgba(20, 20, 20, 1) 85.6%)'
+      }}
+    >
+      <img
+        src={RessorLogo}
+        alt="Logo"
+        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
+      />
     </div>
+
+    {/* Right - Associates */}
+    <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-oswald text-white tracking-wide">
+      Associates
+    </span>
   </div>
 </div>
+
+
+
 
 
 
