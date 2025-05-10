@@ -13,7 +13,7 @@ const About = () => {
 
   return (
     <>
-      <div className=" py-4  md:py-20">
+      <div className="  ">
       <div className="w-full ">
       <section
   className="text-center py-24 bg-cover bg-center bg-no-repeat"
@@ -225,6 +225,19 @@ const About = () => {
 
 
 
+  <div className="relative w-full py-12">
+  {/* Horizontal line */}
+  <div className="absolute top-1/2 left-0 right-0  h-1"style={{
+  backgroundImage: 'linear-gradient(181deg, rgba(50, 50, 50, 1) -1.7%, rgba(30, 30, 30, 1) 85.6%)'}} ></div>
+
+  {/* Logo in the middle */}
+  <div className="relative flex justify-center items-center w-full">
+    <div className="absolute top-1/2 transform -translate-y-1/2  p-3 rounded-full shadow-lg"   style={{
+  backgroundImage: 'linear-gradient(181deg, rgba(50, 50, 50, 1) -1.7%, rgba(30, 30, 30, 1) 85.6%)'}}  >
+      <img src={RessorLogo} alt="Logo" className="w-12 h-12 object-contain"/>
+    </div>
+  </div>
+</div>
 
 
 
@@ -247,19 +260,7 @@ const About = () => {
 
 
         
-          <div className="relative w-full py-12">
-  {/* Horizontal line */}
-  <div className="absolute top-1/2 left-0 right-0 bg-gray-400 h-0.5"></div>
-
-  {/* Logo in the middle */}
-  <div className="relative flex justify-center items-center w-full">
-    <div className="absolute top-1/2 transform -translate-y-1/2  p-3 rounded-full shadow-lg"   style={{
-  backgroundImage: 'linear-gradient(181deg, rgba(50, 50, 50, 1) -1.7%, rgba(30, 30, 30, 1) 85.6%)'}}  >
-      <img src={RessorLogo} alt="Logo" className="w-12 h-12 object-contain"/>
-    </div>
-  </div>
-</div>
-
+       
           <Modal/>
 
   
