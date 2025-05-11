@@ -143,7 +143,7 @@ export const TopDebtor = () => {
    
 <section className="bg-gray-100 py-16 px-6">
   <div className="max-w-6xl mx-auto text-center mb-12">
-    <h2 className="text-5xl font-oswald text-slate-800 mb-4">Why Work With Us?</h2>
+    <h2 className="text-5xl font-oswald text-slate-800 mb-4">Our legal services.</h2>
     <p className="text-gray-600 text-lg">
       Trusted legal guidance backed by a track record of results.
     </p>
