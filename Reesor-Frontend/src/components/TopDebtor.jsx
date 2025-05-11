@@ -1,10 +1,43 @@
 import React, { useState, useEffect } from 'react';
-import { ShieldCheck, UserCheck, MessageSquare, CheckCircle ,AlertCircle} from "lucide-react"
+import { ShieldCheck, UserCheck, MessageSquare, CheckCircle ,AlertCircle  , Plus, Minus } from "lucide-react"
 import Modal from './Modal';
 import MoneyPile from '../assets/legalgirl.avif'
 import  Eagle from '../assets/moneypile.jpg'
 
+
+const faqs = [
+  {
+    question: "How often is the Top Debtors list updated?",
+    answer:
+      "The list is updated weekly to ensure accuracy and relevancy, giving you the most up-to-date insights into outstanding debts.",
+  },
+  {
+    question: "Can I download the debtor information?",
+    answer:
+      "Yes. You can export the data in various formats including CSV and PDF for reporting and record-keeping.",
+  },
+  {
+    question: "How do you gather and verify debt data?",
+    answer:
+      "We use a combination of verified reports, financial records, and third-party data providers to ensure all debt entries are accurate.",
+  },
+  {
+    question: "Is the information publicly available?",
+    answer:
+      "Only verified and non-confidential debt information is shared. We strictly follow legal guidelines and privacy policies.",
+  },
+];
+
 export const TopDebtor = () => {
+
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggle = (index) => {
+    setOpenIndex(index === openIndex ? null : index);
+  };
+
+
   // State to hold debtor data and error state
   const [debtorData, setDebtorData] = useState([]);
   const [error, setError] = useState(null);
@@ -143,7 +176,7 @@ export const TopDebtor = () => {
    
 <section className="bg-gray-100 py-16 px-6">
   <div className="max-w-6xl mx-auto text-center mb-12">
-    <h2 className="text-6xl font-bold  font-oswald mb-4">Our legal services.</h2>
+    <h2 className="text-6xl font-bold text-gray-800  font-oswald mb-4">Our legal services.</h2>
     <p className="text-gray-600 font-bold text-lg">
       Trusted legal guidance backed by a track record of results.
     </p>
@@ -191,6 +224,45 @@ export const TopDebtor = () => {
     </div>
   </div>
 </section>
+
+<section className="bg-gray-100 py-16 px-4">
+  <div className="w-[100%] mx-auto px-4 md:px-8">
+    <h2 className="text-4xl md:text-6xl font-oswald text-center mb-10 text-gray-800">
+      Frequently Asked Questions
+    </h2>
+    <div className="space-y-4">
+      {faqs.map((faq, index) => (
+        <div
+          key={index}
+          className="border border-gray-300 rounded-lg bg-white transition-all duration-300"
+        >
+          <button
+            onClick={() => toggle(index)}
+            className="w-full flex justify-between items-center text-left px-6 py-8"
+          >
+            <span className="font-semibold text-gray-800 text-lg flex-1">
+              {faq.question}
+            </span>
+            {openIndex === index ? (
+              <Minus className="w-5 h-5 text-gray-600 flex-shrink-0" />
+            ) : (
+              <Plus className="w-5 h-5 text-gray-600 flex-shrink-0" />
+            )}
+          </button>
+          <div
+            className={`px-6 pb-4 text-md text-gray-600 overflow-hidden transition-all duration-300 ease-in-out ${
+              openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+            }`}
+          >
+            {faq.answer}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
     
   </div>
