@@ -52,10 +52,10 @@ export const TopDebtor = () => {
 </section>
 
         <Modal/> 
-        <section className="relative z-10 py-16 bg-gray-100">
+        <section className="relative z-10 py-8 bg-gray-100">
   <div className="max-w-5xl mx-auto px-4 text-center bg-gray-100">
-    <h2 className="text-3xl font-bold text-gray-800 mb-4 font-oswald">Legal Insights & Updates</h2>
-    <p className="text-gray-600 text-lg leading-relaxed">
+    <h2 className="text-6xl font-bold text-gray-800 mb-4 font-oswald">Legal Insights & Updates</h2>
+    <p className="text-gray-600 font-bold text-lg leading-relaxed">
       Our team of skilled attorneys and legal professionals is dedicated to providing you with top-tier legal support.
     </p>
   </div>
@@ -143,8 +143,8 @@ export const TopDebtor = () => {
    
 <section className="bg-gray-100 py-16 px-6">
   <div className="max-w-6xl mx-auto text-center mb-12">
-    <h2 className="text-5xl font-oswald text-slate-800 mb-4">Our legal services.</h2>
-    <p className="text-gray-600 text-lg">
+    <h2 className="text-6xl font-bold  font-oswald mb-4">Our legal services.</h2>
+    <p className="text-gray-600 font-bold text-lg">
       Trusted legal guidance backed by a track record of results.
     </p>
   </div>
