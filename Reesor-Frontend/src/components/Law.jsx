@@ -78,7 +78,7 @@ export const Law = () => {
         <div className="text-white">
           <h3 className="text-3xl font-bold mb-2">Need Legal Help With Freight Recovery?</h3>
           <p className="mb-4 text-lg text-white">We’re not just attorneys — we’re industry experts.</p>
-          <button className="bg-yellow-400 text-black px-6 py-2 rounded font-semibold hover:bg-yellow-300 transition">
+          <button className="bg-yellow-400 text-white px-6 py-2 rounded font-semibold hover:bg-yellow-300 transition">
             Contact Us Now
           </button>
         </div>
