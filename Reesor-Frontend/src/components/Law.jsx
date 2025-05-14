@@ -10,7 +10,7 @@ import {
   
   
 import jjtrucj from '../assets/sebastian-pichler-bAQH53VquTc-unsplash.jpg'; 
-import girl from '../assets/beautiful-woman-hat-retro-fashionsummer-260nw-418145404.webp'; 
+import girl from '../assets/man-7450033_1280.jpg'; 
 
 import React from "react";
 
