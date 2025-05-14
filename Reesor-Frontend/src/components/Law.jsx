@@ -71,13 +71,13 @@ export const Law = () => {
 
     {/* Right Image with Overlay */}
     <div
-      className="relative h-[60vh] w-full w-1/2 bg-cover  xl:h-[50vh]  xl:w-6/12 bg-center rounded-lg overflow-hidden"
+      className="relative h-[50vh] md:h-[50vh] w-full w-1/2 bg-cover  xl:h-[50vh]  xl:w-6/12 bg-center rounded-lg overflow-hidden"
       style={{ backgroundImage: `url(${jjtrucj})` }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center text-center px-4">
         <div className="text-white">
           <h3 className="text-3xl font-bold mb-2">Need Legal Help With Freight Recovery?</h3>
-          <p className="mb-4 text-lg">We’re not just attorneys — we’re industry experts.</p>
+          <p className="mb-4 text-lg text-white">We’re not just attorneys — we’re industry experts.</p>
           <button className="bg-yellow-400 text-black px-6 py-2 rounded font-semibold hover:bg-yellow-300 transition">
             Contact Us Now
           </button>
