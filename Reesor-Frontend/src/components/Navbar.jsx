@@ -88,6 +88,16 @@ export const Navbar = () => {
     >
         Home
     </Link>
+
+      <Link 
+            to="/law"
+            className="text-2xl text-white tracking-[0.2em] hover:text-white/50 transition-colors transform hover:scale-105" 
+            onClick={toggleMenu}
+          >
+           About
+          </Link>
+    
+    
     <Link 
         to="/about" 
         className="text-2xl text-white tracking-[0.2em] hover:text-white/50 transition-colors transform hover:scale-105" 
@@ -96,27 +106,23 @@ export const Navbar = () => {
         Contact
     </Link>
 
-    <Link 
-            to="/debtor" 
-            className="text-2xl text-white tracking-[0.2em] hover:text-white/50 transition-colors transform hover:scale-105" 
-            onClick={toggleMenu}
-          >
-           Place Debtor
-          </Link>
-          <Link 
+      <Link 
             to="/topdebtor" 
             className="text-2xl text-white tracking-[0.2em] hover:text-white/50 transition-colors transform hover:scale-105" 
             onClick={toggleMenu}
           >
            Top Debtor
           </Link>
-          <Link 
-            to="/law"
+        
+
+    <Link 
+            to="/debtor" 
             className="text-2xl text-white tracking-[0.2em] hover:text-white/50 transition-colors transform hover:scale-105" 
             onClick={toggleMenu}
           >
-           About
+           Submit A Debtor 
           </Link>
+        
           
 
    

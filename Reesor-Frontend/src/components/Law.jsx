@@ -56,49 +56,40 @@ export const Law = () => {
       ];
   return (
     <div className="bg-gray-50 text-white pt-[110px]  font-sans" >
-<section className="text-center pt-4 pb-8 px-4 bg-gray-50">
-  <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 text-left">
-    <h1 className="text-slate-800 !text-[60px] font-oswald w-full leading-tight md:text-[48px] sm:text-[36px]">
-      We Understand the Industry <br />
-      — and the Law
-    </h1>
+<section className="bg-gray-50  px-4">
+  <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
+    {/* Left Content */}
+    <div className="md:w-1/2">
+      <h1 className="text-slate-800 text-[60px] font-oswald leading-tight mb-6">
+        We Understand the Industry <br />— and the Law
+      </h1>
+      <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
+        With decades of hands-on experience, we’ve built a practice around understanding not just the law — but how it’s applied in real-world freight disputes. Our expertise includes case law, federal transportation statutes, and how various circuit courts interpret liability between brokers, shippers, consignees, and carriers.
+      </p>
+    </div>
 
-    <p className="text-gray-700 text-lg md:text-xl leading-relaxed max-w-md sm:text-base">
-      With decades of hands-on experience, we’ve built a practice around understanding not just the law — but how it’s applied in real-world freight disputes. Our expertise includes case law, federal transportation statutes, and how various circuit courts interpret liability between brokers, shippers, consignees, and carriers.
-    </p>
+    {/* Right Image with Overlay */}
+    <div
+      className="relative h-[60vh] w-full md:w-1/2 bg-cover bg-center rounded-lg overflow-hidden"
+      style={{ backgroundImage: `url(${jjtrucj})` }}
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center text-center px-4">
+        <div className="text-white">
+          <h3 className="text-3xl font-bold mb-2">Need Legal Help With Freight Recovery?</h3>
+          <p className="mb-4 text-lg">We’re not just attorneys — we’re industry experts.</p>
+          <button className="bg-yellow-400 text-black px-6 py-2 rounded font-semibold hover:bg-yellow-300 transition">
+            Contact Us Now
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 
 
 
-
-
-
-
-      {/* Hero Section */}
-      <div
-    className="relative h-[60vh] bg-cover bg-center pb-[10px] rounded-lg overflow-hidden w-[90%] mx-auto"
-    style={{ backgroundImage: `url(${jjtrucj})` }}
-  >
-    <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center text-center px-4">
-      {/* CTA Footer */}
-    
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h3 className="text-5xl text-white font-bold mb-2">Need Legal Help With Freight Recovery?</h3>
-          <p className="mb-4 text-2xl text-white">We’re not just attorneys — we’re industry experts.</p>
-          <button className="bg-yellow-400 text-black px-6 py-2 rounded font-semibold hover:bg-yellow-300 transition">
-            Contact Us Now
-          </button>
-        </div>
-      
-    </div>
-  
-</div>
-
-
-
-<section className="text-center py-16 bg-gray-50">
+<section className="text-center py-2 bg-gray-50">
   <div className="max-w-6xl mx-auto">
     <h2 className="!text-[40px] font-oswald text-slate-800 mb-8">Our Legacy in Numbers</h2>
     <p className="text-lg text-gray-700 mb-12">

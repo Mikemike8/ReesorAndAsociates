@@ -4,6 +4,8 @@ import React, { useState } from 'react';  // Import useState hook
 import { Link } from 'react-router-dom'; // Import the Link component
 import Modal from './Modal';
 
+import LegalGirl from '../assets/legalgirl.avif'
+
 
 const Debtor = () => {
   const [formData, setFormData] = useState({
@@ -116,26 +118,26 @@ const Debtor = () => {
 
   
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8" >
-      <div className="max-w-4xl mx-auto space-y-12">
+    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8"  >
+      <div className="max-w-6xl mx-auto space-y-12" >
+        
         <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto space-y-12">
-      <section className="text-center py-16 bg-gray-200">
+      <div className="max-w-5xl mx-auto space-y-12">
+      <section className="text-center p-0 m-0  bg-gray-100">
   <h1 className="text-[60px] font-oswald mb-6 text-slate-800
  tracking-wide">
     Submit a Debtor
   </h1>
-  <p className="text-lg font-raleway text-gray-600 max-w-2xl mx-auto">
+  <p className="text-lg font-bold text-gray-600 max-w-2xl mx-auto">
     Help us keep the industry informed. Use the form below to report companies or individuals who owe you money. 
     Your contribution strengthens the network and promotes accountability across the board.
   </p>
 </section>
         
         {/* Debt Recovery Form Section */}
-        <div className="bg-white rounded-xl shadow-lg p-8">
-        
+    <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-[1500px] ">
 
-        <h1 className="text-3xl font-oswald text-[#222222]  mb-6 border-b-2 border-[#222222]  pb-4">
+        <h1 className="text-5xl font-oswald text-[#222222] text-slate-800  mb-6 border-b-2 border-[#222222]  pb-4">
             Freight Claim Recovery Submission
           </h1>
 
@@ -281,12 +283,26 @@ const Debtor = () => {
         </ol>
       </div>
 
-      <button
-        type="submit"
-        className="w-full bg-[#1a1a1a]  text-white py-4 px-6 rounded-lg hover:bg-[#222222] transition-colors font-semibold text-lg"
-      >
-        Initiate Recovery Process
-      </button>
+    <button
+  type="submit"
+  className="w-full bg-[#1a1a1a] text-white py-4 px-6 rounded-lg shadow-lg hover:from-[#333333] hover:to-[#666666] hover:text-gray-300 transition-all duration-300 font-semibold text-lg flex items-center justify-center"
+>
+  <svg
+    className="w-5 h-5 mr-2"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M5 13l4 4L19 7"
+    />
+  </svg>
+  Initiate Recovery Process
+</button>
+
     </form>
 
 
