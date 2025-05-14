@@ -57,12 +57,13 @@ export const Law = () => {
   return (
     <div className="bg-gray-50 text-white pt-[110px]  font-sans" >
 <section className="bg-gray-50  px-4">
-  <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
+  <div className="max-w-6xl mx-auto pb-4 flex flex-col md:flex-row items-center gap-8 lg:gap-12">
     {/* Left Content */}
     <div className="md:w-1/2">
-      <h1 className="text-slate-800 text-[60px] font-oswald leading-tight mb-6">
-        We Understand the Industry <br />— and the Law
-      </h1>
+     <h1 className="text-slate-800 text-[60px] xl:text-[72px] lg:text-[72px] font-oswald leading-tight mb-6 xl:mb-20">
+  We Understand the Industry <br />— and the Law
+</h1>
+
       <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
         With decades of hands-on experience, we’ve built a practice around understanding not just the law — but how it’s applied in real-world freight disputes. Our expertise includes case law, federal transportation statutes, and how various circuit courts interpret liability between brokers, shippers, consignees, and carriers.
       </p>
@@ -70,7 +71,7 @@ export const Law = () => {
 
     {/* Right Image with Overlay */}
     <div
-      className="relative h-[60vh] w-full md:w-1/2 bg-cover bg-center rounded-lg overflow-hidden"
+      className="relative h-[60vh] w-full w-1/2 bg-cover  xl:h-[50vh]  xl:w-6/12 bg-center rounded-lg overflow-hidden"
       style={{ backgroundImage: `url(${jjtrucj})` }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center text-center px-4">
@@ -154,7 +155,7 @@ export const Law = () => {
     <img
       src={girl}
       alt="Magazine cover image"
-      className="w-full h-full object-cover border border-gray-900 rounded-xl max-h-[500px] md:max-h-none"
+      className="w-full h-full object-cover border border-gray-900 rounded-xl max-h-[425px] md:max-h-[420px]"
     />
   </div>
 
@@ -167,11 +168,6 @@ export const Law = () => {
 </section>
 
 </div>
-
-
-
-
-
 
     </div>
   );
