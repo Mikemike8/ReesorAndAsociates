@@ -8,20 +8,16 @@ import LegalGirl from '../assets/legalgirl.avif'
 
 
 const Debtor = () => {
-
-
- const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState({
     fullName: '',
     companyName: '',
     phoneNumber: '',
     emailAddress: '',
     debtorInfo: '',
     additionalDetails: '',
-    documentUrl: '', // To store the uploaded document URL
+    documentFile: null,
+    documentUrl: '', // To store the Cloudinary URL
   });
-
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,77 +28,77 @@ const Debtor = () => {
   };
 
   const handleFileChange = (e) => {
-    setSelectedFile(e.target.files[0]);
+    setFormData((prevData) => ({
+      ...prevData,
+      documentFile: e.target.files[0],
+    }));
+  };
+
+  const uploadToCloudinary = async (file) => {
+    const cloudName = 'dpttzjwpr'; // Replace with your Cloudinary cloud name
+    const uploadPreset = 'PDFDATA'; // Replace with your unsigned upload preset
+
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', uploadPreset);
+
+    try {
+      const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/auto/upload`, {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await response.json();
+      if (data.secure_url) {
+        return data.secure_url;
+      } else {
+        throw new Error('Failed to upload file to Cloudinary');
+      }
+    } catch (error) {
+      console.error('Error uploading to Cloudinary:', error);
+      throw error;
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!selectedFile) {
-      alert('Please select a file to upload.');
-      return;
-    }
-
-    // Upload the file to Cloudinary
-    const cloudName = 'dpttzjwpr'; // Replace with your Cloudinary cloud name
-    const uploadPreset = 'PDFDATA'; // Replace with your unsigned upload preset
-
-    const formDataToUpload = new FormData();
-    formDataToUpload.append('file', selectedFile);
-    formDataToUpload.append('upload_preset', uploadPreset);
-
-    try {
-      const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/auto/upload`, {
-        method: 'POST',
-        body: formDataToUpload,
-      });
-
-      const data = await response.json();
-
-      if (data.secure_url) {
-        // Update the formData with the uploaded document URL
+    if (formData.documentFile) {
+      try {
+        const documentUrl = await uploadToCloudinary(formData.documentFile);
         setFormData((prevData) => ({
           ...prevData,
-          documentUrl: data.secure_url,
+          documentUrl,
         }));
 
-        // Proceed with form submission to MongoDB
-        await fetch('https://reesorandasociatestestserver.onrender.com/api/save', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    Email: email,
-    Company: company,
-  }),
-});
+        const formPayload = new FormData();
+        formPayload.append('fullName', formData.fullName);
+        formPayload.append('companyName', formData.companyName);
+        formPayload.append('phoneNumber', formData.phoneNumber);
+        formPayload.append('emailAddress', formData.emailAddress);
+        formPayload.append('debtorInfo', formData.debtorInfo);
+        formPayload.append('additionalDetails', formData.additionalDetails);
+        formPayload.append('documentUrl', documentUrl);
 
-        setStatus('Form submitted successfully!');
-        setFormData({
-          fullName: '',
-          companyName: '',
-          phoneNumber: '',
-          emailAddress: '',
-          debtorInfo: '',
-          additionalDetails: '',
-          documentUrl: '',
+        const response = await fetch('https://reesorandasociatesuploadpdf.onrender.com/submit-form', {
+          method: 'POST',
+          body: formPayload,
         });
-      } else {
-        alert('Failed to upload the document.');
+
+        const data = await response.json();
+        if (response.ok) {
+          alert('Upload Successful ✅');
+          window.location.reload(); // Refresh the page
+        } else {
+          alert('Failed to upload: ' + data.message);
+        }
+      } catch (error) {
+        alert('Error submitting form: ' + error.message);
+        console.error('Error submitting form:', error);
       }
-    } catch (error) {
-      console.error('Error uploading the document:', error);
-      alert('An error occurred while uploading the document.');
+    } else {
+      alert('Please select a file to upload.');
     }
   };
-
-
-
-
-
-
-
   
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8"  >

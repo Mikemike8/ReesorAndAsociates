@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
   origin: [
-    'http://localhost:5180',  // Local development
+    'http://localhost:5173',  // Local development
     'https://reesorandasociates.onrender.com'  // Deployed frontend
   ],
   credentials: true,  // Allow cookies if necessary
