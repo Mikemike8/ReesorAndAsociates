@@ -8,97 +8,114 @@ import LegalGirl from '../assets/legalgirl.avif'
 
 
 const Debtor = () => {
-    const [formData, setFormData] = useState({
-    fullName: '',
-    companyName: '',
-    phoneNumber: '',
-    emailAddress: '',
-    debtorInfo: '',
-    additionalDetails: '',
+  const [formData, setFormData] = useState({
+    fullName: "",
+    companyName: "",
+    phoneNumber: "",
+    emailAddress: "",
+    debtorInfo: "",
+    additionalDetails: "",
     documentFile: null,
-    documentUrl: '', // To store the Cloudinary URL
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
+    setFormData({
+      ...formData,
       [name]: value,
-    }));
+    });
   };
 
   const handleFileChange = (e) => {
-    setFormData((prevData) => ({
-      ...prevData,
+    setFormData({
+      ...formData,
       documentFile: e.target.files[0],
-    }));
+    });
   };
 
-  const uploadToCloudinary = async (file) => {
-    const cloudName = 'dpttzjwpr'; // Replace with your Cloudinary cloud name
-    const uploadPreset = 'PDFDATA'; // Replace with your unsigned upload preset
-
-    const formData = new FormData();
-    formData.append('file', file);
-    formData.append('upload_preset', uploadPreset);
-
-    try {
-      const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/auto/upload`, {
-        method: 'POST',
-        body: formData,
-      });
-      const data = await response.json();
-      if (data.secure_url) {
-        return data.secure_url;
-      } else {
-        throw new Error('Failed to upload file to Cloudinary');
-      }
-    } catch (error) {
-      console.error('Error uploading to Cloudinary:', error);
-      throw error;
-    }
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
+    const formPayload = new FormData();
+    formPayload.append("fullName", formData.fullName);
+    formPayload.append("companyName", formData.companyName);
+    formPayload.append("phoneNumber", formData.phoneNumber);
+    formPayload.append("emailAddress", formData.emailAddress);
+    formPayload.append("debtorInfo", formData.debtorInfo);
+    formPayload.append("additionalDetails", formData.additionalDetails);
     if (formData.documentFile) {
-      try {
-        const documentUrl = await uploadToCloudinary(formData.documentFile);
-        setFormData((prevData) => ({
-          ...prevData,
-          documentUrl,
-        }));
+      formPayload.append("documentFile", formData.documentFile);
+    }
 
-        const formPayload = new FormData();
-        formPayload.append('fullName', formData.fullName);
-        formPayload.append('companyName', formData.companyName);
-        formPayload.append('phoneNumber', formData.phoneNumber);
-        formPayload.append('emailAddress', formData.emailAddress);
-        formPayload.append('debtorInfo', formData.debtorInfo);
-        formPayload.append('additionalDetails', formData.additionalDetails);
-        formPayload.append('documentUrl', documentUrl);
-
-        const response = await fetch('https://reesorandasociatesuploadpdf.onrender.com/submit-form', {
-          method: 'POST',
-          body: formPayload,
-        });
-
-        const data = await response.json();
+    fetch("https://reesorandasociatesuploadpdf.onrender.com/submit-form", {
+      method: "POST",
+      body: formPayload,
+    })
+      .then((response) => response.json().then(data => {
         if (response.ok) {
-          alert('Upload Successful ✅');
+          alert("Upload Successful ✅");
           window.location.reload(); // Refresh the page
         } else {
-          alert('Failed to upload: ' + data.message);
+          alert("Failed to upload: " + data.message);
         }
-      } catch (error) {
-        alert('Error submitting form: ' + error.message);
-        console.error('Error submitting form:', error);
+      }))
+      .catch((error) => {
+        alert("Error submitting form: " + error.message);
+        console.error("Error submitting form:", error);
+      });
+  };
+
+
+
+
+
+
+  const [email, setEmail] = useState('');
+  const [company, setCompany] = useState('');
+  const [status, setStatus] = useState('');
+
+  const handleCompanyChange = (e) => {
+    setCompany(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault(); // Prevent page reload
+    setStatus('Submitting...'); // Display submission status
+  
+    try {
+      const response = await fetch('https://reesorandasociatestestserver.onrender.com/api/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ Email: email, Company: company }),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        setStatus(data.message);
+        setEmail('');
+        setCompany('');
+      } else {
+        setStatus(`❌ Error: ${data.error}`);
       }
-    } else {
-      alert('Please select a file to upload.');
+    } catch (err) {
+      setStatus('❌ Failed to connect to server');
     }
   };
+
+
+
+
+
+
+
+
+
+
   
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8"  >
