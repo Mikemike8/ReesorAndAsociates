@@ -8,107 +8,89 @@ import LegalGirl from '../assets/legalgirl.avif'
 
 
 const Debtor = () => {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    companyName: "",
-    phoneNumber: "",
-    emailAddress: "",
-    debtorInfo: "",
-    additionalDetails: "",
-    documentFile: null,
+
+
+ const [formData, setFormData] = useState({
+    fullName: '',
+    companyName: '',
+    phoneNumber: '',
+    emailAddress: '',
+    debtorInfo: '',
+    additionalDetails: '',
+    documentUrl: '', // To store the uploaded document URL
   });
+
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
-    });
+    }));
   };
 
   const handleFileChange = (e) => {
-    setFormData({
-      ...formData,
-      documentFile: e.target.files[0],
-    });
+    setSelectedFile(e.target.files[0]);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formPayload = new FormData();
-    formPayload.append("fullName", formData.fullName);
-    formPayload.append("companyName", formData.companyName);
-    formPayload.append("phoneNumber", formData.phoneNumber);
-    formPayload.append("emailAddress", formData.emailAddress);
-    formPayload.append("debtorInfo", formData.debtorInfo);
-    formPayload.append("additionalDetails", formData.additionalDetails);
-    if (formData.documentFile) {
-      formPayload.append("documentFile", formData.documentFile);
+    if (!selectedFile) {
+      alert('Please select a file to upload.');
+      return;
     }
 
-    fetch("https://reesorandasociatesuploadpdf.onrender.com/submit-form", {
-      method: "POST",
-      body: formPayload,
-    })
-      .then((response) => response.json().then(data => {
-        if (response.ok) {
-          alert("Upload Successful ✅");
-          window.location.reload(); // Refresh the page
-        } else {
-          alert("Failed to upload: " + data.message);
-        }
-      }))
-      .catch((error) => {
-        alert("Error submitting form: " + error.message);
-        console.error("Error submitting form:", error);
-      });
-  };
+    // Upload the file to Cloudinary
+    const cloudName = 'dpttzjwpr'; // Replace with your Cloudinary cloud name
+    const uploadPreset = 'PDFDATA'; // Replace with your unsigned upload preset
 
+    const formDataToUpload = new FormData();
+    formDataToUpload.append('file', selectedFile);
+    formDataToUpload.append('upload_preset', uploadPreset);
 
-
-
-
-
-  const [email, setEmail] = useState('');
-  const [company, setCompany] = useState('');
-  const [status, setStatus] = useState('');
-
-  const handleCompanyChange = (e) => {
-    setCompany(e.target.value);
-  };
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleFormSubmit = async (e) => {
-    e.preventDefault(); // Prevent page reload
-    setStatus('Submitting...'); // Display submission status
-  
     try {
-      const response = await fetch('https://reesorandasociatestestserver.onrender.com/api/save', {
+      const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/auto/upload`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ Email: email, Company: company }),
+        body: formDataToUpload,
       });
-  
+
       const data = await response.json();
-  
-      if (response.ok) {
-        setStatus(data.message);
-        setEmail('');
-        setCompany('');
+
+      if (data.secure_url) {
+        // Update the formData with the uploaded document URL
+        setFormData((prevData) => ({
+          ...prevData,
+          documentUrl: data.secure_url,
+        }));
+
+        // Proceed with form submission to MongoDB
+        await fetch('https://reesorandasociatestestserver.onrender.com/api/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
+
+        setStatus('Form submitted successfully!');
+        setFormData({
+          fullName: '',
+          companyName: '',
+          phoneNumber: '',
+          emailAddress: '',
+          debtorInfo: '',
+          additionalDetails: '',
+          documentUrl: '',
+        });
       } else {
-        setStatus(`❌ Error: ${data.error}`);
+        alert('Failed to upload the document.');
       }
-    } catch (err) {
-      setStatus('❌ Failed to connect to server');
+    } catch (error) {
+      console.error('Error uploading the document:', error);
+      alert('An error occurred while uploading the document.');
     }
   };
-
-
-
 
 
 
@@ -137,7 +119,7 @@ const Debtor = () => {
         {/* Debt Recovery Form Section */}
     <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-[1500px] ">
 
-        <h1 className="text-5xl font-oswald text-[#222222] text-slate-800  mb-6 border-b-2 border-[#222222]  pb-4">
+        <h1 className="text-5xl font-oswald text-[#222222]   mb-6 border-b-2 border-[#222222]  pb-4">
             Freight Claim Recovery Submission
           </h1>
 

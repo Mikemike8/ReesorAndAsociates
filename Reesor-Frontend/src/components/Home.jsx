@@ -3,6 +3,7 @@ import Morgan from '../assets/Morgan.mp4';
 import Truck2  from '../assets/Truck2.jpg';
 import Doubles from '../assets/Doubles.png';
 import Freight from '../assets/Freight.png';
+import mantruck from '../assets/usacalli.jpg'
 import RessorLogo from '../assets/Reesorlog.png'; // Ensure your image path is correct
 
 import Chart from '../assets/Chart.png';
@@ -161,7 +162,7 @@ export const Home = () => {
   <div className="w-full lg:w-6/12 flex justify-center lg:justify-start">
     <img 
       className="w-full lg:w-[90%] h-auto rounded-lg object-cover" 
-      src="https://static.wixstatic.com/media/6bf8bb_d61cccea43b647bb9b2fabd59663a588~mv2.jpg/v1/fill/w_567,h_549,fp_0.50_0.50,q_80,enc_avif,quality_auto/14-Misconceptions_edited.jpg" 
+      src={mantruck}
       alt="Description of the image" 
     />
   </div>
