@@ -68,11 +68,15 @@ const Debtor = () => {
 
         // Proceed with form submission to MongoDB
         await fetch('https://reesorandasociatestestserver.onrender.com/api/save', {
-           method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ Email: email, Company: company }),
-      
-        });
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    Email: email,
+    Company: company,
+  }),
+});
 
         setStatus('Form submitted successfully!');
         setFormData({
