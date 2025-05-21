@@ -55,38 +55,37 @@ export const Law = () => {
         },
       ];
   return (
-    <div className="bg-gray-50 text-white pt-[110px]  font-sans" >
-<section className="bg-gray-50  px-4">
-  <div className="max-w-6xl mx-auto pb-4 flex flex-col md:flex-row items-center gap-8 lg:gap-12">
-    {/* Left Content */}
-    <div className="md:w-1/2">
-     <h1 className="text-slate-800 text-[60px] xl:text-[72px] lg:text-[72px] font-oswald leading-tight mb-6 xl:mb-20">
-  We Understand the Industry <br />— and the Law
-</h1>
+ <div className="bg-gray-50 text-white pt-[110px] font-sans">
+  <section className="bg-gray-50 px-4">
+    <div className="max-w-6xl mx-auto pb-12 flex flex-col lg:flex-row items-start gap-10">
+      
+      {/* Left Content */}
+      <div className="w-full lg:w-6/12">
+        <h1 className="text-slate-800 text-[36px] sm:text-[48px] lg:text-[60px] xl:text-[72px] font-oswald leading-tight mb-6">
+          We Understand the Industry <br />— and the Law
+        </h1>
+        <p className="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed">
+          With decades of hands-on experience, we’ve built a practice around understanding not just the law — but how it’s applied in real-world freight disputes. Our expertise includes case law, federal transportation statutes, and how various circuit courts interpret liability between brokers, shippers, consignees, and carriers.
+        </p>
+      </div>
 
-      <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
-        With decades of hands-on experience, we’ve built a practice around understanding not just the law — but how it’s applied in real-world freight disputes. Our expertise includes case law, federal transportation statutes, and how various circuit courts interpret liability between brokers, shippers, consignees, and carriers.
-      </p>
-    </div>
-
-    {/* Right Image with Overlay */}
-    <div
-      className="relative h-[50vh] md:h-[50vh] w-full w-1/2 bg-cover  xl:h-[50vh]  xl:w-6/12 bg-center rounded-lg overflow-hidden"
-      style={{ backgroundImage: `url(${jjtrucj})` }}
-    >
-      <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center text-center px-4">
-        <div className="text-white">
-          <h3 className="text-3xl font-bold mb-2">Need Legal Help With Freight Recovery?</h3>
-          <p className="mb-4 text-lg text-white">We’re not just attorneys — we’re industry experts.</p>
-          <button className="bg-yellow-400 text-white px-6 py-2 rounded font-semibold hover:bg-yellow-300 transition">
-            Contact Us Now
-          </button>
+      {/* Right Image with Overlay */}
+      <div
+        className="relative w-full lg:w-5/12 aspect-[4/3] bg-center bg-cover rounded-lg overflow-hidden"
+        style={{ backgroundImage: `url(${jjtrucj})` }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center text-center p-4">
+          <div className="text-white">
+            <h3 className="text-2xl font-bold mb-2">Need Legal Help With Freight Recovery?</h3>
+            <p className="mb-4 text-base md:text-lg">We’re not just attorneys — we’re industry experts.</p>
+            <button className="bg-yellow-400 text-white px-6 py-2 rounded font-semibold hover:bg-yellow-300 transition">
+              Contact Us Now
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
 
 
