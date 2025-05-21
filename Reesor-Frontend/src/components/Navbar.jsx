@@ -44,14 +44,15 @@ export const Navbar = () => {
                         {/* Left side: Logo with responsive sizes */}
                         
                         <div className="flex flex-row items-center text-center">
-  <img
+  {/* <img
     className="w-[120px] h-[120px] sm:w-[130px] sm:h-[130px] md:w-[130px] md:h-[130px] lg:w-[150px] lg:h-[150px] xl:w-[150px] xl:h-[150px]"
     src={RessorLogo}
     alt="Reesor & Associates Logo"
-  />
-  <p className="mt-4 max-w-[295px] text-white text-lg font-bold font-display">
-      Reesor & Associates
-    </p>
+  /> */}
+<span className="font-serif text-4xl tracking-widest text-white">
+  REESOR <span className="font-sans  text-sm align-top ml-1 tracking-normal">ASSOCIATES</span>
+</span>
+
 </div>
 
 
