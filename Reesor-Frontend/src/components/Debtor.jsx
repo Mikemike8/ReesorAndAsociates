@@ -76,7 +76,7 @@ const App = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-12">
-        <section className="text-center p-0 m-0 bg-gray-100">
+        <section className="text-center pt-20 m-0 bg-gray-100">
           <h1 className="text-[60px] font-oswald mb-6 text-slate-800 tracking-wide">
             Submit a Debtor
           </h1>
