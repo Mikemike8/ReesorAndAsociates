@@ -11,7 +11,8 @@ const PORT = 5010;
 app.use(cors({
   origin: [
     'http://localhost:5173',  // Local development
-    'https://reesorandasociates.onrender.com'  // Deployed frontend
+    'https://reesorandasociates.onrender.com',
+    'https://jressor.onrender.com', // Deployed frontend
   ],
   credentials: true,  // Allow cookies if necessary
 }));
